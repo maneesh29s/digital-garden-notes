@@ -1,0 +1,8 @@
+fileignoreconfig:
+- filename: README.md
+  checksum: 2527e41a52611485fd135e35139773622d349fcde06af9b2527f4f4fc8a204e1
+custom_patterns:
+- (?i).*e4r.*
+- (?i).*tw.*
+- (?i).*thoughtworks.*
+version: "1.0"
