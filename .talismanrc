@@ -1,6 +1,8 @@
 fileignoreconfig:
+- filename: AI/transformers.md
+  checksum: 74025405389f177fe81e3a0c07db06aea334890d3f99f69af96802293b9ea8a0
 - filename: README.md
-  checksum: 2527e41a52611485fd135e35139773622d349fcde06af9b2527f4f4fc8a204e1
+  checksum: f52c2bb26a9ad04865f38dd1656fa17fb655b5be5b622c4e1ff8abcc6d1d87aa
 custom_patterns:
 - (?i).*e4r.*
 - (?i).*tw.*
