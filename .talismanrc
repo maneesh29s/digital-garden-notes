@@ -1,6 +1,14 @@
 fileignoreconfig:
 - filename: AI/transformers.md
   checksum: 74025405389f177fe81e3a0c07db06aea334890d3f99f69af96802293b9ea8a0
+- filename: Algorithms/bitonic_sort.md
+  checksum: 44b4036ff5ddc638040066e19d6bec7680d6fcc71166497de0940bc980d522a7
+- filename: Algorithms/hough_transform.md
+  checksum: d0c4a8f9c3b327743c159433bb5984b0c47b217289d77d4afdf95c0adbdac4dd
+- filename: Algorithms/sorting_networks.md
+  checksum: 277456e75923c101e4356604027a2d6e99d880100d8706b87ec73076b56e9aa8
+- filename: Algorithms/space_filling_curves.md
+  checksum: 79c28faea53b2394434bdf77d77f753c2f411796c5fafd7462842d398f9e5ea5
 - filename: README.md
   checksum: f52c2bb26a9ad04865f38dd1656fa17fb655b5be5b622c4e1ff8abcc6d1d87aa
 custom_patterns:
