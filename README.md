@@ -6,7 +6,7 @@ title: digital-garden
 
 Welcome to my personal knowledge base
 
-I use [obsidian](https://obsidian.md/) to manage my files, and [quartz](https://quartz.jzhao.xyz/) to publish it online on my github.io website
+I use [obsidian](https://obsidian.md/) and [zettlr](https://www.zettlr.com/) to manage my files, and [quartz](https://quartz.jzhao.xyz/) to publish it online on my github.io website
 
 Some of the knowledge I have gained as a part of [e4r](https://www.thoughtworks.com/en-in/clients/engineering-research)
 
@@ -17,5 +17,6 @@ All the content of this website is present in raw markdown format in [this repo]
 ## Contents
 
 1. [AI](./AI)
+2. [Algorithms](./Algorithms) 
 
 More to be added soon :)
