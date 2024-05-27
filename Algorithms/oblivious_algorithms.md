@@ -27,12 +27,12 @@ Control Flow: conditionals, loops
 
 GPUs can't handle complex control flows, but they can perform 1000x raw calculations (because of parallelisation) than CPUs
 
-# Types of Oblivious Algorithms
+## Types of Oblivious Algorithms
 
-## Cache Oblivious Algorithm
+### Cache Oblivious Algorithm
 
 An algorithm which is [Oblivious](../Dictionary/Oblivious%20(en-US).md) to cache size
 
-<https://www.youtube.com/watch?v=xwE568oVQ1Y>
+e.g. [FunnerSort](https://en.wikipedia.org/wiki/Funnelsort)
 
-<https://en.wikipedia.org/wiki/Funnelsort>
+To learn more, have a look at this [video lecture](https://www.youtube.com/watch?v=xwE568oVQ1Y)

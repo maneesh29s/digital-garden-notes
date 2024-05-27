@@ -9,8 +9,6 @@ title: Hough Transform
 
 # Hough Transform
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XRBc_xkZREg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 ## Formulation
 
 Converting image space to parameter space
@@ -74,15 +72,19 @@ Similar to line detection
 
 ![Hough_Transform_Circle_Detection_Example.jpeg](Artifacts/Hough_Transform_Circle_Detection_Example.jpeg)
 
-## Using Gradient Information in Circle Detection
+### Using Gradient Information in Circle Detection
 
-## Circle Detection when Radius is unknown
+### Circle Detection when Radius is unknown
 
 In this case, in parameter space there are 3 unknown variables: a , b and r
 
 ![Hough_Transform_Circle_Detection_Unknown_Radius.jpeg](Artifacts/Hough_Transform_Circle_Detection_Unknown_Radius.jpeg)
 
-# Rolling Hough Transform
+## Rolling Hough Transform
 
 Performing Hough Transform over a large image, on a rolling window ( similar to convolution, or sliding median )
 This is very computationally heavy operation, because of rolling window, but can be parallelised using GPU
+
+## References
+
+1. [Youtube Lecture](https://youtu.be/XRBc_xkZREg)
