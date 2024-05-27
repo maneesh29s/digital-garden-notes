@@ -9,6 +9,14 @@ fileignoreconfig:
   checksum: 277456e75923c101e4356604027a2d6e99d880100d8706b87ec73076b56e9aa8
 - filename: Algorithms/space_filling_curves.md
   checksum: 79c28faea53b2394434bdf77d77f753c2f411796c5fafd7462842d398f9e5ea5
+- filename: ComputerArchitecture/concurrency.md
+  checksum: 37939cb917ab0a27dff20f4fcb9334a9abfdb7657ea967e7293e0cf79105cca1
+- filename: ComputerArchitecture/intel_x86_64_architecture.md
+  checksum: abd39dda6596fb58fc34737381932dd5971e4a48029d2cb32f98ce53892a82ec
+- filename: ComputerArchitecture/multi_cpu_and_multi_core_systems.md
+  checksum: 4c2251da7129326e74ddff5ece119055a17bc96006b46998ac92c14049a8c6d1
+- filename: ComputerArchitecture/program_processes_threads.md
+  checksum: 9d279dea39599d6b3910e69e7a0559fbd5be8e7d4b2b7394c0684a1bf27646ee
 - filename: README.md
   checksum: f52c2bb26a9ad04865f38dd1656fa17fb655b5be5b622c4e1ff8abcc6d1d87aa
 custom_patterns:
