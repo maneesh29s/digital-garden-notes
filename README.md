@@ -1,10 +1,10 @@
 ---
-title: digital-garden
+title: Digital Garden
 ---
 
-# My Digital Garden
+# Welcome to Digital Garden
 
-Welcome to my personal knowledge base
+My personal knowledge base!
 
 I use [obsidian](https://obsidian.md/) and [zettlr](https://www.zettlr.com/) to manage my files, and [quartz](https://quartz.jzhao.xyz/) to publish it online on my github.io website
 
@@ -17,7 +17,8 @@ All the content of this website is present in raw markdown format in [this repo]
 ## Contents
 
 1. [AI](./AI)
-2. [Algorithms](./Algorithms) 
+2. [Algorithms](./Algorithms)
 3. [Computer Architecture](./ComputerArchitecture)
 
 More to be added soon :)
+
