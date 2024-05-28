@@ -13,7 +13,7 @@ title: Intel x86-64 Architecture
 
 ## Intel® Hyper-threading technology
 
-**Hyper-threading** is intel's proprietary implementation of [Simultaneous multithreading (SMT)](ComputerArchitecture/simultaneous_multi_threading.md)
+**Hyper-threading** is intel's proprietary implementation of [Simultaneous multithreading (SMT)](simultaneous_multi_threading.md)
 It enables hardware level concurrent processing inside a physical CPU core.
 
 ![intel_i7_9750H](Artifacts/intel_i7_9750H.png)
