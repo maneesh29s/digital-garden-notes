@@ -19,6 +19,26 @@ fileignoreconfig:
   checksum: 9d279dea39599d6b3910e69e7a0559fbd5be8e7d4b2b7394c0684a1bf27646ee
 - filename: README.md
   checksum: f52c2bb26a9ad04865f38dd1656fa17fb655b5be5b622c4e1ff8abcc6d1d87aa
+- filename: Security/AES.md
+  checksum: 1aa3c1a82102a03d11e729ebaf78cccc8d10e3eecaad50f103d951513f1e8259
+- filename: Security/DH.md
+  checksum: 2ccc1eba44b0e31b9dd89dda89ed063087d6d4350df73b49e7559a68987a01df
+- filename: Security/cypher_suite.md
+  checksum: 333bf929e8b25b89fecee44959481553a866d9eac1a23077cdc308fab696767f
+- filename: Security/encryption.md
+  checksum: f975aae269032ec8036c61d4bdd83c5241c0366f5ad851e15cf07a017b0a2a0b
+- filename: Security/error_correction.md
+  checksum: 0cde1211201a57a275ddca7e031113d5b9350e51707dd207bb3c105badbd944c
+- filename: Security/forward_secracy.md
+  checksum: 5cd9af3674526276637f040a6dbed820746b48e7f27b76ded689c1cc0ca8100d
+- filename: Security/hashing.md
+  checksum: c8535555d63b20801d7ed8c646425fa278fca2f2c601c797d0621841c709c00c
+- filename: Security/mitm.md
+  checksum: 907588240ed4476cb7e7b27f02bb9d0bc41f0d0ea5d4a42a1ee4561ebbc210fc
+- filename: Security/rsa.md
+  checksum: 4b45df9f99f389110eb451edb13c05b1b03cb44a2b6d4878e5798cb4c40d813e
+- filename: Security/signing.md
+  checksum: 74a38a9649a7a43ce7b97f6125b9ffc5d83c0e285f04d2663cbbce94b4351988
 custom_patterns:
 - (?i).*e4r.*
 - (?i).*tw.*
