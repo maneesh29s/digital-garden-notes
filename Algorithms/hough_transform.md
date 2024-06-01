@@ -14,12 +14,12 @@ title: Hough Transform
 Converting image space to parameter space
 In the following example, a line in image space is given by equation
 
-$$y_i = m\*x_i + c$$
+$$y_i = m*x_i + c$$
 
 where $m$ is slope, and $c$ is y-intercept
 Rearranging the terms we get
 
-$$c_i=-m_i\*x + y$$
+$$c_i=-m_i*x + y$$
 
 Above equation is also an equation of line, with slop $x_i$ and y-intercept $y_i$
 
