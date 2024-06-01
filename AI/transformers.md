@@ -12,24 +12,24 @@ title: Transformers model architecture
 
 ![400](Artifacts/Transformers_architecture.jpeg)
 
-Left half: Encoder
+Left half: Encoder  
 Right half: Decoder
 
-Both encoder and decoder are composed of a stack of $N_x = 6$ identical layers.
+Both encoder and decoder are composed of a stack of $N_x = 6$ identical layers.  
 xx
 
 ## Encoder
 
 ### Input Embedding
 
-Embeddings generated from a given sequence of text , numbers, or any signals
+Embeddings generated from a given sequence of text , numbers, or any signals  
 e.g. "My dog eats fish"
 
 ### Positional Encoding
 
-Updates the embedding depending on the position of a particular value in a given sequence.
-e.g. (not completely valid) "My dog eats fish" "My favourite animal is dog"
-In both sentences, the work "dog" has different meaning depending on its position.
+Updates the embedding depending on the position of a particular value in a given sequence.  
+e.g. (not completely valid) "My dog eats fish" "My favourite animal is dog"  
+In both sentences, the work "dog" has different meaning depending on its position.  
 Thus position factor must be added in the embeddings
 
 ### Multi-head Attention
@@ -38,12 +38,12 @@ Each word in the given sequence of text will have 3 vectors:
 
 1. Q (query)
 1. K (key)
-1. V (value)
+1. V (value)  
    The attention layer takes these 3 vectors and generates an attention vector, which (kind of) determines the weightage of that word in overall sentence.
 
 ![600](Artifacts/Multi_head_attention.jpeg)
 
-The attention vector for each word can be calculated using **Scaled-Dot Product Attention**.
+The attention vector for each word can be calculated using **Scaled-Dot Product Attention**.  
 But instead of performing a single attention function with $d\_{model}$ dimensions, to get benefit of parallelisation, Multi-Head Attention is performed. The attention is calculated in $h$ parallel processes. The dimensions for each attention layer is kept ( according to the [^1] ) to be $d\_{model} / h$ , so overall computation performed is same.
 
 [^1]: Reference: [Attention is All You Need](https://arxiv.org/abs/1706.03762)
@@ -64,7 +64,7 @@ Contains all the layers (except Input Embedding) present in [Encoder](#encoder).
 
 ### Output Embedding
 
-Output of the previous layer ($N-1 ^{th}$ layer from the stack)
+Output of the previous layer ($N-1 ^{th}$ layer from the stack)  
 Output embeddings are offset by one position, also masking is done before Multi-Head Attention layer. This ensures that the predictions for position $i$ can depend only on the known outputs at positions less than $i$
 
 ### Linear and Softmax
