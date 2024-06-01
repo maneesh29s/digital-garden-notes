@@ -3,71 +3,51 @@ aliases: []
 author: Maneesh Sutar
 date: 2023-09-01
 tags:
-- tofix
 - public
 title: Error Detection
 ---
 
-# Error Detection
+# Error Detection Schemes
 
-## repetition
+Number of bit-errors which are **detectable** = MHD - 1
 
-10101110 10101110 10101110 10101110 10101110
+## Repetition
 
-## parity - minimum hamming distnace of 2
+Repeat data multiple times during tranmission
+Waste of resources
 
-odd 1: 1
-even 1: 0
+## Parity
 
-10101110 1 valid
+Parity of a binary data is whether the data contains odd number of 1s or an even number of 1s.
+A single parity bit provides [MHD](hamming_distance.md) of 2
+So only 1 bit of error detection possible
 
-10101010 1 invalid
+## Redundancy Check
 
-10100010 1 valid
+Image Ref: Ben Eater's video on Checksum
+![300](Artifacts/vrc_lrc.png)
 
-10000010 1 invlid
+In above example, the whole data is grouped into streams of 8 bits  
+==In VRC, the parity is calculated in the direction of stream of the data  
+In LRC, the parity is calculated along a bit position of the data
 
-00000010 1 valid
-
-minimum hamming distance = d
-number of bit errors that you can detect = d - 1
+==Hamming distance in both cases is 2==, since that's the best a parity bit can do  
+If we combine both techniques, hamming distance ==increases to 4 bits==
 
 ## Checksum
 
-10101110 10101110 10101110 10101110 01000111
+As the name suggest, we ==check the sum of the data==
 
-10101110
-10101110
-10101110
-10101110
-00000000
-01000111
+1. Group all your data into groups of 8 bits
+1. Add all the groups together
+1. If the answer has more than 8 bits, roll over the extra bits from MSB till the 8th bit, and add them back into the rest of the answer  e.g. if answer of summation is 111010101100, perform ( 10101100 + 00001110 = 10111010 )
+1. Find 1's complement of the checksum. In above e.g. , its 01000101
+1. Simply append the checksum to the rest of the message and send.
 
-------------
-10 10110110
+At receiving end, follow all the steps till step 3.  
+Since 1's complement of the checksum is present in the message itself, ==the final checksum after step 3, at receiving end, should be all 1==  
+If it is not, that means there is some error in the message itself, and we need to re-transmit the message
 
-10110110
-00000010
+## CRC - Cyclic Redunduncy Check
 
----------
-
-11111111
-
-## CRC - cyclic redunduncy check
-
-[CRC](CRC.md)
-
-## finite field
-
-Associativity
-
-(a + b) + c = a + (b + c) =
-
-Commutativity
-a + b = b + a
-
--a = 0 - a
-
-1 + 1 = 0
-1 - 1 = 0
-0 - 1 = 1
+More on this here [CRC](CRC.md)

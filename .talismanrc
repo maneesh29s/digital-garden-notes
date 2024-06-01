@@ -28,9 +28,11 @@ fileignoreconfig:
 - filename: Security/encryption.md
   checksum: f975aae269032ec8036c61d4bdd83c5241c0366f5ad851e15cf07a017b0a2a0b
 - filename: Security/error_correction.md
-  checksum: 0cde1211201a57a275ddca7e031113d5b9350e51707dd207bb3c105badbd944c
+  checksum: f51ae8d2bca70625cca754317885cf69e6e1ce9cc83bcad483750f709d958f32
 - filename: Security/forward_secracy.md
   checksum: 5cd9af3674526276637f040a6dbed820746b48e7f27b76ded689c1cc0ca8100d
+- filename: Security/hamming_distance.md
+  checksum: 656bbbb0e966643762337941b1d1477821af52c21224a01859231b2cb26060ee
 - filename: Security/hashing.md
   checksum: c8535555d63b20801d7ed8c646425fa278fca2f2c601c797d0621841c709c00c
 - filename: Security/mitm.md

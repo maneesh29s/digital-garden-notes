@@ -1,25 +1,18 @@
 ---
-aliases: null
+aliases:
+- Hamming Codes
 author: Maneesh Sutar
 date: 2023-09-01
 tags:
-- tofix
 - public
 title: Error Correction
 ---
 
 # Error Correction
 
-## Why error correction? isn't detection enough?
-
-Think about deep space communication where transmission time is in hours
-Re-transmission is time consuming and costly
-
 ## Concepts
 
-**Hamming Distance**: difference between bitwise positions of 2 code words
-
-**Min hamming distance (MHD)**: min. number of bits that need to be flipped for the next valid code word
+[Hamming Distance and MHD](hamming_distance.md)
 
 **Redundancy (bits**): Additional bits that we send with our data
 
@@ -30,74 +23,102 @@ Re-transmission is time consuming and costly
 **ECC Notation**: (Message block size, data bits size, hamming distance)
 
 Number of bit-errors which are **detectable** = MHD - 1
-
 Number of bit-error which are **correctable** = floor ( (MHD - 1) / 2 )
 
-## Methods for Error Correction
+## Why error correction? isn't detection enough?
 
-### Repetition
+Think about deep space communication where transmission time is in hours
+Re-transmission is time consuming and costly
 
-Data is repeated "r" times
+## Why correction and detection together is not possible?
 
-say r = 3
-0: 000
-1: 111
+Take example of [Hamming Codes](#hamming-codes) (HC) which have [Hamming Distance](hamming_distance.md) of 3.
 
-0110: 000 111 111 000
+Even though HC can detect 2 bit errors, it cannot distinguish
 
-Hamming distance  = r
-Block length = r
+* a double bit error of some valid code
+* a single bit error of a different valid code  
+  It won't be sure which is the "right" codeword to convert to.
+
+Similarly, in Extended HC, with hamming distance of 4, triple errors might get mistaken for single errors and "corrected" to the wrong value.
+
+So your system can either choose to detect the errors, or correct the errors.
+
+# Error Correction Schemes
+
+## Repetition
+
+Data is repeated $r$ times
+e.g. say $r = 3$
+
+|Data|Output|
+|----|------|
+|0|000|
+|1|111|
+|0110|000 111 111 000|
+
+**Notation:** $$\[r, 1, r\]$$
+
+Hamming distance  = $r$
+Block length = $r$
 Message length = 1
-Rate: 1 / r
-Notation: (r, 1, r)
 
-1 bit error correcting OR 2 bit error detecting
+For r = 3, repetition provides 1 bit error correcting OR 2 bit error detection
 
-### Hamming Codes
+## Hamming Codes
 
-<https://docs.google.com/spreadsheets/d/1eYzlwtUPrevD95FoAhPIt2A6nAkIjm6YOprlPqGR5zw/edit?usp=sharing>
+Play around with hamming codes using [playground](https://docs.google.com/spreadsheets/d/1eYzlwtUPrevD95FoAhPIt2A6nAkIjm6YOprlPqGR5zw/edit?usp=sharing)
 
-Here "r" is a natural number >= 2
-
+**Notation:** $$\[2r − 1, 2r − r − 1, 3\]$$
+Here $r$ is a natural number >= 2
 Hamming Distance = 3
-Block length = 2r − 1
-Message length = 2r − r − 1
-Rate:
-Notation \[2r − 1, 2r − r − 1, 3\]2-code
+Block length = $2r − 1$
+Message length = $2r − r − 1$
 
-1 bit error correcting OR 2 bit error detecting
+**Hamming codes** (irrespective of $r$) provide either
 
-### Extended Hamming Codes
+* 1 bit error correcting
+* 2 bit error detecting
 
+**Why MHD is 3 ?**
+In hamming codes, for a single bit flipped in the data part, 2 parity bits corresponding to that bit location also need to be flipped in order for the overall code to be a valid hamming code.
+
+For a data bit going from 0 to 1, total 3 (the data bit and 2 parity bits) bits are flipped.  
+This is true for all hamming code schemes (7,4 or 15,11 or others), because in each case the way the parity bit works are same.
+
+## Extended Hamming Codes
+
+**Notation** $$\[2r − 1, 2r − r − 1, 3\]$$
 Here "r" is a natural number >= 2
-
 Hamming Distance = 4
 Block length = 2r − 1
 Message length = 2r − r − 1
-Rate:
-Notation \[2r − 1, 2r − r − 1, 3\]2-code
 
-1 bit error correcting AND upto 2 bit guranteed error detecting
-OR 3 bit error detecting
+**Extended Hamming codes** always provide either
 
-### Extended Binary Golay code
+* 1 bit error correcting AND upto 2 bit guaranteed error detecting
+* 3 bit error detecting
 
-\[24, 12, 8\]
+**Why MHD is 4?**
+In the extended hamming codes, an extra parity bit is added to existing scheme (15,11 -> 16,11), which contains the parity of the entire block.  
+This makes hamming distance 4 (check yourself with the [playground](https://docs.google.com/spreadsheets/d/1eYzlwtUPrevD95FoAhPIt2A6nAkIjm6YOprlPqGR5zw/edit?usp=sharing))
 
+## Extended Binary Golay code
+
+Notation: $$\[24, 12, 8\]$$
 Block length: 24
 Message length: 12
-Hamming Distance (HD): 8
-
+Hamming Distance: 8
 Rate = 12/24 = 0.5
 
-Since HD = 8,
-Error Detection =  7 bits ( 8 - 1)
-Error Correction = 3 ( 2\*3 + 1 \< 8)
+Since Hamming Distance = 8, this scheme provides either
 
-### Reed–Solomon error correction
+* Error Correction upto 3 bits
+* Error Detection upto 7 bits
 
-\[n, k, n − k + 1\]
+## Reed–Solomon error correction
 
-e.g. (255, 223, 33)
+Notation: $$\[n, k, n − k + 1\]$$
+One of the scheme is $\[255, 223, 33\]$ with hamming distance of 33.
 
 Applications: Data Storage (CDs, DVDs), Barcodes, Space Transmission

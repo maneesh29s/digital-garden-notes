@@ -21,7 +21,9 @@ A[Protect your data] -->|Data Reversibility| B["<a class='internal-link is-unres
 
 A -->|Data Integrity| C["<a class='internal-link is-unresolved' href='./hashing'>Hashing</a>"]
 
-A --> D["<a class='internal-link is-unresolved' href='./signing'>Authentication and Signing</a>"] --> E
+A -->|Authentication| D["<a class='internal-link is-unresolved' href='./signing'>Signing</a>"] --> E
+
+A -->|Data correction| HC["<a class='internal-link is-unresolved' href='./error_correction'>Hamming Codes</a>"]
 
 B --> E["<a class='internal-link is-unresolved' href='./rsa'>RSA</a>"]
 
