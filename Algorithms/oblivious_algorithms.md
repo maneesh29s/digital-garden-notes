@@ -9,9 +9,9 @@ title: Oblivious Algorithms
 
 # Oblivious Algorithms
 
-[Oblivious](../Dictionary/Oblivious%20(en-US).md) algorithms's control flow is independent of some properties (value , size) of the input data.
-Quick sort (or merge sort, or any adaptive sorting) are non-oblivious, because the algorithm steps change based on data.
-[Bitonic Sort](https://en.wikipedia.org/wiki/Bitonic_sorter) (also known as sorting net) is oblivious, because **it always compares the same elements disregarding data it gets**
+[Oblivious](../Dictionary/Oblivious%20(en-US).md) algorithms's control flow is independent of some properties (value , size) of the input data.  
+Quick sort (or merge sort, or any adaptive sorting) are non-oblivious, because the algorithm steps change based on data.  
+[Bitonic Sort](https://en.wikipedia.org/wiki/Bitonic_sorter) (also known as sorting net) is oblivious, because **it always compares the same elements disregarding data it gets**  
 Bitonic sort does exactly the same steps in the best and the worst case, while non-oblivious algorithms may vary from $n$ steps to $n^2$ (for example).
 
 ## Algorithm Design Strategy

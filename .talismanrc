@@ -2,9 +2,9 @@ fileignoreconfig:
 - filename: AI/transformers.md
   checksum: 74025405389f177fe81e3a0c07db06aea334890d3f99f69af96802293b9ea8a0
 - filename: Algorithms/bitonic_sort.md
-  checksum: 44b4036ff5ddc638040066e19d6bec7680d6fcc71166497de0940bc980d522a7
+  checksum: edc257f8cd9519ef043c9f185bdb18bd91334f05f437476834112e9d7e65cc17
 - filename: Algorithms/hough_transform.md
-  checksum: d0c4a8f9c3b327743c159433bb5984b0c47b217289d77d4afdf95c0adbdac4dd
+  checksum: e6d9c8e5d12c6a8d76e7f31bbe8bdae9262786e901d662929b42d7a350c6f481
 - filename: Algorithms/sorting_networks.md
   checksum: 277456e75923c101e4356604027a2d6e99d880100d8706b87ec73076b56e9aa8
 - filename: Algorithms/space_filling_curves.md

@@ -11,12 +11,12 @@ title: Hough Transform
 
 ## Formulation
 
-Converting image space to parameter space
+Converting image space to parameter space  
 In the following example, a line in image space is given by equation
 
 $$y_i = m*x_i + c$$
 
-where $m$ is slope, and $c$ is y-intercept
+where $m$ is slope, and $c$ is y-intercept  
 Rearranging the terms we get
 
 $$c_i=-m_i*x + y$$
@@ -39,8 +39,8 @@ In following image, the 4 points in parameter space correspond to 4 lines in Ima
 
 ## Issue Using Slope as parameter
 
-Slope of the line ($m$) can be between $\infty \leq m \leq \infty$ ($\infty$ when line in image space is vertical)
-Its not possible to represent infinity (or even such large values) in computer
+Slope of the line ($m$) can be between $\infty \leq m \leq \infty$ ($\infty$ when line in image space is vertical)  
+Its not possible to represent infinity (or even such large values) in computer  
 More memory and computation required
 
 ## Using radius and orientation as parameters
@@ -49,7 +49,7 @@ Represent the line in Image Space as
 
 $$ x*sin(\theta) - y*cos(\theta) + \rho = 0 $$
 
-Here, **Orientation** ($\theta$) is finite: $0 \leq \theta \lt \pi$
+Here, **Orientation** ($\theta$) is finite: $0 \leq \theta \lt \pi$  
 **Perpendicular** **distance** from origin ($\rho$) is finite (can not be greater than size of the image itself)
 
 ![Hough_Transform_3.jpeg](Artifacts/Hough_Transform_3.jpeg)
@@ -88,7 +88,7 @@ In this case, in parameter space there are 3 unknown variables: a , b and r
 
 ## Rolling Hough Transform
 
-Performing Hough Transform over a large image, on a rolling window ( similar to convolution, or sliding median )
+Performing Hough Transform over a large image, on a rolling window ( similar to convolution, or sliding median )  
 This is very computationally heavy operation, because of rolling window, but can be parallelised using GPU
 
 ## References
