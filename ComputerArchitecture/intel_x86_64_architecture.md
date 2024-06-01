@@ -13,13 +13,13 @@ title: Intel x86-64 Architecture
 
 ## Intel® Hyper-threading technology
 
-**Hyper-threading** is intel's proprietary implementation of [Simultaneous multithreading (SMT)](simultaneous_multi_threading.md)
+**Hyper-threading** is intel's proprietary implementation of [Simultaneous multithreading (SMT)](simultaneous_multi_threading.md)  
 It enables hardware level concurrent processing inside a physical CPU core.
 
 ![intel_i7_9750H](Artifacts/intel_i7_9750H.png)
 
-For example, the [i7-9750H CPU](https://ark.intel.com/content/www/us/en/ark/products/191045/intel-core-i7-9750h-processor-12m-cache-up-to-4-50-ghz.html), is taking up single socket in the motherboard.
-Inside the CPU, there are 6 physical cores, which use intel's [multi-core architecture](#multi-core-architecture) to support concurrent processing of OS threads.
+For example, the [i7-9750H CPU](https://ark.intel.com/content/www/us/en/ark/products/191045/intel-core-i7-9750h-processor-12m-cache-up-to-4-50-ghz.html), is taking up single socket in the motherboard.  
+Inside the CPU, there are 6 physical cores, which use intel's [multi-core architecture](#multi-core-architecture) to support concurrent processing of OS threads.  
 Inside a physical core, if HYPER-THREADING is enabled (which is yes in above case), we can get 2 logical processors ("Threads per core" in above image) inside a physical core.
 
 Because of HYPER_THREADING, when we run `htop` command, we can see see 12 individual compute units instead of 6
@@ -32,7 +32,7 @@ Each logical processor inside a physical core has its own **Architectural State*
 
 Each logical processor has its own **APIC ID**, which enables OS to treat every logical processor as a seperate execution unit.
 
-The core of the physical processor, i.e.  execution unit AND the system bus is shared between logical processors
+The core of the physical processor, i.e.  execution unit AND the system bus is shared between logical processors  
 ==CPU cache is shared==
 
 ![hypterthreading](Artifacts/hypterthreading.png)
@@ -43,7 +43,7 @@ In this, each processor core has dedicated microarchitectural resources identica
 
 In Intel, each logical processor inside a dual-core processor (whether supporting Intel Hyper-Threading Technology or not) has its own APIC functionality, PAT, machine check architecture, debug registers and extensions.
 
-Each logical processor handles serialization instructions or self-modifying code on its own. Memory order is handled the same way as in Intel Hyper-Threading Technology
+Each logical processor handles serialization instructions or self-modifying code on its own. Memory order is handled the same way as in Intel Hyper-Threading Technology  
 The topology of the cache hierarchy (with respect to whether a given cache level is shared by one or more processor cores or by all logical processors in the physical package) depends on the processor implementation.
 
 ## SIMD Support

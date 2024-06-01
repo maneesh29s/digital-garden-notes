@@ -12,7 +12,7 @@ fileignoreconfig:
 - filename: ComputerArchitecture/concurrency.md
   checksum: 37939cb917ab0a27dff20f4fcb9334a9abfdb7657ea967e7293e0cf79105cca1
 - filename: ComputerArchitecture/intel_x86_64_architecture.md
-  checksum: abd39dda6596fb58fc34737381932dd5971e4a48029d2cb32f98ce53892a82ec
+  checksum: ad1b8add36d225caa3092041096473434c4b913cd74629f09993aea5b2adf18a
 - filename: ComputerArchitecture/multi_cpu_and_multi_core_systems.md
   checksum: 4c2251da7129326e74ddff5ece119055a17bc96006b46998ac92c14049a8c6d1
 - filename: ComputerArchitecture/program_processes_threads.md

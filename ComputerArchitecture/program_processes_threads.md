@@ -15,7 +15,7 @@ title: Processes and Threads
 
 ## Program
 
-==A program is an executable file, containing instructions and some data.==
+==A program is an executable file, containing instructions and some data.==  
 Usually it is a binary executable file, or even text code in case of interpreted languages.
 
 ## Processes
@@ -24,7 +24,7 @@ Usually it is a binary executable file, or even text code in case of interpreted
 
 ==A process is an running instance of a program==
 
-==Each process has its own virtual memory address space.==
+==Each process has its own virtual memory address space.==  
 A process memory consists of:
 
 1. Code memory

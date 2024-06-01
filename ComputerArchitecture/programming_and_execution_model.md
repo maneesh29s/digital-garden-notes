@@ -28,7 +28,7 @@ Refer [parallelism_overview](parallelism_overview.md)
 
 # Different Scenarios
 
-Execution model can differ from programming model
+Execution model can differ from programming model  
 e.g. Sequential code executed in OoO fashion by a superscalar processor
 
 |Programming Model|Possible Execution|
