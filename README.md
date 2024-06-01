@@ -19,6 +19,7 @@ All the content of this website is present in raw markdown format in [this repo]
 1. [AI](./AI)
 2. [Algorithms](./Algorithms)
 3. [Computer Architecture](./ComputerArchitecture)
+4. [Security](./Security)
 
 More to be added soon :)
 
