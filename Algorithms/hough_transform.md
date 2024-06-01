@@ -13,10 +13,14 @@ title: Hough Transform
 
 Converting image space to parameter space
 In the following example, a line in image space is given by equation
-$$y_i = m*x_i + c$$
+
+$$y_i = m\*x_i + c$$
+
 where $m$ is slope, and $c$ is y-intercept
 Rearranging the terms we get
-$$c_i=-m_i*x + y$$
+
+$$c_i=-m_i\*x + y$$
+
 Above equation is also an equation of line, with slop $x_i$ and y-intercept $y_i$
 
 * A ==line== in (x,y) domain (image space) changes to a ==point== in parameter space (m,c)
@@ -42,7 +46,9 @@ More memory and computation required
 ## Using radius and orientation as parameters
 
 Represent the line in Image Space as
+
 $$ x*sin(\theta) - y*cos(\theta) + \rho = 0 $$
+
 Here, **Orientation** ($\theta$) is finite: $0 \leq \theta \lt \pi$
 **Perpendicular** **distance** from origin ($\rho$) is finite (can not be greater than size of the image itself)
 

@@ -18,7 +18,9 @@ RSA can also be used to encrypt small amounts of data (such as the encryption ke
 ## Basic Principle
 
 A basic principle behind RSA is the observation that it is practical to find three very large positive integers e, d, and n, such that for all integers m (0 ≤ *m* \< *n*),
+
 $$(m^e)^d \mod n = m \mod n$$
+
 because the two exponents can be swapped,, **the private and public key can also be swapped**, allowing for message [signing and verification](signing.md) using the same algorithm.
 
 ## Key generation

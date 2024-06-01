@@ -57,7 +57,8 @@ e.g. say $r = 3$
 |1|111|
 |0110|000 111 111 000|
 
-**Notation:** $$\[r, 1, r\]$$
+**Notation:**
+$$\[r, 1, r\]$$
 
 Hamming distance  = $r$
 Block length = $r$
@@ -69,7 +70,9 @@ For r = 3, repetition provides 1 bit error correcting OR 2 bit error detection
 
 Play around with hamming codes using [playground](https://docs.google.com/spreadsheets/d/1eYzlwtUPrevD95FoAhPIt2A6nAkIjm6YOprlPqGR5zw/edit?usp=sharing)
 
-**Notation:** $$\[2r − 1, 2r − r − 1, 3\]$$
+**Notation:**
+$$\[2r − 1, 2r − r − 1, 3\]$$
+
 Here $r$ is a natural number >= 2
 Hamming Distance = 3
 Block length = $2r − 1$
@@ -88,7 +91,9 @@ This is true for all hamming code schemes (7,4 or 15,11 or others), because in e
 
 ## Extended Hamming Codes
 
-**Notation** $$\[2r − 1, 2r − r − 1, 3\]$$
+**Notation**
+$$\[2r − 1, 2r − r − 1, 3\]$$
+
 Here "r" is a natural number >= 2
 Hamming Distance = 4
 Block length = 2r − 1
@@ -105,7 +110,9 @@ This makes hamming distance 4 (check yourself with the [playground](https://docs
 
 ## Extended Binary Golay code
 
-Notation: $$\[24, 12, 8\]$$
+Notation:
+$$\[24, 12, 8\]$$
+
 Block length: 24
 Message length: 12
 Hamming Distance: 8
@@ -118,7 +125,9 @@ Since Hamming Distance = 8, this scheme provides either
 
 ## Reed–Solomon error correction
 
-Notation: $$\[n, k, n − k + 1\]$$
+Notation:
+$$\[n, k, n − k + 1\]$$
+
 One of the scheme is $\[255, 223, 33\]$ with hamming distance of 33.
 
 Applications: Data Storage (CDs, DVDs), Barcodes, Space Transmission
