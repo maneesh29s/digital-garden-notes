@@ -10,14 +10,14 @@ title: Hashing
 
 # Hashing
 
-Irreversible, one way computation
-Original data can not be recovered from the hash
+Irreversible, one way computation  
+Original data can not be recovered from the hash  
 Uses math and prime numbers
 
-In terms of security
+In terms of security  
 bcrypt/argon > [SHA](sha.md) > [CRC32](CRC.md)
 
-in terms of speed
+in terms of speed  
 [CRC32](CRC.md) > sha > bcrypt/argon
 
 [SHA](sha.md): One of the oldest hashing algorithm. But today more secure algorithms are available. Today it is used check file integrity.

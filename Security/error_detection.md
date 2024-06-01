@@ -12,22 +12,22 @@ Number of bit-errors which are **detectable** = MHD - 1
 
 ## Repetition
 
-Repeat data multiple times during tranmission
+Repeat data multiple times during tranmission  
 Waste of resources
 
 ## Parity
 
-Parity of a binary data is whether the data contains odd number of 1s or an even number of 1s.
-A single parity bit provides [MHD](hamming_distance.md) of 2
+Parity of a binary data is whether the data contains odd number of 1s or an even number of 1s.  
+A single parity bit provides [MHD](hamming_distance.md) of 2  
 So only 1 bit of error detection possible
 
 ## Redundancy Check
 
-Image Ref: Ben Eater's video on Checksum
+Image Ref: Ben Eater's video on Checksum  
 ![300](Artifacts/vrc_lrc.png)
 
 In above example, the whole data is grouped into streams of 8 bits  
-==In VRC, the parity is calculated in the direction of stream of the data  
+In VRC, the parity is calculated in the direction of stream of the data  
 In LRC, the parity is calculated along a bit position of the data
 
 ==Hamming distance in both cases is 2==, since that's the best a parity bit can do  

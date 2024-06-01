@@ -37,5 +37,5 @@ Try adding more bits to original data, minimum 3 times more bits will be added t
 
 Thus the minimum hamming distance is 3.
 
-Number of bit-errors which are **detectable** = MHD - 1
+Number of bit-errors which are **detectable** = MHD - 1  
 Number of bit-error which are **correctable** = floor ( (MHD - 1) / 2 )

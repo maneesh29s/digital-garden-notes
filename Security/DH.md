@@ -12,7 +12,7 @@ title: Diffie-Hellman key exchange
 
 # Diffie–Hellman key exchange
 
-**Diffie–Hellman key exchange or DH** is a mathematical method of securely exchanging cryptographic keys over a public channel.
+**Diffie–Hellman key exchange or DH** is a mathematical method of securely exchanging cryptographic keys over a public channel.  
 Used to generate a random symmetric secret key between any 2 hosts that wish to communicate securely.
 
 Due to a new secret key used every session, this algorithm introduces [forward secracy](forward_secracy.md) in the system which pure RSA does not.
@@ -46,7 +46,7 @@ This is the working of the **standard Diffie-Hellman** algorithm, later formaliz
 
 ![video](https://youtu.be/85oMrKd8afY?list=TLPQMzEwNTIwMjTjX8y6dMupBg)
 
-**Finite Field DH** has roughly the same key strength as [RSA](rsa.md#limitations) for the same key sizes.
+**Finite Field DH** has roughly the same key strength as [RSA](rsa.md#limitations) for the same key sizes.  
 So 2048-bit FFDH has same security as 2048-bit RSA
 
 ## ECDH
