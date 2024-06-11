@@ -41,6 +41,8 @@ fileignoreconfig:
   checksum: 539da07f4ea05e8f7b54c92499d8a83fc01d78e7243bfab025ac7a798418b474
 - filename: Security/signing.md
   checksum: 74a38a9649a7a43ce7b97f6125b9ffc5d83c0e285f04d2663cbbce94b4351988
+- filename: notebooks/zarr.ipynb
+  checksum: 9d3d60f2ed250acd050f64c221ed3b3683c7d5162a98152be1f1d995cb994dc5
 custom_patterns:
 - (?i).*e4r.*
 - (?i).*tw.*
