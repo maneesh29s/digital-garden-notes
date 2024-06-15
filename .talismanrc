@@ -9,6 +9,18 @@ fileignoreconfig:
   checksum: 277456e75923c101e4356604027a2d6e99d880100d8706b87ec73076b56e9aa8
 - filename: Algorithms/space_filling_curves.md
   checksum: 79c28faea53b2394434bdf77d77f753c2f411796c5fafd7462842d398f9e5ea5
+- filename: CPP/Makefile.md
+  checksum: 6fd4e7a3dc736af486f0a0424b00edbc56a5bc7ce57a6a8d1433a3fd09c4cacb
+- filename: CPP/copy_move_semantics.md
+  checksum: 92f8b5f1b484c0de9d1b7d4913350710db7b7487ccbd6a3422b6395a33dc52ee
+- filename: CPP/smart_ptr.md
+  checksum: f747469af607435c35b79c40d10f6be3b40f58c16b26ef4e94b00b7602fd9480
+- filename: CPP/static_vs_dynamic_linking.md
+  checksum: 375736c0a0ad799be6b94502095985f1899b4a70733ca25d3144e3f1485a39b9
+- filename: CPP/swig.md
+  checksum: 35c2d97b0bec9c8f14ed7aae06cb84ad63f780dacb32e10ad648bb34f9723499
+- filename: CPP/template_metaprogramming.md
+  checksum: c4eb1899c4329b3f6320c9f3c1a02ec2c3300319aa09b69356af062b70ef44ae
 - filename: ComputerArchitecture/concurrency.md
   checksum: 37939cb917ab0a27dff20f4fcb9334a9abfdb7657ea967e7293e0cf79105cca1
 - filename: ComputerArchitecture/intel_x86_64_architecture.md
