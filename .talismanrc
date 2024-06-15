@@ -17,6 +17,14 @@ fileignoreconfig:
   checksum: 4c2251da7129326e74ddff5ece119055a17bc96006b46998ac92c14049a8c6d1
 - filename: ComputerArchitecture/program_processes_threads.md
   checksum: 9d279dea39599d6b3910e69e7a0559fbd5be8e7d4b2b7394c0684a1bf27646ee
+- filename: Python/JAX.md
+  checksum: 18d719e82443a9be49ff364239a765e8e0d43d2752a6d21a19eefd269c7b861f
+- filename: Python/Multithreading_vs_Multiprocessing_in_python.md
+  checksum: 0229a054e4aeafdffe0b0e2a5a24bb72a8a108a3334f612cc4b6c410e37c4a80
+- filename: Python/pythons_messy_tools.md
+  checksum: c27c3f1baf2b7a53da63b19564da13326d0549989999e1c6511bda2300c8b85c
+- filename: Python/xarray.md
+  checksum: 045b1ba7a00e04e4a49fc7295f3b42423105bf0657ce6fd8b396f33415202bae
 - filename: README.md
   checksum: f52c2bb26a9ad04865f38dd1656fa17fb655b5be5b622c4e1ff8abcc6d1d87aa
 - filename: Security/AES.md
