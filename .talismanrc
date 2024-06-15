@@ -17,6 +17,16 @@ fileignoreconfig:
   checksum: 4c2251da7129326e74ddff5ece119055a17bc96006b46998ac92c14049a8c6d1
 - filename: ComputerArchitecture/program_processes_threads.md
   checksum: 9d279dea39599d6b3910e69e7a0559fbd5be8e7d4b2b7394c0684a1bf27646ee
+- filename: HPC/LLAMA.md
+  checksum: a45d0707f4d8a8307bb7de26afc54648e9eedbd186a2172258bc9bcbd27ce54c
+- filename: HPC/gpu_working.md
+  checksum: 09a5b18f52d283f9dcc7d6ae4a3a65675849fbeea71ba7ddb0a8b8bfe3e22542
+- filename: HPC/nvidia_cub.md
+  checksum: 100dcf428f9a22d1328910e4b724c022903d9eef8b5fc5121a522cf8997dacff
+- filename: HPC/nvidia_gpus_in_depth.md
+  checksum: c495a270910a9dbbe6bb611c8d55b8427c11c8822e7036f54abb64c0654dbfdb
+- filename: HPC/vCPU.md
+  checksum: 9ff7bfde2660433f0da4feeeb93b2aec0d940ad02d70caff457aa7570fb6b52a
 - filename: Python/JAX.md
   checksum: 18d719e82443a9be49ff364239a765e8e0d43d2752a6d21a19eefd269c7b861f
 - filename: Python/Multithreading_vs_Multiprocessing_in_python.md
