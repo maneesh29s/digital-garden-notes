@@ -17,9 +17,13 @@ All the content of this website is present in raw markdown format in [this repo]
 ## Contents
 
 1. [AI](./AI)
-2. [Algorithms](./Algorithms)
-3. [Computer Architecture](./ComputerArchitecture)
-4. [Security](./Security)
+1. [Algorithms](./Algorithms)
+1. [Computer Architecture](./ComputerArchitecture)
+1. [Git](./GitAdvanced)
+1. [High Performance Computing](./HPC)
+1. [Linux OS](./Linux)
+1. [Linux Container Ecosystem](./Linux/Containers)
+1. [Python Programming Language](./Python)
+1. [Security](./Security)
 
 More to be added soon :)
-
