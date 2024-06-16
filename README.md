@@ -14,6 +14,8 @@ I also write [blogs](https://medium.com/@maneesh29s) derived from some of the no
 
 All the content of this website is present in raw markdown format in [this repo](https://github.com/maneesh29s/digital-garden)
 
+The published digital garden is hosted using github pages [here](https://maneesh29s.github.io/digital-garden-publish/)
+
 ## Contents
 
 1. [AI](./AI)
