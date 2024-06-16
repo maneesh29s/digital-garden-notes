@@ -184,4 +184,4 @@ You can view the new context with `docker context ls` and `docker context inspec
 
 dockerd as a compliant Container Runtime Interface for Kubernetes
 
-# tofix  add a diagram
+Note: #toadd add a diagram
