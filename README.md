@@ -12,7 +12,7 @@ Some of the knowledge I have gained as a part of [e4r](https://www.thoughtworks.
 
 I also write [blogs](https://medium.com/@maneesh29s) derived from some of the notes present in this vault
 
-All the content of this website is present in raw markdown format in [this repo](https://github.com/maneesh29s/digital-garden)
+All the content of this website is present in raw markdown format in [this repo](https://github.com/maneesh29s/digital-garden-notes)
 
 The published digital garden is hosted using github pages [here](https://maneesh29s.github.io/digital-garden-publish/)
 
