@@ -19,6 +19,7 @@ All the content of this website is present in raw markdown format in [this repo]
 1. [AI](./AI)
 1. [Algorithms](./Algorithms)
 1. [Computer Architecture](./ComputerArchitecture)
+1. [C++ Programming](./CPP)
 1. [Git](./GitAdvanced)
 1. [High Performance Computing](./HPC)
 1. [Linux OS](./Linux)
