@@ -25,8 +25,8 @@ title: GPU Programming Paradigms
 
 ### Numerical Computations
 
-1. [C++ matx](https://github.com/NVIDIA/MatX)
-1. [python_jax](../Python/python_jax.md)
+1. [C++ MatX](https://github.com/NVIDIA/MatX)
+1. [Python JAX](../Python/JAX.md)
 
 ### More focused on ML application
 

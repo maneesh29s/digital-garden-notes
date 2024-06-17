@@ -98,14 +98,10 @@ Since the new_message is as expected , signature is verified.
 
 1. **RSA is used to encrypt messages that are shorter than the modulus of the public key.** For 1024-bit keys, this means that the message must be 117 bytes or fewer (the modulus is 128-bytes, minus 11 for the padding of the message).
 
-1. The security of RSA relies on the practical difficulty of factoring the product of two large prime numbers, or the "[factoring problem](https://en.wikipedia.org/wiki/Factoring_problem "Factoring problem")".  
-   This solution to the problem is slow, but not as slow as a brute-force attack as there are algorithms available. Thus we need very large [key length](https://en.wikipedia.org/wiki/Key_size#).  
-   As per [this](https://en.wikipedia.org/wiki/Key_size#Asymmetric_algorithm_key_lengths)
-
-1. 1024-bit RSA keys are equivalent in strength to 80-bit symmetric keys
-
-1. 2048-bit RSA keys to 112-bit symmetric keys
-
+1. The security of RSA relies on the practical difficulty of factoring the product of two large prime numbers, or the "[factoring problem](https://en.wikipedia.org/wiki/Factoring_problem "Factoring problem")". This solution to the problem is slow, but not as slow as a brute-force attack as there are algorithms available. Thus we need very large [key length](https://en.wikipedia.org/wiki/Key_size#). As per [this](https://en.wikipedia.org/wiki/Key_size#Asymmetric_algorithm_key_lengths),
+   
+   * 1024-bit RSA keys are equivalent in strength to 80-bit symmetric keys
+   * 2048-bit RSA keys to 112-bit symmetric keys
 1. RSA is **much slower due to its mathematical complexity**. It is not suitable for encrypting large data directly.
 
 1. Unlike [Diffie–Hellman key exchange](DH.md), It does not provide [Forward Secrecy](forward_secracy.md)

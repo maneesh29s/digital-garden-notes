@@ -42,9 +42,8 @@ In TLS [Cypher Suites](cypher_suite.md), a version of DH called [ECDH](#ecdh) is
 
 ## Finite Field Diffie-Hellman
 
+A [great animated video](https://youtu.be/85oMrKd8afY) on the working on DH algorithm.  
 This is the working of the **standard Diffie-Hellman** algorithm, later formalized as **Finite Field Diffie-Hellman** algorithm
-
-![video](https://youtu.be/85oMrKd8afY?list=TLPQMzEwNTIwMjTjX8y6dMupBg)
 
 **Finite Field DH** has roughly the same key strength as [RSA](rsa.md#limitations) for the same key sizes.  
 So 2048-bit FFDH has same security as 2048-bit RSA

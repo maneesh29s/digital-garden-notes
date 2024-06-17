@@ -9,6 +9,6 @@ title: Google Brax
 
 # Google Brax
 
-[Google brax](https://github.com/google/brax)
+Refer [Google brax](https://github.com/google/brax)
 
-Physicas simulator written with [python_jax](python_jax.md)
+Physics simulator written with [JAX](JAX.md)
