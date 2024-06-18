@@ -184,4 +184,8 @@ You can view the new context with `docker context ls` and `docker context inspec
 
 dockerd as a compliant Container Runtime Interface for Kubernetes
 
+A kubernetes kubelet talks to  `cri-dockerd` to start/stop containers. The `cri-dockerd` in turn talks to docker engine `dockerd` , which then talks to `containerd` (and so on...)
+
+Check [this](colima.md#using-cri-dockerd) to see how Minikube can use  `cri-dockerd` to run docker containers.
+
 Note: #toadd add a diagram

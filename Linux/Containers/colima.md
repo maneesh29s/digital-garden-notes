@@ -53,7 +53,7 @@ minicube's docker container runs on Ubuntu 22.04 with systemd. The container is 
 
 minikube supports 3 [CRI](Kubernetes.md#CRI): containerd (via cri plugin), cri-o and cri-dockerd
 
-### using cri-dockerd
+### Using cri-dockerd
 
 The `systemd` inside k8s node spawns `docker.service`, `containerd.service` and `docker.socket`.  
 The `dockerd` command listens for the request at the default `/var/run/docker.sock` socket.  
@@ -62,9 +62,9 @@ The docker.service uses the modified service file present at `/lib/systemd/syste
 Along with above 3 services, the k8s node's systemd also spawns [cri-docker.service](https://github.com/Mirantis/cri-dockerd/blob/master/packaging/systemd/cri-docker.service). and  [cri-docker.socket](https://github.com/Mirantis/cri-dockerd/blob/master/packaging/systemd/cri-docker.socket)  
 For the `cri-dockerd` command, the `--container-runtime-endpoint fd://` options specifies `cri-dockerd` to use the `/var/run/cri-docker.sock` spawned using [Socket Activation](../systemd.md#Socket%20Activation)
 
-Kubelet sends request to `cri-dockerd` using the `cri-dockerd.sock` socket as it is ran with  `--container-runtime-endpoint=unix:///var/run/cri-dockerd.sock`.
+Kubelet is ran with  `--container-runtime-endpoint=unix:///var/run/cri-dockerd.sock` option, thus it sends request to `cri-dockerd` using the `cri-dockerd.sock` socket 
 
-Also, `cri-dockerd` sends request to docker engine at the default socket present at `/var/run/docker.sock`
+Then, `cri-dockerd` sends request to docker engine (`dockerd`) using the socket present at `/var/run/docker.sock`  (check `cri-dockerd --help` for more default options)
 
 The `docker` cli tool by default talks to the socket present at `/var/run/docker.sock`
 
@@ -73,7 +73,7 @@ Since both `cri-dockerd` and `docker-cli` are talking to the same socket, using 
  > 
  > The `containerd namespace` in which all k8s containers are running is the docker default "moby"
 
-### using containerd
+### Using containerd
 
 When `minikube` is started with `--container-runtime=containerd` ,  
 minikube still uses the same VM as k8s node, but all docker related systemd services, `docker.service`, `docker.socket`, `cri-docker.socket`, `cri-docker.service` are disabled.  
