@@ -101,6 +101,8 @@ Thus `nerdctl -n moby ps`  will show the running `dockerd` containers, while `ne
 
 k3s vs k8s <https://www.cloudzero.com/blog/k3s-vs-k8s/#:~:text=K8s%20run%20components%20in%20separate,%2C%20server%2C%20and%20Agent%20process>.
 
+**k3s**: a cli for managing installed k3s cluster. Internally provides other commands like kubectl, crictl etc.
+
 Colima , when creating the vm itself, installs docker engine  
 (Irrespective of the runtime) using the official docker engine installation way with apt  
 So containerd is installed from docker's containerd.io package  
@@ -109,7 +111,8 @@ When --kubernetes is passed to colima, it will install "cni" before installing "
 colima enables cri plugin, by setting `disabled_plugins = []` in `/etc/containerd/config.toml`. Although the actual cri plugin might not start since docker engine does not come with cni.  
 cni is installed when colima is run with --kubernetes
 
-Colima Docker+k3s vs Continerd+k3s  
+### Colima Docker+k3s vs Continerd+k3s
+
 For Docker runtime, images built or pulled with Docker are accessible to Kubernetes.  
 For Containerd runtime, images built or pulled in the k8s.io namespace are accessible to Kubernetes.
 
@@ -120,17 +123,17 @@ For Containerd runtime, images built or pulled in the k8s.io namespace are acces
 
 1. Colima, based on the --runtime flag, either passes --docker  which starts cri-dockerd and docker engine in k8s cluster, with the default socket path unix:///run/k3s/cri-dockerd/cri-dockerd.sock OR   --container-runtime-endpoint unix:///run/containerd/containerd.sock , so that k3s uses containerd with the custom socket path (default is at unix:///run/k3s/containerd/containerd.sock)
 
-When colima run --kubernetes  
+When colima run with `--kubernetes`  
 the lima VM itself is the node.  
 That's why you see OS = Ubuntu 23.10 which is the OS of the lima VM  
 Since the lima VM itself is the node, when you run ps aux | grep k3s you can see that the k3s server is running in the VM itself, and not in any containers.
 
-when --kubernetes option is passed to colima start, it will run k3s-install.sh which will install all the k3s components on the VM itself. Based on the --runtime option to colima start, the k3s will either run with containerd or docker + cri-docker
+when `--kubernetes` option is passed to colima start, it will run k3s-install.sh which will install all the k3s components on the VM itself. Based on the --runtime option to colima start, the k3s will either run with containerd or docker + cri-docker
 
 Since the lima VM itself is the node, when you run ps aux | grep k3s you can see that the k3s server is running in the VM itself, and not in any containers.  
 Btw, k3s is also spawning some containers when running, namely "k8s_coredns", "k8s_metric-server",k8s_local-path-provisonor" which I don't why. They are related to k3s but they are running in seperate containers instead of running as system process. (either with docker or containerd depending on the runtime). I can not exec into those containers, it throws "OCI runtime exec failed"
 
---container-runtime-endpoint Disables embedded containerd and use the CRI socket at the given path ,  
+`--container-runtime-endpoint` Disables embedded containerd and use the CRI socket at the given path ,  
 Colima uses this option since it itself installs containerd runtime on the lima VM, and wishes k3s to use the same runtime
 
 docker does not come embedded with k3s. So when specifying --docker as option, k3s will only start the cri-docker with its default cri endpoint /run/k3s/cri-dockerd/cri-docker.sock , and cri-docker will use the docker daemon being run on the same VM seperately.  

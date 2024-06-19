@@ -13,6 +13,8 @@ title: Kubernetes
 
 # Kubernetes
 
+This note does not include "how k8s works", rather some of my observations from my own experiments
+
 ## CRI
 
 Container Runtime Interface  
@@ -20,7 +22,9 @@ Container Runtime Interface
 
 Why CRI? <https://github.com/kubernetes/community/blob/master/contributors/devel/sig-node/container-runtime-interface.md>
 
- a plugin interface which enables the kubelet to use a wide variety of container runtimes, without having a need to recompile the cluster components.
+a plugin interface which enables the kubelet to use a wide variety of container runtimes, without having a need to recompile the cluster components.
+
+**crictl**: a cli for CRI
 
 ### the old way: dockershim
 
@@ -108,7 +112,3 @@ or update `$KUBECONFIG` env variable with multiple config file paths (`:` sepera
 
 To view the config, run `kubectl config view`  
 see `kubectl config --help` for detailed working of how config is generated
-
-## references
-
-Good refs on k8s, dockershim, cri

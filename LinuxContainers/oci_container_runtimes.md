@@ -13,7 +13,7 @@ title: OCI Container Runtimes
 
 All these container runtime conform to the [OCI runtime Spec](https://github.com/opencontainers/runtime-spec)
 
-Also refer to [containerd shim runtime API](./containerd.md#) to know detaiils about runtime shim + engine architecture.
+Also refer to [containerd shim runtime API](containerd.md#) to know detaiils about runtime shim + engine architecture.
 
 ## runc
 

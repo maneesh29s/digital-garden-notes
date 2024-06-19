@@ -11,11 +11,7 @@ title: podman
 
 # podman
 
-podman
-
-is whole another level
-
-podman does what docker and containerd can do i.e. manage images, containers
+Podman does what docker and containerd can do i.e. manage images, containers
 
 Docker is a complete networking storage image packaging solution on its own,  
 containerd also has some own storage networking and image transfer solutions,  

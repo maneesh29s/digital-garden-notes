@@ -247,7 +247,7 @@ In a linux terminal,
 
 [Documentation of overlays fs](https://docs.kernel.org/filesystems/overlayfs.html)
 
-![overlay_fs.png](./Artifacts/overlay_fs.png)  
+![overlay_fs.png](Artifacts/overlay_fs.png)  
 Ref: [youtube](https://youtu.be/x1npPrzyKfs?list=PLaVTMVckiaHKlRz94JVb-EsxA1JYFHdQ0&t=1238)
 
 ### Union filesystems

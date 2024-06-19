@@ -15,6 +15,8 @@ Was a part of [Docker](Docker.md)
 
 See [architecture](https://containerd.io/img/architecture.png)
 
+**nerdctl**: a cli for containerd (remember to use namspaces)
+
 ## Shim runtime API
 
 <https://github.com/containerd/containerd/tree/main/core/runtime/v2#architecture>  

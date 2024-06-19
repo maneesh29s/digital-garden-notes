@@ -11,9 +11,11 @@ title: Docker
 
 # Docker
 
-## Docker reliaying on containerd
+This note does not include "how docker works", rather some of my observations from my own experiments
 
-See: <https://www.docker.com/blog/extending-docker-integration-with-containerd/>
+## Docker's dependence on containerd
+
+See [docker's blog](https://www.docker.com/blog/extending-docker-integration-with-containerd/) for more info 
 
 See `nerdctl help` for all the things that containerd can do, compare with `docker help`
 

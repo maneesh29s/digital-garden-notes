@@ -19,6 +19,9 @@ Linux traditionally has "System V init" as the init process.
 
 But systemd gives performance improvment by using variaous techniques. Also systemd has more features than System V init.
 
+To get the logs (stdout) of a systemctl service:  
+`sudo journalctl -u <service name> | less`
+
 ## Socket Activation
 
 One of the main advantage of systemd is "Socket Activation"
