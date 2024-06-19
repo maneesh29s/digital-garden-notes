@@ -25,7 +25,7 @@ The published digital garden is hosted using github pages [here](https://maneesh
 1. [Git](./GitAdvanced/)
 1. [High Performance Computing](./HPC/)
 1. [Linux OS](./Linux/)
-1. [Linux Container Ecosystem](./Linux/Containers/)
+1. [Linux Container Ecosystem](./LinuxContainers/)
 1. [Python Programming Language](./Python/)
 1. [Security](./Security/)
 1. [Writing](./Writing/)
