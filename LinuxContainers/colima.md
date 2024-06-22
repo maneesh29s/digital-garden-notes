@@ -13,6 +13,9 @@ title: Colima
 
 Colima = Containers on [Lima](https://github.com/lima-vm/lima?tab=readme-ov-file) = Containers on Linux on Mac
 
+ > 
+ > This article contains my observations from various experiments I conducted with colima. It might be a little unstructured, so bare with me
+
 ## Docker with colima
 
 By default, colima uses QEMU VM and Ubuntu 23 as the OS.  
@@ -51,7 +54,7 @@ spawned by systemd. But the **minikube** runs in an isolated container, and it *
 
 minicube's docker container runs on Ubuntu 22.04 with systemd. The container is henceforth referred as the k8s node.
 
-minikube supports 3 [CRI](Kubernetes.md#CRI): containerd (via cri plugin), cri-o and cri-dockerd
+minikube supports 3 [CRI](kubernetes.md#CRI): containerd (via cri plugin), cri-o and cri-dockerd
 
 ### Using cri-dockerd
 
@@ -60,9 +63,9 @@ The `dockerd` command listens for the request at the default `/var/run/docker.so
 The docker.service uses the modified service file present at `/lib/systemd/system/docker.service` so the `dockerd` command runs with more options than the [default docker.service](https://github.com/moby/moby/blob/master/contrib/init/systemd/docker.service)
 
 Along with above 3 services, the k8s node's systemd also spawns [cri-docker.service](https://github.com/Mirantis/cri-dockerd/blob/master/packaging/systemd/cri-docker.service). and  [cri-docker.socket](https://github.com/Mirantis/cri-dockerd/blob/master/packaging/systemd/cri-docker.socket)  
-For the `cri-dockerd` command, the `--container-runtime-endpoint fd://` options specifies `cri-dockerd` to use the `/var/run/cri-docker.sock` spawned using [Socket Activation](../systemd.md#Socket%20Activation)
+For the `cri-dockerd` command, the `--container-runtime-endpoint fd://` options specifies `cri-dockerd` to use the `/var/run/cri-docker.sock` spawned using [Socket Activation](../systemd.md#Socket-Activation)
 
-Kubelet is ran with  `--container-runtime-endpoint=unix:///var/run/cri-dockerd.sock` option, thus it sends request to `cri-dockerd` using the `cri-dockerd.sock` socket 
+Kubelet is ran with  `--container-runtime-endpoint=unix:///var/run/cri-dockerd.sock` option, thus it sends request to `cri-dockerd` using the `cri-dockerd.sock` socket.
 
 Then, `cri-dockerd` sends request to docker engine (`dockerd`) using the socket present at `/var/run/docker.sock`  (check `cri-dockerd --help` for more default options)
 
@@ -99,14 +102,12 @@ Thus `nerdctl -n moby ps`  will show the running `dockerd` containers, while `ne
 
 ## Colima + k3s
 
-k3s vs k8s <https://www.cloudzero.com/blog/k3s-vs-k8s/#:~:text=K8s%20run%20components%20in%20separate,%2C%20server%2C%20and%20Agent%20process>.
+Refer: [k3s vs k8s](https://www.cloudzero.com/blog/k3s-vs-k8s/).
 
 **k3s**: a cli for managing installed k3s cluster. Internally provides other commands like kubectl, crictl etc.
 
-Colima , when creating the vm itself, installs docker engine  
-(Irrespective of the runtime) using the official docker engine installation way with apt  
-So containerd is installed from docker's containerd.io package  
-So as seen eariier, docker by default disables "cri" plugin by modifying the /etc/containerd/config.toml file  
+Colima , when creating the vm itself, installs docker engine (irrespective of the runtime) using the official docker engine installation way with apt. So containerd is installed from docker's `containerd.io` package. As seen eariier, docker by default disables "cri" plugin by modifying the `/etc/containerd/config.toml` file
+
 When --kubernetes is passed to colima, it will install "cni" before installing "k3s"  
 colima enables cri plugin, by setting `disabled_plugins = []` in `/etc/containerd/config.toml`. Although the actual cri plugin might not start since docker engine does not come with cni.  
 cni is installed when colima is run with --kubernetes

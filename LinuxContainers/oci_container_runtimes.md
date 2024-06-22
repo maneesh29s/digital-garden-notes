@@ -13,13 +13,14 @@ title: OCI Container Runtimes
 
 All these container runtime conform to the [OCI runtime Spec](https://github.com/opencontainers/runtime-spec)
 
-Also refer to [containerd shim runtime API](containerd.md#) to know detaiils about runtime shim + engine architecture.
+This page mentions how these runtimes are integrated with [containerd](containerd.md) specifically, although other tools like [podman](podman.md) and [cri-o](cri-o.md) can also use any of these runtimes.  
+You can read the [containerd](containerd.md) page to know details about containerd's shim + runtime engine architecture.
 
 ## runc
 
 <https://github.com/opencontainers/runc>  
 First donated by docker to OCI.  
-Runc became the reference implementaion for developing the OCI runtime spec.  
+runc became the reference implementaion for developing the OCI runtime spec.  
 Default in docker and containerd
 
 `containerd` uses the default `containerd-shim-runc-v2` "runtime shim" to invoke the `runc`.  
@@ -29,7 +30,8 @@ The `runc` is the "runtime engine".
 
 <https://github.com/containers/crun>  
 developed under "containers" organisation (same as podman) by RedHat  
-written in C
+written in C  
+I am not sure if a containerd shim binary is available to be used with crun.
 
 ## kata-runtime
 

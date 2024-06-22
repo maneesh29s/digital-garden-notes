@@ -32,22 +32,21 @@ Then each user can create conda envs in its local `$HOME/.conda` path
 
 Assume miniconda is install in $HOME/miniconda3 for the current user.
 
-1. Backup the current installation directory i.e. ~/miniconda3. This will be handy later if you want to use the same envrionments without reinstalling them.  
-   Else at least backup the environments using following command:
+1. Backup the current installation directory i.e. ~/miniconda3. This will be handy later if you want to use the same envrionments without reinstalling them. Else at least backup the environments using following command:
+   
+   ````sh
+   mkdir conda-env-yamls && cd conda-env-yamls
+   
+   conda env list | grep -v '#' | grep -v '^$' |  awk '{print $1}' | while read -r env_name ; do conda env export -n ${env_name} > ${env_name}-env.yaml ; done
+   ````
 
-````sh
-mkdir conda-env-yamls && cd conda-env-yamls
+1. Install `anaconda-clean` in the base environment, run `anaconda-clean` to clean up dotfiles. It will show which files will be removed. `anaconda-clean` is supposed to create a backup directory, but in both Ryzen and Intel WS, it did not create a backup dir at home. So do a manual backup first
 
-conda env list | grep -v '#' | grep -v '^$' |  awk '{print $1}' | while read -r env_name ; do conda env export -n ${env_name} > ${env_name}-env.yaml ; done
-````
+1. To delete current installation in ~/miniconda3, simply run `rm -r ~/miniconda3`
 
-2. Install `anaconda-clean` in the base environment, run `anaconda-clean` to clean up dotfiles. It will show which files will be removed. `anaconda-clean` is supposed to create a backup directory, but in both Ryzen and Intel WS, it did not create a backup dir at home. So do a manual backup first
+1. Delete lines regarding "conda initialise" from all your shell dotfiles (.bashrc, .zshrc, any other)
 
-2. To delete current installation in ~/miniconda3, simply run `rm -r ~/miniconda3`
-
-2. Delete lines regarding "conda initialise" from all your shell dotfiles (.bashrc, .zshrc, any other)
-
-2. Reload the shell (logout and login) to see if you can still access conda (you shouldn't be able to).
+1. Reload the shell (logout and login) to see if you can still access conda (you shouldn't be able to).
 
 ### Steps to install conda globally
 

@@ -24,18 +24,19 @@ Since there is no daemon (system service) running all the time in background, po
 Other thing is docker has cri-docker, containerd has cri, but  CRI is not in the scope of podman. So podman can be used with container orchstrators like k8s.  
 In such case, a dedicated CRI runtime like CRI-O can work with k8s.
 
-See the scope : <https://github.com/containers/podman?tab=readme-ov-file#overview-and-scope> and also what's out of scope in the same readme
+See the [scope of podman](https://github.com/containers/podman?tab=readme-ov-file#overview-and-scope) and also what's out of scope in the same readme
 
 docker engine (dockerd) provides lot of UX enhancing features like the cli, and extra features like image building (dockerfile), image transfers , high level network and storage,  etc.  
 containerd works at a level lower than docker,  
 docker relies on containerd for some things like container execution and supervision, low-level storage and network
 
 but podman is a tool, which relies on other third party libraries (containers/image, containers/storage), and provides all of the commonly used features of docker and containerd combined. The "podman cli" takes inspiration from docker-cli, and can act as drop-in replacement (alias docker=podman)  
-Podman internally uses "libpod" library. Also see <https://github.com/containers/podman?tab=readme-ov-file#oci-projects-plans> for all the open source libraries it depends on
+Podman internally uses "libpod" library. Also [visit this](https://github.com/containers/podman?tab=readme-ov-file#oci-projects-plans) for list of all the open source libraries it depends on.
 
 ## rootless podman behind the scenes
 
-<https://www.redhat.com/sysadmin/behind-scenes-podman?intcmp=7013a0000025wJwAAI>
+Note: #todo Read the reference  
+Refer: <https://www.redhat.com/sysadmin/behind-scenes-podman?intcmp=7013a0000025wJwAAI>
 
 ### Namespaces in podman
 

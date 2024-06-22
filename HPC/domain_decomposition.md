@@ -12,7 +12,7 @@ title: Domain Decomposition
 
 <https://en.wikipedia.org/wiki/Domain_decomposition_methods>
 
-<https://www.osti.gov/servlets/purl/1806997#:~:text=Domain%20Decomposition%20generally%20means%20the,as%20the%20original%20unpartitioned%20problem>.
+<https://www.osti.gov/servlets/purl/1806997#:~:text=Domain-Decomposition-generally-means-the,as-the-original-unpartitioned-problem>.
 
 ## Decomposition Techniques in HPC
 

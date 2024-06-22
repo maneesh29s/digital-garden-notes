@@ -11,6 +11,8 @@ title: k3d.md
 
 ## k3d
 
+<https://k3d.io/stable/>
+
 k3d allows k3s to be run inside a docker container
 
 By default, when run k3d create cluster my-cluster, it will create a docker container "k3d-my-cluster-server-0" which will act as one of the node of k3s. inside node, It will use a custom OS by k3s, install k3s components along with containerd, and run the k3s server with containerd socket /run/k3s/containerd/containerd.sock

@@ -13,7 +13,8 @@ title: Kubernetes
 
 # Kubernetes
 
-This note does not include "how k8s works", rather some of my observations from my own experiments
+ > 
+ > This article contains my observations from various explorations I conducted regarding Kubernetes and docker. It might be a little unstructured, so bare with me. Also see to [colima](colima.md) to read about various experiments I did with minikube.
 
 ## CRI
 
@@ -26,49 +27,52 @@ a plugin interface which enables the kubelet to use a wide variety of container 
 
 **crictl**: a cli for CRI
 
-### the old way: dockershim
+### Dockershim: the old way
 
-References:  
-<https://kubernetes.io/blog/2020/12/02/dont-panic-kubernetes-and-docker/>  
-<https://kubernetes.io/blog/2020/12/02/dockershim-faq/>  
-<https://kubernetes.io/blog/2022/02/17/dockershim-faq/>
+History: <https://kubernetes.io/blog/2022/05/03/dockershim-historical-context/>
 
-History: <https://kubernetes.io/blog/2022/05/03/dockershim-historical-context/>  
-Brief history:  
 ![Kubernetes_docker_history](Artifacts/Kubernetes_docker_history.png)  
 Image [ref](https://youtu.be/2PvzB9st15Q?t=272)
 
-Note: #tofix  remove "dockershim" from following image, as dockershim was added as a compatability layer between the CRI and dockerd.  
-![kubernetes_before_cri](Artifacts/kubernetes_before_cri.png)
+Early versions of Kubernetes only worked with a specific container runtime: **Docker Engine**. Later, Kubernetes added support for working with other container runtimes.
 
+![kubernetes_before_cri](Artifacts/kubernetes_before_cri.png)  
 Image [ref](https://youtu.be/0sca08LRigE?t=187)
+
+==The CRI standard was== [created](https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-kubernetes/) to ==enable interoperability between orchestrators (like Kubernetes) and many different container runtimes== (crun, rkt, hypernetes).
+
+Docker Engine doesn't implement that interface (CRI). To solve this, a small software shim (dockershim) was introduced as part of the kubelet component specifically to fill in the gaps between Docker Engine and CRI. But dockershim was never intended to be a permanent solution, and over the course of years, its existence has introduced a lot of unnecessary complexity to the kubelet itself.
 
 ![dockershim_cri](Artifacts/dockershim_cri.png)  
 Image [ref](https://kubernetes.io/blog/2018/05/24/kubernetes-containerd-integration-goes-ga/)
 
-Early versions of Kubernetes only worked with a specific container runtime: **Docker Engine**. Later, Kubernetes added support for working with other container runtimes. The CRI standard was [created](https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-kubernetes/) to enable interoperability between orchestrators (like Kubernetes) and many different container runtimes (crun, rkt, hypernetes).
-
-Docker Engine doesn't implement that interface (CRI). To solve this, a small software shim (dockershim) was introduced as part of the kubelet component specifically to fill in the gaps between Docker Engine and CRI. But dockershim was never intended to be a permanent solution, and over the course of years, its existence has introduced a lot of unnecessary complexity to the kubelet itself.
-
 So dockershim was deprecated in k8s v1.20, and completely removed in v1.24.
 
-You see, the thing we call “Docker” isn’t actually one thing—it’s an entire tech stack, and one part of it is a thing called “containerd,” which is a high-level container runtime by itself  
-Docker is cool and useful because it has a lot of UX enhancements that make it really easy for humans to interact with while we’re doing development work, but those UX enhancements aren’t necessary for Kubernetes, because it isn’t a human.  
-Docker isn’t compliant with CRI, the [Container Runtime Interface](https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-kubernetes/). If it were, we wouldn’t need the shim, and this wouldn’t be a thing
+ > 
+ > You see, the thing we call “Docker” isn’t actually one thing—it’s an entire tech stack, and one part of it is a thing called “containerd,” which is a high-level container runtime by itself  
+ > Docker is cool and useful because it has a lot of UX enhancements that make it really easy for humans to interact with while we’re doing development work, but those UX enhancements aren’t necessary for Kubernetes, because it isn’t a human.
+ > 
+ > Docker isn’t compliant with CRI, the [Container Runtime Interface](https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-kubernetes/). If it were, we wouldn’t need the shim, and this wouldn’t be a thing
 
-### the replacement: cri
+**References:**  
+<https://kubernetes.io/blog/2020/12/02/dont-panic-kubernetes-and-docker/>  
+<https://kubernetes.io/blog/2020/12/02/dockershim-faq/>  
+<https://kubernetes.io/blog/2022/02/17/dockershim-faq/>
 
-The first release article (2016, k8s 1.5): <https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-kubernetes/>  
-Not so updated readme file in k8s: <https://github.com/kubernetes/community/blob/master/contributors/devel/sig-node/container-runtime-interface.md>
+### CRI: the replacement
+
+I have talked more about CRI on [this page](kubernetes.md#CRI)
 
 Kubelet always uses CRI except for using the rktnetes integration.  
 The old, pre-CRI Docker integration was removed in 1.7.
+
+To maintain backward compatibility, Docker and Mirantis came together to develop the **cri-docker**
 
 Widely used CRIs:
 
 * containerd's [cri plugin](containerd.md#cri) (CNCF graduated)
 * [cri-o](cri-o.md) (CNCF graduated)
-* [cri-docker](Docker.md#cri-docker)
+* [cri-docker](docker.md#cri-docker)
 
 Deprecated CRI:
 
@@ -77,13 +81,11 @@ Deprecated CRI:
 * [cri-containerd](https://github.com/containerd/cri) - replaced by the cri plugin inside containerd
 * [singularity-cri](https://github.com/sylabs/singularity-cri)
 
-Note: #tofix following image design is older, need to update
+Running kubelet with `--container-runtime-endpoint` is now deprecated, instead one must use kubelet's `--config` option specifying the config file.
 
-Running kubelet with `--container-runtime-endpoint` is now deprecated, instead one must use kubelet's `--config` option specifying the config file.  
-![cri_runtimes](Artifacts/cri_runtimes.png)  
-Image [ref](https://youtu.be/FKoVztEQHss?t=153)
-
-Different CRIs
+**References:**  
+The first release article (2016, k8s 1.5): <https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-kubernetes/>  
+Not so updated readme file in k8s: <https://github.com/kubernetes/community/blob/master/contributors/devel/sig-node/container-runtime-interface.md>
 
 ### cri-tools
 
@@ -99,7 +101,7 @@ A cli tool to play with k8s cluster, similar to docker-cli
 
 ### Kubectl context
 
-similar to [docker context](Docker.md), kubectl also has its context  
+similar to [docker context](docker.md), kubectl also has its context  
 dependeing on which context is selected, kubectl can toggle between multiple k8s clusters
 
 to see all contexts in kubectl, run `kubectl config get-contexts`  

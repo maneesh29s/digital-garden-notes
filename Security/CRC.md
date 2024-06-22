@@ -9,8 +9,17 @@ tags:
 title: Cyclic Redunduncy Checks
 ---
 
-# Cyclic Redunduncy Checks
+# Cyclic Redundancy Checks
 
-## Reference
+An [error detection](error_detection.md) scheme.
 
-1. CRCs by Ben Eater [video](https://youtu.be/izG7qT0EpBw?si=r8NVkftzRnTAa3V7)
+Using CRC algorithms, we can generate "check value", which are used to verify the integrity of the data.
+
+Typically used during transport of data via network.
+
+## Working
+
+Rather than me writing, best explained by these 2 references:
+
+1. CRCs [youtube video](https://youtu.be/izG7qT0EpBw?si=r8NVkftzRnTAa3V7) by Ben Eater
+1. [CRC Wiki's "Computation"](https://en.wikipedia.org/wiki/Cyclic_redundancy_check#Computation).

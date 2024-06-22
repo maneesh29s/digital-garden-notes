@@ -10,13 +10,22 @@ title: RSA
 
 # RSA
 
-An [encryption](encryption.md) and [signing](signing.md) algorithm
+An [encryption](encryption.md) and [signature_authentication](signature_authentication.md) algorithm
 
-Uses public-private key  
+Uses static public-private key.  
 Data encrypted with public key can be decrypted with private key (and vice versa too)
 
-RSA is **often used for secure key exchange, digital signatures** and TLS [cyphe suites](cypher_suite.md)  
-RSA can also be used to encrypt small amounts of data (such as the encryption keys used in symmetric encryption algorithms like [AES](AES.md)).
+Unlike [standard Diffie-Helman](dh.md), RSA does not provide [Forward Secrecy](forward_secracy.md), but it does provide [signature_authentication](signature_authentication.md), so we can make sure that the messages are being sent by the right party.  
+In SSH, in remote server, we do this by adding the public keys of the client as **authorized_keys**, typically in a file `~/.ssh/authorized_keys`.
+
+Over the internet however, RSA is still susceptible to [MITM](mitm.md) attacks. Thus websites use [TLS certificates](https://en.wikipedia.org/wiki/Public_key_certificate#) to verify the public key of the server.
+
+In practice, ==RSA is almost never used as a key exchange mechanism==, because of lack of forward secrecy. In protocols like **SSH**,  ==it is only used as user authentication==, along with [ECDHE](dh.md) algorithms for the key-exchange. Nowadays SSH defaults to generate a [ed25519](dh.md#ECDSA) key for user authentication instead of RSA key.
+
+RSA was used as user authentication algorithm in [Cypher Suites](cypher_suite.md) till TLS 1.2.  
+==Since TLS 1.3, use of RSA is deprecated==, instead newer [ECDSA](dh.md#ECDSA) algorithms like [ed25519](dh.md#ECDSA) are preferred.
+
+Nevertheless, the algorithm is interesting, so go give it a read.
 
 ## Basic Principle
 
@@ -24,7 +33,7 @@ A basic principle behind RSA is the observation that it is practical to find thr
 
 $$(m^e)^d \mod n = m \mod n$$
 
-because the two exponents can be swapped,, **the private and public key can also be swapped**, allowing for message [signing and verification](signing.md) using the same algorithm.
+because the two exponents can be swapped,, **the private and public key can also be swapped**, allowing for message [signing and verification](signature_authentication.md) using the same algorithm.
 
 ## Key generation
 
@@ -104,7 +113,7 @@ Since the new_message is as expected , signature is verified.
    * 2048-bit RSA keys to 112-bit symmetric keys
 1. RSA is **much slower due to its mathematical complexity**. It is not suitable for encrypting large data directly.
 
-1. Unlike [Diffie–Hellman key exchange](DH.md), It does not provide [Forward Secrecy](forward_secracy.md)
+1. Unlike [Diffie–Hellman key exchange](dh.md), It does not provide [Forward Secrecy](forward_secracy.md)
 
 ## References
 

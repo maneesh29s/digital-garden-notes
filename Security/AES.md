@@ -13,7 +13,7 @@ title: Advanced Encryption Standard (AES)
 
 AES is a symmetric key encryption algorithm, means the same key is used for both encryption and decryption.
 
-Any public key cryptosystems like [RSA](rsa.md) or [ECDHE](DH.md#ECDH) can be used to share the symmetric key to be used in AES.
+Any public key cryptosystems like [RSA](rsa.md) or [ECDHE](dh.md#ECDH) can be used to share the symmetric key to be used in AES.
 
 AES uses key lengths of 128, 192, or 256 bits.  
 In terms of security, even AES-128 gives better security than 2048 bit [RSA](rsa.md) encryption.
@@ -56,9 +56,11 @@ A summaru of all modes:
 1. Each ciphertext can be computed parallely on a multi-core CPU, since each block is independent of the other blocks
 1. Even if one of the ciphertext is changed, it will only affect the corresponding plaintext, and not the other blocks
 
-## AES GCM
+## AES-GCM
 
 **AES with GCM** (Galois Counter Mode) is widely used in TLS [Cypher Suites](cypher_suite.md).
+
+GCM provides [authenticated encryption with associanted data (AEAD)](https://en.wikipedia.org/wiki/Authenticated_encryption#Authenticated_encryption_with_associated_data), thus it can be used for encryption along with message authenticaton.
 
 It uses the CTR [mode of operation](#mode-of-operations) with a **Auth Tag** which is used to check the integrity of the entire message (all ciphertexts, length of the data, Nonce, and the received tag).
 

@@ -16,21 +16,21 @@ flowchart TD
 
 DCLI["<a href='https://docs.docker.com/reference/cli/docker/'>docker cli</a>"] --> |using| DSK[docker.sock] --> |talks to| DCRD["<a href='https://docs.docker.com/reference/cli/dockerd/'>Docker Engine(dockerd)</a>"]
 
-KBLT[kubelet] --> |via| CRIDSK[cri-docker.sock] --> |talks to| CRID[cri-docker] --> |via| DSK
+KBLT[kubelet] --> |via| CRIDSK[cri-docker.sock] --> |talks to| CRID[""<a class='internal-link' href='./docker#cri-docker'>cri-docker</a>""] --> |via| DSK
 
 DCRD -->|via| CNTRDSK[containerd.sock] --> |talks to| CNTRD["<a class='internal-link' href='./containerd'>containerd</a>"]
 
-KBLT --> |"via <a class='internal-link' href='./Kubernetes#CRI'>CRI</a> plugin"| CNTRDSK
+KBLT --> |"via <a class='internal-link' href='./containerd#CRI'>CRI plugin</a> <br> of containerd"| CNTRDSK
 
-KBLT --> CRIO["<a class='internal-link' href='./cri-o'>CRI-O</a>"] --> PDMN["<a class='internal-link' href='./podman'>podman</a>"]
+KBLT --> |via| CRIOSK[crio.sock] --> |talks to| CRIO["<a class='internal-link' href='./cri-o'>CRI-O</a>"] --> |calls| OCIRNTM
 
 CNTRD --> |calls| OCIRNTM["<a class='internal-link' href='./oci_container_runtimes'>OCI Container Runtimes</a>"]
 
-PDMN --> |calls| OCIRNTM
+PDMN["<a class='internal-link' href='./podman'>podman</a>"] --> |calls| OCIRNTM
 
-OCIRNTM --> R["<a href='https://github.com/opencontainers/runc'>runc</a>"] 
+OCIRNTM --> R[runc] 
 
-OCIRNTM --> C["<a href='https://github.com/containers/crun'>crun</a>"]
+OCIRNTM --> C[crun]
 
 OCIRNTM --> G[gVisor]
 

@@ -26,7 +26,7 @@ ORGS --> CNCF[Cloud Native Container Foundation]
 
 ## CNCF
 
-Refer: https://www.cncf.io/
+Refer: <https://www.cncf.io/>
 
 Cloud Native Container Foundation
 
@@ -38,7 +38,7 @@ CRI-O also kind of comes under CNCF as one of the "graduated" projects
 
 ## OCI
 
-Refer: https://opencontainers.org/ and their [github-org](https://github.com/opencontainers)
+Refer: <https://opencontainers.org/> and their [github-org](https://github.com/opencontainers)
 
 Defines a standard specifications for runtimes, images, and distribution
 
@@ -46,7 +46,7 @@ Defines a standard specifications for runtimes, images, and distribution
 
 ## Moby
 
-Refer: https://github.com/moby
+Refer: <https://github.com/moby>
 
 A github organisation where [Docker](https://www.docker.com/) hosts all their open-sourced repositories.
 

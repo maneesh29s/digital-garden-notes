@@ -11,11 +11,12 @@ title: Docker
 
 # Docker
 
-This note does not include "how docker works", rather some of my observations from my own experiments
+ > 
+ > This article contains my observations from various experiments I conducted with docker and containerd. It might be a little unstructured, so bare with me
 
 ## Docker's dependence on containerd
 
-See [docker's blog](https://www.docker.com/blog/extending-docker-integration-with-containerd/) for more info 
+See [docker's blog](https://www.docker.com/blog/extending-docker-integration-with-containerd/) for more info
 
 See `nerdctl help` for all the things that containerd can do, compare with `docker help`
 
@@ -70,7 +71,7 @@ Thus docker images too are run with containerd-shim but with the namespace of do
 Once you run a docker image using `docker run`, you can see the docker images being run as containers with `nerdctl -n moby ps`. But nerdctl still has no information regarding which image was used to run the container, and it will show empty image id. Even `nerdctl inspect` on the docker container shows no information about the image, and shows very few details like networking. The information regarding the image is isolated within the docker program.  
 Additionaly, if you run a nerdctl image in moby namespace e.g. `nerdctl -n moby run <image>` , the resultant container will only be visible in `nerdctl -n moby ps` and `docker ps` will not show the container
 
-docker vs containerd: <https://www.wallarm.com/cloud-native-products-101/containerd-vs-docker-what-is-the-difference-between-the-tools#:~:text=Containerd%20can%20replace%20Docker%2C%20but,communicate%20with%20the%20host%20operating>.
+docker vs containerd: <https://www.wallarm.com/cloud-native-products-101/containerd-vs-docker-what-is-the-difference-between-the-tools#:~:text=Containerd-can-replace-Docker%2C-but,communicate-with-the-host-operating>.
 
 ### integration with systemd
 

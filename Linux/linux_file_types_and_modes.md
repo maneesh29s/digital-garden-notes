@@ -10,7 +10,7 @@ title: Linux File Types and File Modes
 
 # Linux File Types and File Modes
 
-More info on [inode manpage](https://man7.org/linux/man-pages/man7/inode.7.html#:~:text=the%20value%200.-,The%20file%20type%20and%20mode,-The%20stat.st_mode)
+More info on [inode manpage](https://man7.org/linux/man-pages/man7/inode.7.html#:~:text=the-value-0.-,The-file-type-and-mode,-The-stat.st_mode)
 
 File type and permission are stored as a **16-bit "value"**
 

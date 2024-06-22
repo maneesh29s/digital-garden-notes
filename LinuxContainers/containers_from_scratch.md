@@ -264,17 +264,24 @@ Ref: [youtube](https://youtu.be/x1npPrzyKfs?list=PLaVTMVckiaHKlRz94JVb-EsxA1JYFH
 * ﻿﻿Uses file name to describe the files
 
 * For files, the upperdir hides corresponding file in lowerdir.
+
 * For directories, the contents of upperdir and lowerdir **are merged**.  Therefore, files present in lowerdir which are not present in upperdir are also visible.
+
 * ﻿﻿When writing to the overlay
+  
   * ﻿﻿lowerdir is not modified, all updates/addition go to upperdir
   * ﻿﻿Existing files are copied-up to the upperdir for modificiation
   * ﻿﻿Whole file is copied, not just blocks
 * ﻿﻿"Deleting" a file in the upperdir creates a whiteout
+  
   * ﻿﻿Files: character devices with 0/0 device number
   * ﻿﻿Directories: xattr "trusted. overlay. opaque" set to "y"
 * ﻿﻿An upperdir can have multiple lowerdirs
+
 * ﻿﻿Overlay filesystems can be created with `mount (2)`
+
 * ﻿﻿You can examine the mounts with
+  
   * `mount (8)`
   * `/proc/mounts`
   * `/proc/$$/mountinfo`

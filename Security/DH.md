@@ -15,11 +15,9 @@ title: Diffie-Hellman key exchange
 **Diffie–Hellman key exchange or DH** is a mathematical method of securely exchanging cryptographic keys over a public channel.  
 Used to generate a random symmetric secret key between any 2 hosts that wish to communicate securely.
 
-Due to a new secret key used every session, this algorithm introduces [forward secracy](forward_secracy.md) in the system which pure RSA does not.
+Due to a new secret key used every session, this algorithm introduces [forward secracy](forward_secracy.md) in the system which pure RSA does not. But standard DH does not provide [user verification](signature_authentication.md), so there's no way to verify whether client/server had actually sent the message. Thus, it is highly susceptible to [MITM](mitm.md) attacks. Today standard DH is never used.
 
-But DH does not provide [sign and verify](signing.md), so there's no way to verify whether client/server had actually sent the message. Thus, it is highly susciptable to [MITM](mitm.md) attacks, where middleman generates separate secret keys with both client and server using the DH process, so it can encrypt and decrypt all the traffic.
-
-In TLS [Cypher Suites](cypher_suite.md), a version of DH called [ECDH](#ecdh) is used for key sharing, and [RSA](rsa.md) is used for [signing and authentication](signing.md)
+In TLS [Cypher Suites](cypher_suite.md), a version of DH called [ECDHE](#ecdh) is used for **key sharing**, and [ECDSA](#ecdsa) or [RSA](rsa.md) is used for [user authentication](signature_authentication.md).
 
 ## Types of keys
 
@@ -27,7 +25,7 @@ In TLS [Cypher Suites](cypher_suite.md), a version of DH called [ECDH](#ecdh) is
 
 * temporary secret key
 * provides [Forward Secrecy](forward_secracy.md)
-* no [signing](signing.md) or authenticity
+* no [signature_authentication](signature_authentication.md) or authenticity
 
 **static:**
 
@@ -50,10 +48,17 @@ So 2048-bit FFDH has same security as 2048-bit RSA
 
 ## ECDH
 
-**Elliptic-curve Diffie–Hellman** or [ECDH](https://en.wikipedia.org/wiki/Elliptic-curve_Diffie%E2%80%93Hellman) encryption uses DH key exchange, and [elliptical curve](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography) method to generate the secret.
+**Elliptic-curve Diffie–Hellman** or [ECDH](https://en.wikipedia.org/wiki/Elliptic-curve_Diffie%E2%80%93Hellman) encryption uses DH key exchange, and [elliptical curve](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography) method to generate the secret.  
+Have a look at this [youtube video](https://youtu.be/NF1pwjL9-DE) to understand the math.
 
-Elliptical curves allow smaller keys to provide equivalent security, compared to cryptosystems based on modular exponentiation such as [RSA](rsa.md).
+Elliptical curves ==allow smaller keys to provide equivalent security==, compared to cryptosystems based on modular exponentiation such as [RSA](rsa.md) or even the standard Diffie Helman.
 
-But a **256-bit ECDH** key has approximately the same safety factor as a 128-bit [AES](AES.md) key (which is even higher than 2048 bit RSA)
+But a **256-bit ECDH** key has approximately the same safety factor as a 128-bit [aes](aes.md) key (which is even higher than 2048 bit RSA)
 
-**ECDHE** (where final 'E' stands for "ephemeral") and its variants like [Curve25519](https://en.wikipedia.org/wiki/Curve25519) are widely used in TLS [cypher suite](cypher_suite.md) for initial key exchange.
+**ECDHE** (where final 'E' stands for "ephemeral") and its variants like [X25519](https://en.wikipedia.org/wiki/Curve25519) are widely used in TLS [cypher suite](cypher_suite.md) for initial key exchange.
+
+## ECDSA
+
+**Elliptical Curve Digital-Signature Algorithms** is a family of [Digital Signing and Authentication](signature_authentication.md) algorithms based on Elliptical curve cryptography.
+
+[Ed25519](https://en.wikipedia.org/wiki/EdDSA#Ed25519) is an implementation of **ECDSA** (or [EdDSA](https://en.wikipedia.org/wiki/EdDSA#) to be specific) used widely for user authentication, like in **ssh**. It is also based on [Curve25519](https://en.wikipedia.org/wiki/Curve25519).

@@ -31,7 +31,7 @@ To see inode info of a file, run `stat <file>`
 * Device where inode resides
 * Inode number
 * File type and mode: See [linux_file_types_and_modes](linux_file_types_and_modes.md)
-* Link count: the number of hard [links](links.md)  to the file. 
+* Link count: the number of hard [links](links.md)  to the file.
 * User ID: records the user ID of the owner of the file.
 * Group ID: Records the ID of the group owner of the file.
 * Device type: If this file (inode) represents a device, then the inode records the ==major and minor ID of that device==. Used for block and character special files , which are typically located in `/dev`. More on this [devices](devices.md)
@@ -43,5 +43,5 @@ To see inode info of a file, run `stat <file>`
   It is changed by file accesses, e.g. execution, reading by any means. Also modified using `touch` commmand
 * Last modification timestamp (mtime)  
   It is changed by file modification, e.g. writing, trucation. Also modified using `touch` commmand. It is *not* changed for changes in owner, group, hard link count, or mode.
-* Last status change timestamp (ctime):   
+* Last status change timestamp (ctime):  
   It is changed by modifications in *inode information* (i.e., owner, group, link count, mode, etc.).
