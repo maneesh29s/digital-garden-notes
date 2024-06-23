@@ -15,7 +15,8 @@ An [error detection](error_detection.md) scheme.
 
 Using CRC algorithms, we can generate "check value", which are used to verify the integrity of the data.
 
-Typically used during transport of data via network.
+Typically used during transport of data via network.  
+The [network packet](https://en.wikipedia.org/wiki/Network_packet) contains CRCs to detect error during transmission.
 
 ## Working
 

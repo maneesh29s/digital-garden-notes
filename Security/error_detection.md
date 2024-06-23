@@ -50,8 +50,9 @@ If it is not, that means there is some error in the message itself, and we need 
 
 ## CRC - Cyclic Redunduncy Check
 
-More on this in [CRC](crc.md)
+More on this in [CRC](crc.md)  
+CRCs are more robust than checksums.
 
-## HMAC - Hash based message authentication codes
+## Hashing
 
-More on this in [Hashing](hashing.md)
+More on this in [Hashing](hashing.md).

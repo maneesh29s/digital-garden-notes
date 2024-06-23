@@ -96,7 +96,7 @@ fileignoreconfig:
 - filename: Security/AES.md
   checksum: 275a860fe17e786dab88253858268ba363d8da504aab7d9c28b4564a31ca0653
 - filename: Security/CRC.md
-  checksum: 2be20be1a89dfe45e0bf7b36e1cdf369f2fb4531e14a188e1c1c4028d4e9bb2a
+  checksum: d282ea5ad8462a92334dcf3ab41a4aa0099b5ec6d436dd749fe1fc16a95bc9cb
 - filename: Security/DH.md
   checksum: 1204fbbd28b77537e0025b7092b2bc5fb11b2f25d52c494639e162ffad6b4ee1
 - filename: Security/cypher_suite.md
@@ -112,7 +112,7 @@ fileignoreconfig:
 - filename: Security/hamming_distance.md
   checksum: 656bbbb0e966643762337941b1d1477821af52c21224a01859231b2cb26060ee
 - filename: Security/hashing.md
-  checksum: eb5c99929c3ab1b10a9e9627ca1137ee60091012858b3775d2a0c63f71ff1021
+  checksum: 134719c69319982fe92f7a243750efaae3a5e0f55c715e92c15ecaec50f15cae
 - filename: Security/mitm.md
   checksum: 4e4999ef8a88a5a6747b5e6a48d1d0c9db48f8a1cdadfbc99abfd1b972754b97
 - filename: Security/rsa.md

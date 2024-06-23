@@ -17,25 +17,45 @@ title: Security
 ````mermaid
 flowchart TD
 
-A[Protect your data] -->|Data Reversibility| B["<a class='internal-link' href='./encryption'>Encryption</a>"]
+A[Protect your data] 
+B["<a class='internal-link' href='./encryption'>Encryption</a>"]
+C["<a class='internal-link ' href='./error_detection'>Error Detection</a>"]
+D["<a class='internal-link' href='./signature_authentication'>Signing and Authentication</a>"]
+E["<a class='internal-link' href='./rsa'>RSA</a>"]
+F["<a class='internal-link' href='./dh#ECDH'>X25519</a>"]
+H[Argon2/Bcrypt]
+I["<a class='internal-link' href='./sha'>SHA</a>"]
+J["<a class='internal-link' href='./crc'>CRC</a>"]
+L["<a class='internal-link' href='./dh#ECDSA'>ed25519</a>"]
+HC["<a class='internal-link' href='./error_correction'>Error Correction</a>"]
 
-A -->|Data Integrity| C["<a class='internal-link ' href='./hashing'>Hashing</a>"]
+SYM[Symmetric]
+ASYM[Asymetric]
+AES["<a class='internal-link' href='./aes'>AES-GCM</a>"]
+CHA["<a class='internal-link' href='./chacha'>ChaCha20-Poly1305</a>"]
 
-A -->|Authentication| D["<a class='internal-link' href='./signing'>Signing</a>"] --> E
+A -->|Data Protection| B
 
-A -->|Data correction| HC["<a class='internal-link' href='./error_correction'>Hamming Codes</a>"]
+A -->|Data Integrity| C
 
-B --> E["<a class='internal-link' href='./rsa'>RSA</a>"]
+A -->|User Authentication| D 
+D --> E
+D --> L
 
-B --> F["<a class='internal-link' href='./dh'>ECDH</a>"]
+A -->|Data correction| HC
 
-C --> G{Security?}
+B --> ASYM --> E
+ASYM --> F
+B --> SYM --> AES
+SYM --> CHA
 
-G -->|Highest| H[Argon2/Bcrypt]
+C --> G{Secure against<br> attacks?}
 
-G -->|Medium| I["<a class='internal-link' href='./sha'>SHA</a>"]
+G -->|Highest| H
 
-G -->|Low| J["<a class='internal-link' href='./crc'>CRC</a>"]
+G -->|Medium| I
+
+G -->|Low| J
 
 
 ````
