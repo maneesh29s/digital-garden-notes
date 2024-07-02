@@ -40,16 +40,17 @@ because the two exponents can be swapped,, **the private and public key can als
 Ref: <https://www.cs.utexas.edu/users/mitra/honors/soln.html>  
 The math behind public-private key generation by Eddie Woo: [video](https://youtu.be/oOcTVTpUsPQ)
 
-* Choose p = 3 and q = 11
-* Compute n = p *q = 3* 11 = 33
+* Choose $p = 3$ and $q = 11$
+* Compute $n = p*q = 3*11 = 33$
   * n is used as the [modulus](https://en.wikipedia.org/wiki/Modular_arithmetic "Modular arithmetic") for both the public and private keys. Its length, usually expressed in bits, is the [key length](https://en.wikipedia.org/wiki/Key_length "Key length").
   * n is released as part of the public key.
-* Compute φ(n) = (p - 1) *(q - 1) = 2* 10 = 20.
+* Compute $\phi(n) = (p - 1)*(q - 1) = 2*10 = 20$.
   * To know about $\phi$ , refer the video above or see [Carmichael's totient function](https://en.wikipedia.org/wiki/Carmichael%27s_totient_function).)
-* Choose e such that 1 \< e \< φ(n) and e and φ (n) are coprime. Let e = 7
-* Compute a value for d such that (d *e) % φ(n) = 1. One solution is d = 3 ; as (3* 7) % 20 = 1
-* Public key is (e, n) => (7, 33)
-* Private key is (d, n) => (3, 33)
+* Choose $e$ such that $1 \< e \< φ(n)$ and $e$ and $\phi(n)$ are co-prime. Let $e = 7$
+* Compute a value for d such that $(d*e) \mod \phi(n) = 1$.   
+  One solution is d = 3 ; as $(3*7) \mod 20 = 1$
+* Public key is $(e, n) => (7, 33)$
+* Private key is $(d, n) => (3, 33)$
 
 ## Encryption and Decryption
 
@@ -65,14 +66,14 @@ message to be sent = 10
 
 **Encryption**
 
-**Encrypted message = (message) ^ (e) mod (n)**  
-= 10 ^ 5 mod 14  
+Encrypted message = (message) ^ (e) mod (n)  
+= $10 ^ 5 \mod 14$  
 = 12
 
 **Decryption**
 
-**message = (encrypted message) ^ (d) mod (n)**  
-= 12 ^ 11 mod 14  
+message    = (encrypted message) ^ (d) mod (n)  
+= $12 ^ {11} \mod 14$  
 = 10
 
 ## Signing
