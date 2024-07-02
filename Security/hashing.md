@@ -17,15 +17,17 @@ Original message should not be recoverable from the hashed value
 Hashed value ==should be unique for the given message==. This means that even a single bit flip in the original message should change the hashed value completely.  
 Uses modulo mathematics and prime numbers.
 
-Although [CRC](crc.md) are not categorised as "hashing" functions, they are mostly used for the same applications.
+## Comparison of some hash functions
 
-In terms of security against known attacks:  
-Bcrypt/Argon2 > [SHA](sha.md) > [CRC32](crc.md)
+ > 
+ > Although [CRC](crc.md) are not categorised as "hash" functions, they are also used for maintaining the integrity of the message during network transport.
 
-In terms of speed  
-[CRC32](crc.md) > [SHA](sha.md) > bcrypt/argon
+|Category|[CRC32](crc.md)|[SHA](sha.md)|Bcrypt/Argon2|
+|--------|-----|---|-------------|
+|Security against known attacks|Lowest|Medium|Highest|
+|Computation|Fastest|Medium|Slowest|
 
-[SHA](sha.md): One of the oldest hashing algorithm. But today more secure algorithms are available. Today it is used check file integrity. It is used in [HMAC](#hmac).
+[SHA](sha.md): One of the oldest hashing algorithm. In TLS it is used is used as hashing mechanism for [HMAC](#hmac). It is also used to check file integrity after downloading from internet.
 
 [Argon](https://en.wikipedia.org/wiki/Argon2)/Bcrypt: Purposefully slow to make cracking difficult. Used to store passwords.
 
@@ -48,3 +50,15 @@ Now, depending on "what constitutes a message", there can be 3 ways in which HMA
 As per the above [reference](https://moxie.org/2011/12/13/the-cryptographic-doom-principle.html) article, "**Encrypt then Mac**" is the best option, since you don't have to decrypt the cipher text before checking the authenticity of the message.
 
 Since TLS 1.3, **HMAC** is not used, instead new encryption schemes like [AES-GCM](aes.md#AES-GCM) and [ChaCha20-Poly1305](chacha.md) are used which provide [authenticated encryption with associanted data (AEAD)](https://en.wikipedia.org/wiki/Authenticated_encryption#Authenticated_encryption_with_associated_data). Both AES-GCM and ChaCha20-Poly1305 internally use a version of "Encrypt then Mac" scheme to generate the "Authentication Tag" along with the cipher text.
+
+## HKDF
+
+**HMAC-based Key Derivation Function (HKDF)** is a standard algorithm in [TLS Cypher Suites](cypher_suite.md) used to derive a fixed length [symmetric key](encryption.md) from a secret.
+
+The secret is either
+
+* A pre-shared key ([PSK](https://en.wikipedia.org/wiki/Pre-shared_key))
+* A shared secret, which is generated between 2 parties using [Diffie-Hellman key exchange](dh.md)
+
+HKDF is the composition of two functions, **HKDF-Extract** and **HKDF-Expand**  
+Read [wiki](https://en.wikipedia.org/wiki/HKDF#Mechanism) to learn how it works.

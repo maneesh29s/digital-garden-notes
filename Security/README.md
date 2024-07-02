@@ -17,7 +17,7 @@ title: Security
 ````mermaid
 flowchart TD
 
-A[Protect your data] 
+A[Security] 
 B["<a class='internal-link' href='./encryption'>Encryption</a>"]
 C["<a class='internal-link ' href='./error_detection'>Error Detection</a>"]
 D["<a class='internal-link' href='./signature_authentication'>Signing and Authentication</a>"]
@@ -33,6 +33,7 @@ SYM[Symmetric]
 ASYM[Asymetric]
 AES["<a class='internal-link' href='./aes'>AES-GCM</a>"]
 CHA["<a class='internal-link' href='./chacha'>ChaCha20-Poly1305</a>"]
+HASH["<a class='internal-link' href='./hashing'>Hash</a>"]
 
 A -->|Data Protection| B
 
@@ -49,13 +50,9 @@ ASYM --> F
 B --> SYM --> AES
 SYM --> CHA
 
-C --> G{Secure against<br> attacks?}
-
-G -->|Highest| H
-
-G -->|Medium| I
-
-G -->|Low| J
-
+C --> HASH
+C --> J
+HASH --> H
+HASH --> I
 
 ````

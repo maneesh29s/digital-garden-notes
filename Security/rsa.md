@@ -46,11 +46,13 @@ The math behind public-private key generation by Eddie Woo: [video](https://yout
   * n is released as part of the public key.
 * Compute $\phi(n) = (p - 1)*(q - 1) = 2*10 = 20$.
   * To know about $\phi$ , refer the video above or see [Carmichael's totient function](https://en.wikipedia.org/wiki/Carmichael%27s_totient_function).)
-* Choose $e$ such that $1 \< e \< φ(n)$ and $e$ and $\phi(n)$ are co-prime. Let $e = 7$
-* Compute a value for d such that $(d*e) \mod \phi(n) = 1$.   
+* Choose $e$ such that $1 < e < \phi(n)$ and $e$ and $\phi(n)$ are co-prime. Let $e = 7$
+* Compute a value for d such that $(d*e) \mod \phi(n) = 1$.  
   One solution is d = 3 ; as $(3*7) \mod 20 = 1$
 * Public key is $(e, n) => (7, 33)$
 * Private key is $(d, n) => (3, 33)$
+
+To play around with RSA key generation, try python's [cryptography library](https://cryptography.io/en/latest/hazmat/primitives/asymmetric/rsa/).
 
 ## Encryption and Decryption
 

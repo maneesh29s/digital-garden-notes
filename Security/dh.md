@@ -46,6 +46,8 @@ This is the working of the **standard Diffie-Hellman** algorithm, later formaliz
 **Finite Field DH** has roughly the same key strength as [RSA](rsa.md#limitations) for the same key sizes.  
 So 2048-bit FFDH has same security as 2048-bit RSA
 
+To try hands-on with numbers, refer to python's [cryptography library](https://cryptography.io/en/latest/hazmat/primitives/asymmetric/dh/) documentation.
+
 ## ECDH
 
 **Elliptic-curve Diffie–Hellman** or [ECDH](https://en.wikipedia.org/wiki/Elliptic-curve_Diffie%E2%80%93Hellman) encryption uses DH key exchange, and [elliptical curve](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography) method to generate the secret.  
@@ -57,8 +59,11 @@ But a **256-bit ECDH** key has approximately the same safety factor as a 128-bi
 
 **ECDHE** (where final 'E' stands for "ephemeral") and its variants like [X25519](https://en.wikipedia.org/wiki/Curve25519) are widely used in TLS [cypher suite](cypher_suite.md) for initial key exchange.
 
+Python's cryptography library has a seperate implementation of [X25519 key exchange](https://cryptography.io/en/latest/hazmat/primitives/asymmetric/x25519/)
+
 ## ECDSA
 
 **Elliptical Curve Digital-Signature Algorithms** is a family of [Digital Signing and Authentication](signature_authentication.md) algorithms based on Elliptical curve cryptography.
 
-[Ed25519](https://en.wikipedia.org/wiki/EdDSA#Ed25519) is an implementation of **ECDSA** (or [EdDSA](https://en.wikipedia.org/wiki/EdDSA#) to be specific) used widely for user authentication, like in **ssh**. It is also based on [Curve25519](https://en.wikipedia.org/wiki/Curve25519).
+[Ed25519](https://en.wikipedia.org/wiki/EdDSA#Ed25519) is an implementation of **ECDSA** (or [EdDSA](https://en.wikipedia.org/wiki/EdDSA#) to be specific) used widely for user authentication, like in **ssh**. It is also based on [Curve25519](https://en.wikipedia.org/wiki/Curve25519).  
+To try hands-on of Ed25519 signing, refer python's cryptography module [documentation](https://cryptography.io/en/latest/hazmat/primitives/asymmetric/ed25519/)
