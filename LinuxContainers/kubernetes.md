@@ -3,8 +3,6 @@ aliases: []
 author: Maneesh Sutar
 date: 2024-05-10
 tags:
-- todo
-- tofix
 - public
 - linux
 - container
@@ -18,35 +16,30 @@ title: Kubernetes
 
 ## CRI
 
-Container Runtime Interface  
-<https://github.com/kubernetes/cri-api>
+The [Container Runtime Interface](https://github.com/kubernetes/cri-api) is a plugin **interface** which **enables the kubelet to use a wide variety of container runtimes**, without having a need to recompile the cluster components.
 
-Why CRI? <https://github.com/kubernetes/community/blob/master/contributors/devel/sig-node/container-runtime-interface.md>
-
-a plugin interface which enables the kubelet to use a wide variety of container runtimes, without having a need to recompile the cluster components.
-
-**crictl**: a cli for CRI
+Kubernetes repo contains a good readme on [Why CRI?](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-node/container-runtime-interface.md)
 
 ### Dockershim: the old way
-
-History: <https://kubernetes.io/blog/2022/05/03/dockershim-historical-context/>
 
 ![Kubernetes_docker_history](Artifacts/Kubernetes_docker_history.png)  
 Image [ref](https://youtu.be/2PvzB9st15Q?t=272)
 
-Early versions of Kubernetes only worked with a specific container runtime: **Docker Engine**. Later, Kubernetes added support for working with other container runtimes.
+[Historically](https://kubernetes.io/blog/2022/05/03/dockershim-historical-context/), the early versions of Kubernetes only worked with a specific container runtime: **Docker Engine**. Later, Kubernetes added support for working with other container runtimes.
 
 ![kubernetes_before_cri](Artifacts/kubernetes_before_cri.png)  
 Image [ref](https://youtu.be/0sca08LRigE?t=187)
 
 ==The CRI standard was== [created](https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-kubernetes/) to ==enable interoperability between orchestrators (like Kubernetes) and many different container runtimes== (crun, rkt, hypernetes).
 
-Docker Engine doesn't implement that interface (CRI). To solve this, a small software shim (dockershim) was introduced as part of the kubelet component specifically to fill in the gaps between Docker Engine and CRI. But dockershim was never intended to be a permanent solution, and over the course of years, its existence has introduced a lot of unnecessary complexity to the kubelet itself.
+Docker Engine doesn't implement that interface (CRI). To solve this, a small software shim (dockershim) was introduced as part of the kubelet component specifically to fill in the gaps between Docker Engine and CRI. But ==dockershim was never intended to be a permanent solution==, and over the course of years, its existence has introduced a lot of unnecessary complexity to the kubelet itself.
 
 ![dockershim_cri](Artifacts/dockershim_cri.png)  
 Image [ref](https://kubernetes.io/blog/2018/05/24/kubernetes-containerd-integration-goes-ga/)
 
 So dockershim was deprecated in k8s v1.20, and completely removed in v1.24.
+
+As mentioned in this [article from kubernetes](https://kubernetes.io/blog/2020/12/02/dont-panic-kubernetes-and-docker/#so-why-the-confusion-and-what-is-everyone-freaking-out-about):
 
  > 
  > You see, the thing we call “Docker” isn’t actually one thing—it’s an entire tech stack, and one part of it is a thing called “containerd,” which is a high-level container runtime by itself  
@@ -54,14 +47,7 @@ So dockershim was deprecated in k8s v1.20, and completely removed in v1.24.
  > 
  > Docker isn’t compliant with CRI, the [Container Runtime Interface](https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-kubernetes/). If it were, we wouldn’t need the shim, and this wouldn’t be a thing
 
-**References:**  
-<https://kubernetes.io/blog/2020/12/02/dont-panic-kubernetes-and-docker/>  
-<https://kubernetes.io/blog/2020/12/02/dockershim-faq/>  
-<https://kubernetes.io/blog/2022/02/17/dockershim-faq/>
-
 ### CRI: the replacement
-
-I have talked more about CRI on [this page](kubernetes.md#CRI)
 
 Kubelet always uses CRI except for using the rktnetes integration.  
 The old, pre-CRI Docker integration was removed in 1.7.

@@ -92,7 +92,7 @@ Then you can move to these options, from easy to hard
 
 [setuptools](https://setuptools.pypa.io/en/latest/userguide/) is the OG python packaging tool, **comes by default with every python**. Used in projects to define project dependencies and to build projects. Very less automation, need to mannually write `setup.py` or (the recently standardized) `pyproject.toml` manifest files.
 
-[pipenv](https://github.com/pypa/pipenv): Pipenv automatically creates and manages a virtualenv for your projects, as well as adds/removes packages from your `Pipfile`  as you install/uninstall packages. nicely bridges the gaps between pip, python (using system python, pyenv or asdf) and virtualenv
+[pipenv](https://github.com/pypa/pipenv): Pipenv automatically creates and manages a virtualenv for your projects, as well as adds/removes packages from your `Pipfile`  as you install/uninstall packages. nicely bridges the gaps between pip, python (using system python, pyenv or [asdf](https://github.com/asdf-vm/asdf)) and virtualenv
 
 [poetry](https://python-poetry.org/docs/) : is more or less **pipenv+setuptools** with its own customisations and features. It is not part of the [pypa](https://github.com/pypa).  more on [poetry](poetry.md)
 

@@ -9,10 +9,6 @@ title: Bittricks
 
 # Bittricks
 
-## Other bittricks
-
-### another
-
 The ultimate resources to bit level tricks
 
 Backtracking Algorithms in MCPL using Bit Patterns and Recursion by Martin Richards 1997  
@@ -23,8 +19,3 @@ Hacker's Delight by Henry S. Warren 2002
 
 The Art of Computer Programming Vol 4A 7.1 by Donald Knuth  
 <https://en.wikipedia.org/wiki/The_Art_of_Computer_Programming>
-
-|hell|here|sadsa|
-|----|----|-----|
-|asadsad|asdsadsdasa|adsasdadsadaad|
-|aa|aa|a|
