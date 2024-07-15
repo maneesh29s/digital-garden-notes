@@ -34,6 +34,7 @@ ASYM[Asymetric]
 AES["<a class='internal-link' href='./aes'>AES-GCM</a>"]
 CHA["<a class='internal-link' href='./chacha'>ChaCha20-Poly1305</a>"]
 HASH["<a class='internal-link' href='./hashing'>Hash</a>"]
+X509["<a class='internal-link' href='./x_509'>X.509</a>"]
 
 A -->|Data Protection| B
 
@@ -42,6 +43,7 @@ A -->|Data Integrity| C
 A -->|User Authentication| D 
 D --> E
 D --> L
+D --> X509
 
 A -->|Data correction| HC
 
@@ -54,5 +56,8 @@ C --> HASH
 C --> J
 HASH --> H
 HASH --> I
-
 ````
+
+**Good References**
+
+1. [Practical Cryptography for Developers](https://cryptobook.nakov.com/)

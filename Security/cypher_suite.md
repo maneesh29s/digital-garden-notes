@@ -44,7 +44,7 @@ Example of TLS1.3 [cypher suites](https://datatracker.ietf.org/doc/html/rfc8446#
 * TLS_CHACHA20_POLY1305_SHA256
 
 Support for many of the legacy RSA based and DH algorithms were removed.  
-It looks like TLS 1.3 is pushing towards to use of [curve25519](https://en.wikipedia.org/wiki/Curve25519) based algorithms, like ECDHE and ed25519 (EdDSA). TLS1.3 mandates [forward secracy](forward_secracy.md) for all connections.
+It looks like TLS 1.3 is pushing towards to use of **elliptical curve** based algorithms, like ECDHE and ed25519 (EdDSA). TLS1.3 mandates [forward secracy](forward_secracy.md) for all connections.
 
 Many popular sites now use [X25519](https://en.wikipedia.org/wiki/Curve25519) with AES_256_GCM as cypher suite.
 

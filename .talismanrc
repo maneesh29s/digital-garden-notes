@@ -127,6 +127,10 @@ fileignoreconfig:
   checksum: bdb840911a45c1a64be0cad36de25240d9c93a6a786c26694f320dc3dd64e590
 - filename: Security/signing.md
   checksum: 74a38a9649a7a43ce7b97f6125b9ffc5d83c0e285f04d2663cbbce94b4351988
+- filename: Security/tls.md
+  checksum: 8c6f93e90675fdd4dbbb8c7e0c7d409c498f8c0f7edd35fa499e8ae5daa004d9
+- filename: Security/x_509.md
+  checksum: 89a2931c0d529b673f54ebdcdd3f1277da12670b6dcfc2d16779bc19bce0243f
 - filename: notebooks/zarr.ipynb
   checksum: 9d3d60f2ed250acd050f64c221ed3b3683c7d5162a98152be1f1d995cb994dc5
 custom_patterns:
