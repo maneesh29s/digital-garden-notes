@@ -87,6 +87,16 @@ fileignoreconfig:
   checksum: 48087c9fa3853cfa461bc948a961be9695f80f4cd3d8c10a63f943ba2375089a
 - filename: LinuxContainers/podman.md
   checksum: 4d78b8e4b0e410c33bfaf63dba9c5842f1d6a22e58c86471788906336e4ffc53
+- filename: Mathematics/affine_geometry.md
+  checksum: 855a0bad5395f523cae46ff134f225f4cb0c0b4ce174164a62f425e8ef8eb4ea
+- filename: Mathematics/arbitrary_precision_arith.md
+  checksum: 51e275ab2818b1bd023b4675d91bc4821800f18906c67b30ad5d9eb3164eaf9d
+- filename: Mathematics/floating_point_numbers.md
+  checksum: 2482fdca5b3f6e81949b8e5c65674875cac22a67f20113d5c5c9eb7c0377f962
+- filename: Mathematics/ieee754_floats.md
+  checksum: 54062b38170108c6bfa9611644b74842914ee4869e9f6ed02ebb335647f486c2
+- filename: Mathematics/tensor_networks.md
+  checksum: 2fe391235eb35e1d2cb3a65543f02964ca29fef46414dd4500c60c4371de6cb7
 - filename: Python/JAX.md
   checksum: 18d719e82443a9be49ff364239a765e8e0d43d2752a6d21a19eefd269c7b861f
 - filename: Python/Multithreading_vs_Multiprocessing_in_python.md
