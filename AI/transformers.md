@@ -1,5 +1,5 @@
 ---
-aliases: null
+aliases: []
 author: Maneesh Sutar
 date: 2023-06-01
 tags:

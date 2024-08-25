@@ -54,7 +54,7 @@ Examples of such systems are supercomputers or CPU clusters in warehouses, where
 
 Typically such clusters employ **controller/worker** architecture, where one "controller" CPU co-ordinates the jobs that has to be scheduled across rest of the "worker" CPUs.
 
-For inter-CPU communication, high-speed networks such as [Infiniband](../IO/Infiniband.md) or 100GbE are used.
+For inter-CPU communication, high-speed networks such as [infiniband](../IO/infiniband.md) or 100GbE are used.
 
 ![500](Artifacts/multiple_cpu_system.png)  
 Image [ref](https://passlab.github.io/OpenMPProgrammingBook/MultiCoreMultiCPU/1_MIMDArchitecture.html):

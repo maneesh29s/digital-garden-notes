@@ -29,8 +29,10 @@ title: Resetting, checking out & reverting
    
    1. use `git reflog` to fix your mess up.
    1. use `git reset -p` to interactively change the history
-   1. Prefer `git switch` over `git checkout` for switching between branches or creating new branches
-   1. Using `git reset` or `git checkout` on a file level might be confusing as we need to know what they do by default. Instead use `git restore`, specifying the `--source=<treeish>` and whether to do changes in `--worktree` (default) or `--staged`
+1. Prefer `git switch` over `git checkout` for switching between branches or creating new branches
+
+1. Using `git reset` or `git checkout` on a file level might be confusing as we need to know what they do by default. Instead use `git restore`, specifying the `--source=<treeish>` and whether to do changes in `--worktree` (default) or `--staged`
+   
    \|Command|Equivalent|  
    \|---|---|  
    \|`git reset HEAD~2 ./readme`\|`git restore --staged --source=HEAD~2 ./readme`\|  

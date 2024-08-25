@@ -5,7 +5,7 @@ date: 2024-05-10
 tags:
 - public
 - linux
-- container
+- linux/container
 title: podman
 ---
 
@@ -35,7 +35,6 @@ See the [scope of podman](https://github.com/containers/podman?tab=readme-ov-fil
 
 ## BTS of rootless podman
 
-Note: #todo Read the reference  
 Refer: <https://www.redhat.com/sysadmin/behind-scenes-podman?intcmp=7013a0000025wJwAAI>
 
 ### Namespaces in podman

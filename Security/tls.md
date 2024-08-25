@@ -19,7 +19,7 @@ Also see [TLS Cypher Suites](cypher_suite.md) for more information on standard a
 
 The overall flow of **TLS 1.2 Handshake** is given below:
 
-````
+````txt
   Client                                          Server
 
       ClientHello                  -------->
@@ -67,7 +67,7 @@ Server shares its [x_509](x_509.md) certificate which contains a public key and 
 In case of [ephemeral diffie-hellman](dh.md#Types-of-keys) (DHE or ECDHE) `KeyExchangeAlgorithm`, server needs to send its temporary DH params or `ServerDHParams`. This is done using `ServerKeyExchange` message.  
 The structure of `ServerKeyExchange` is as follow:
 
-````
+````cpp
 struct {
    select (KeyExchangeAlgorithm) {
     // anonymous key exchange, no auhentication from any side
@@ -175,7 +175,7 @@ Main reference: [RFC8446](https://datatracker.ietf.org/doc/html/rfc8446)
 
 The **TLS 1.3 Handshake** is given below:
 
-````
+````txt
        Client                                           Server
 
 Key  ^ ClientHello

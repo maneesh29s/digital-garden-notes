@@ -13,7 +13,7 @@ title: GPU Programming Paradigms
 
 ## Most native
 
-1. [CUDA](CUDA.md)
+1. [cuda](cuda.md)
 1. [CUB](nvidia_cub.md)
 
 ## Language Standard library like libs

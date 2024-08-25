@@ -10,35 +10,31 @@ title: systemd
 
 # systemd
 
-systemd blog: <https://0pointer.de/blog/projects/systemd.html>
+**systemd** is one of the [several init systems](https://wiki.gentoo.org/wiki/Comparison_of_init_systems) available for linux.
 
 Its the "init" process in linux which runs with PID 1.  
 Its the parent of all processes.
 
-Linux traditionally has "System V init" as the init process.
+Linux traditionally has "System V init" as the init process.  
+But systemd gives performance improvements by using various techniques. Also systemd has more features than System V init.
 
-But systemd gives performance improvment by using variaous techniques. Also systemd has more features than System V init.
-
-To get the logs (stdout) of a systemctl service:  
-`sudo journalctl -u <service name> | less`
+All major linux distros (debian, ubuntu, fedora, RHEL) currently use **systemd** as the default init system.
 
 ## Socket Activation
 
 One of the main advantage of systemd is "Socket Activation"
 
-socket activation blog: <https://0pointer.de/blog/projects/socket-activation.html>
+Systemd loads all the required sockets at the boot itself, and starts listening to them on behalf of the real service (which has not yet started).
 
-Also see [systemd.socket(5)](https://manpages.debian.org/testing/systemd/systemd.socket.5.en.html)
-
-Systemd loads all the required sockets at the boot itself, and starts listening to them on behalf of the real service (which has not yet started).  
-Once a client performs a request to the socket, 2 things happen parallely
+Once a client performs a request to the socket, 2 things happen parallelly
 
 1. systemd listens and keeps track of all the requests in a message queye
 
-1. systemd starts the corresponding service (the application)  
-   once the service is loaded completely, systemd transfers the ownership of the socket to that service. The service will then listen to the socket and perform whatever action is wants to.
+1. systemd starts the corresponding service (the application)
 
-Because of socket activation,
+Once the service is loaded completely, systemd transfers the ownership of the socket to that service. The service will then listen to the socket and perform whatever action is wants to.
+
+Because of socket activation:
 
 1. We no longer need to configure dependencies explicitly. Since the sockets are initialized before all services they are simply available.
 
@@ -61,15 +57,25 @@ systemd will make sure to start docker.socket first, and then docker.service on 
  > 
  > By default, systemd matches the filename before ".service" and ".socket" suffixes to decide which socket should trigger which service. This can be modified in the socket file using `=Service` option
 
-Also the dockerd command in docker.service contains  `-H fd://` option. This option forces dockerd to use systemd socket activation to get the socket from systemd INSTEAD of dockerd creating a new socket on its own.  
-<https://stackoverflow.com/questions/43303507/what-does-fd-mean-exactly-in-dockerd-h-fd>
+Also the dockerd command in docker.service contains  `-H fd://` option. This option forces dockerd to use systemd started socket INSTEAD of dockerd creating a new socket on its own.
 
-systemd loads starts these sockets and services at boot (if "enabled" to start at boot) OR you can start these services mannually using `systemctl start`
+The `systemd` loads starts these sockets and services at boot (if "enabled" to start at boot) OR you can start these services manually using `systemctl start`
 
-## modifying the behavior systemd service file
+## Miscellaneous
 
-Say is the service running is present in file "/lib/systemd/system/docker.service"  
-then create a folder called "/etc/systemd/system/docker.service.d" (with '.d' at the end of the service name\_  
-Inside this folder, all the conf files you create will be used by systemd daemon as drop-in replace for the "docker" service
+### View logs of services
 
-<https://stackoverflow.com/questions/59842743/what-is-a-drop-in-file-what-is-a-drop-in-directory-how-to-edit-systemd-service>
+To get the logs (stdout) of a systemctl service:  
+`sudo journalctl -u <service name> | less`
+
+### Modifying the behavior systemd service file
+
+If you wish to modify `docker.service` whose service file is present in `/lib/systemd/system/docker.service`, then create a new directory at path `/etc/systemd/system/docker.service.d` (with '.d' at the end of the service name). Inside this directory, all the config files you create will be used by systemd daemon as [drop-in](https://stackoverflow.com/questions/59842743/what-is-a-drop-in-file-what-is-a-drop-in-directory-how-to-edit-systemd-service) replacement for the "docker" service
+
+## References
+
+1. A series of blogs on **systemd** by the creator **Lennart Poettering** :
+   
+   1. [The introductory blog](https://0pointer.de/blog/projects/systemd.html)
+   1. [Socket activation blog](https://0pointer.de/blog/projects/socket-activation.html)
+1. [SysvInit vs Systemd](https://youtu.be/Fz8Ldw-s8_Q), which also talks in depth on systemd workings, pros and cons

@@ -9,8 +9,8 @@ title: JAX
 
 # JAX
 
-Jax follows [Functional Programming](../SoftwareDevelopment/functional_programming.md)  
-Works great with [Pure Functions](SoftwareDevelopment/PureFunctions.md)
+Jax follows [Functional Programming](../FunctionalProgramming/functional_programming.md)  
+Works great with [Pure Functions](../FunctionalProgramming/pure_functions.md)
 
 For impure functions, it may produce unexpected results or errors.
 

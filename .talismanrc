@@ -26,19 +26,19 @@ fileignoreconfig:
 - filename: ComputerArchitecture/intel_x86_64_architecture.md
   checksum: ad1b8add36d225caa3092041096473434c4b913cd74629f09993aea5b2adf18a
 - filename: ComputerArchitecture/multi_cpu_and_multi_core_systems.md
-  checksum: 4c2251da7129326e74ddff5ece119055a17bc96006b46998ac92c14049a8c6d1
+  checksum: 59beff9cce270f2b5f676e7ab7a4723dd9852135593a765fb3e718e98f8b9616
 - filename: ComputerArchitecture/program_processes_threads.md
   checksum: 9d279dea39599d6b3910e69e7a0559fbd5be8e7d4b2b7394c0684a1bf27646ee
 - filename: GitAdvanced/git_log.md
   checksum: a3a52518aa622549213fcc06ed8a3f24d6dfbc6bed7c4a025ae44a29105ce815
 - filename: GitAdvanced/resetting_checking_out_reverting.md
-  checksum: 46525a7468f1ae1501aa7ee631daf6262e6521db12d026dc1b7ed415a65ee463
+  checksum: 36319e984949ec17ba97654c78d21c47c1154717ea26348a93f5c0d82ef5e144
 - filename: HPC/LLAMA.md
   checksum: a45d0707f4d8a8307bb7de26afc54648e9eedbd186a2172258bc9bcbd27ce54c
 - filename: HPC/gpu_working.md
   checksum: 09a5b18f52d283f9dcc7d6ae4a3a65675849fbeea71ba7ddb0a8b8bfe3e22542
 - filename: HPC/nvidia_cub.md
-  checksum: 100dcf428f9a22d1328910e4b724c022903d9eef8b5fc5121a522cf8997dacff
+  checksum: 07870dc97842db87b7faa424ce3a35fcf923cd7e27511b01edf86c5b3a9f2078
 - filename: HPC/nvidia_gpus_in_depth.md
   checksum: c495a270910a9dbbe6bb611c8d55b8427c11c8822e7036f54abb64c0654dbfdb
 - filename: HPC/vCPU.md
@@ -67,6 +67,8 @@ fileignoreconfig:
   checksum: 86b76e42ca08220ab1e4ef906b52d7c2e0813f0e73b6e34f207ffe941f134227
 - filename: Linux/criu.md
   checksum: 7a156daf55957e4df3f91a6f4ff0a17a33fc4d7c790fedaa96f126571c6f2c23
+- filename: Linux/devices.md
+  checksum: 78507db797c86ae06bb48624abc9921b75cfb1dd592ca2caf9554c351cdd89aa
 - filename: Linux/links.md
   checksum: a14c60bbfb80db13f9596edd4a46d86ec5a35f8f90c51878e510a9801d220e21
 - filename: Linux/pipe.md
@@ -83,6 +85,8 @@ fileignoreconfig:
   checksum: 589f43333cd097ba439afe848cf1ee9893f4346822e7e29f18d56145d34aeae8
 - filename: LinuxContainers/README.md
   checksum: 8a17ea07c6400c3528d1c167f7e3bf9abe5f60ca7417d11ffd254cdeecfac18d
+- filename: LinuxContainers/containers_from_scratch.md
+  checksum: 9abbd79aefe59fe767ddea28f1db67f4ddd592f7596cb26cada8fdd90f64693e
 - filename: LinuxContainers/kubernetes.md
   checksum: 48087c9fa3853cfa461bc948a961be9695f80f4cd3d8c10a63f943ba2375089a
 - filename: LinuxContainers/podman.md

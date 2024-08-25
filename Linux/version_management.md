@@ -20,7 +20,11 @@ Learn more: <https://modules.readthedocs.io/en/latest/INSTALL.html>
 
 ## conda
 
-Typically get conda from **miniconda**  
+Typically get conda from **miniconda**
+
+ > 
+ > Also read [Python's messy tools](../Python/pythons_messy_tools.md)
+
 Local Installation: user level, in `$HOME/miniconda3`
 
 Global Installation: Somewhere in `/opt/miniconda3` ,  

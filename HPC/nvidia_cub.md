@@ -4,7 +4,6 @@ aliases:
 author: Maneesh Sutar
 date: 2023-11-29
 tags:
-- tofix
 - public
 title: NVIDIA CUB
 ---
@@ -13,7 +12,7 @@ title: NVIDIA CUB
 
 [Github repo](https://github.com/NVIDIA/cub)
 
-reusable software components for every layer of the CUDA programming mode
+Reusable software components for every layer of the CUDA programming mode
 
 When working with GPUs, CPU creates a queue of operations to be run on GPU
 

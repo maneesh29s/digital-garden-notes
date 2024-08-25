@@ -16,3 +16,9 @@ title: Dask
 ## Tutorials
 
 NCAR tutorials: [link](https://github.com/NCAR/dask-tutorial?tab=readme-ov-file)
+
+## Computation
+
+Dask is **lazily evaluated**. The result from a computation isn’t computed until you ask for it. Instead, a Dask task graph for the computation is produced.
+
+Anytime you have a Dask object (df, array) and you want to get the result, call `compute`
