@@ -7,6 +7,6 @@ tags:
 title: Writing
 ---
 
-# Writing
+# Folder: Writing
 
 A collection of tools / ideas to write better.
