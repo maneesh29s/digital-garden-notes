@@ -29,6 +29,10 @@ fileignoreconfig:
   checksum: 59beff9cce270f2b5f676e7ab7a4723dd9852135593a765fb3e718e98f8b9616
 - filename: ComputerArchitecture/program_processes_threads.md
   checksum: 9d279dea39599d6b3910e69e7a0559fbd5be8e7d4b2b7394c0684a1bf27646ee
+- filename: FunctionalProgramming/pure_functions.md
+  checksum: cf27622bc71062e0124311bef547b580dc1255e84a38f927b10ef5ef02253906
+- filename: FunctionalProgramming/side_effects.md
+  checksum: 5ece48d3a5b0089d125ca250311a9d137a90168766d2396d70c5e1002b882173
 - filename: GitAdvanced/git_log.md
   checksum: a3a52518aa622549213fcc06ed8a3f24d6dfbc6bed7c4a025ae44a29105ce815
 - filename: GitAdvanced/resetting_checking_out_reverting.md
