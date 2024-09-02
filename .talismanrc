@@ -29,6 +29,16 @@ fileignoreconfig:
   checksum: 59beff9cce270f2b5f676e7ab7a4723dd9852135593a765fb3e718e98f8b9616
 - filename: ComputerArchitecture/program_processes_threads.md
   checksum: 9d279dea39599d6b3910e69e7a0559fbd5be8e7d4b2b7394c0684a1bf27646ee
+- filename: ComputerNetworking/DHCP.md
+  checksum: af9b156eb6580c4961bd9f8b80f8b742c8453eeef35d0db844b2d79ce3ade292
+- filename: ComputerNetworking/Firewall.md
+  checksum: 052d355e23851d6e26ef796562882d9eb24f47e1b3147bd157569250b18602fb
+- filename: ComputerNetworking/NAT.md
+  checksum: 21f2503df41bb8b1729a1d6671c0c51b80a204acb2fcc23a89385110863f7aa8
+- filename: ComputerNetworking/README.md
+  checksum: dd49954fa78f3ad532dd6323a136328ad60e136dd874b8e93689877f8f26f4db
+- filename: ComputerNetworking/VLANS.md
+  checksum: 1ebb22266497bd6ae9b9feef35e1539a846a6d78d987288ebef6d6a081f79836
 - filename: FunctionalProgramming/pure_functions.md
   checksum: cf27622bc71062e0124311bef547b580dc1255e84a38f927b10ef5ef02253906
 - filename: FunctionalProgramming/side_effects.md
@@ -75,6 +85,8 @@ fileignoreconfig:
   checksum: 78507db797c86ae06bb48624abc9921b75cfb1dd592ca2caf9554c351cdd89aa
 - filename: Linux/links.md
   checksum: a14c60bbfb80db13f9596edd4a46d86ec5a35f8f90c51878e510a9801d220e21
+- filename: Linux/networking.md
+  checksum: 82c232409d798da0b2e9adfc545b3e0db8c179b6750c9aeecb7b3ec363986dec
 - filename: Linux/pipe.md
   checksum: 7b1ccd560a5f42b298d110f6b1e19b1026adcea403f04ab4a0577b669db8ed47
 - filename: Linux/sysvIPC.md
@@ -93,6 +105,8 @@ fileignoreconfig:
   checksum: 9abbd79aefe59fe767ddea28f1db67f4ddd592f7596cb26cada8fdd90f64693e
 - filename: LinuxContainers/kubernetes.md
   checksum: 48087c9fa3853cfa461bc948a961be9695f80f4cd3d8c10a63f943ba2375089a
+- filename: LinuxContainers/networking.md
+  checksum: b611e91c301a8c2c7af8d724c2d18f1d603c53084ec190b663b1e0268e351081
 - filename: LinuxContainers/podman.md
   checksum: 4d78b8e4b0e410c33bfaf63dba9c5842f1d6a22e58c86471788906336e4ffc53
 - filename: Mathematics/affine_geometry.md

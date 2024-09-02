@@ -187,3 +187,5 @@ In the GPU, each block is given to a SM to operate on.
 1. [Video Lecture](https://youtu.be/UFD8K-lprbQ) Digital Design and Comp. Arch. - Lecture 20: GPU Architectures - Prof Onur Mutlu. Most of the images in these notes are taken from the [Lecture slides](https://safari.ethz.ch/digitaltechnik/spring2023/lib/exe/fetch.php?media=onur-ddca-2023-lecture20-gpu-afterlecture.pdf).
 
 1. David A. Patterson and John L. Hennessy. 1990. **Computer architecture: a quantitative approach**. Morgan Kaufmann Publishers Inc., San Francisco, CA, USA.
+
+1. [CUDA Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#)
