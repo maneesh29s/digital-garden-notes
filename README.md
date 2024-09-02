@@ -21,6 +21,7 @@ The published digital garden is hosted using github pages [here](https://maneesh
 1. [AI](./AI/)
 1. [Algorithms](./Algorithms/)
 1. [Computer Architecture](./ComputerArchitecture/)
+1. [Computer Networking](./ComputerNetworking/)
 1. [C++ Programming](./CPP/)
 1. [Functional Programming](./FunctionalProgramming/)
 1. [Git](./GitAdvanced/)

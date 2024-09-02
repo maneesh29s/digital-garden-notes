@@ -13,9 +13,15 @@ Using **Dynamic Host Control Protocol** , a **DHCP Server** typically hosted on 
 
 **DHCP** is a UDP based protocol. The ==server== listens on UDP ==port 67==, and the ==client== listens on UDP port ==68==.
 
-## Stages in DHCP protocol
+## Handshake
 
-![300](Artifacts/DHCP.png)
+````txt
+Client                  Server
+------- DISCOVER --------->
+<------- OFFER -----------
+------- REQUEST ---------->
+<----- ACKNOWLEDGE ------->
+````
 
 During DHCP handshake, the client and server exchange following information crucial for connectivity:
 
@@ -24,7 +30,7 @@ During DHCP handshake, the client and server exchange following information cruc
 1. **The network's DNS server ip** (if exists, almost always on the router)
 1. **The domain name** e.g. ".local". Used for DNS resolution of the hostnames in local network. e.g. "mypc.local"
 
-Once **DHCP Server** assigns an IP address to a client, it also takes care of updating the corresponding **DNS server's** entry, adding a new entry containing the ==client's hostname and client's IP==.
+Once **DHCP Server** assigns an IP address to a client, it also takes care of updating the corresponding **DNS server's** entry, adding a new entry containing the ==client's hostname and client's IP==.  
 The local network's **DNS server** is also running on your router (typically) on ==port 53.==
 
 ## References

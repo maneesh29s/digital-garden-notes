@@ -128,7 +128,7 @@ fileignoreconfig:
 - filename: Python/xarray.md
   checksum: 045b1ba7a00e04e4a49fc7295f3b42423105bf0657ce6fd8b396f33415202bae
 - filename: README.md
-  checksum: f52c2bb26a9ad04865f38dd1656fa17fb655b5be5b622c4e1ff8abcc6d1d87aa
+  checksum: dfb113e9706ddc9fb6b5f67d68b384ec120aa53d45b5de1db4af3f26f864f900
 - filename: Security/AES.md
   checksum: 275a860fe17e786dab88253858268ba363d8da504aab7d9c28b4564a31ca0653
 - filename: Security/CRC.md

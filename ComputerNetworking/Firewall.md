@@ -26,8 +26,8 @@ This note contains answers to the some of the questions that I had regarding fir
 
 1. You are telling firewall to ==allow incoming traffic via that port from the public network== that your machine is connected to. This must be done if your machine is a "server" running applications like a web server (**nginx**) or ssh daemon (**sshd**).
 1. The ==server will only handle the data== if
-   1. there is a service actively listening on that port
-   1. the service is capable of processing the incoming data according to the relevant protocol.
+1. there is a service actively listening on that port
+1. the service is capable of processing the incoming data according to the relevant protocol.
 1. ==Ports that do not have a corresponding service will not handle incoming data== and will effectively ignore it.
 
 ## What exactly is Forwarding a port?
