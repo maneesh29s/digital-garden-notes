@@ -117,7 +117,7 @@ If the client sends a certificate containing [RSA](rsa.md) public key, then clie
 
 If the agreed upon `KeyExchangeAlgorithm` is `RSA`, then client ==generates a random 46-byte== **PreMasterSecret**, and ==encrypts it using server's RSA public key== present in the server's certificate ([refer](https://datatracker.ietf.org/doc/html/rfc5246#section-7.4.7.1)). The `ClientKeyExchange` message contains this RSA `EncryptedPreMasterSecret`.
 
-If the agreed upon `KeyExchangeAlgorithm` is one of the ["Diffie-Hellman"s](dh.md) (excluding **fixed_dh**), then `ClientKeyExchange` contains the client side public parameters of the diffie-hellman. ([refer](https://datatracker.ietf.org/doc/html/rfc5246#section-7.4.7.2))
+If the agreed upon `KeyExchangeAlgorithm` is one of the ["Diffie-Hellman"s](dh.md) (excluding fixed_dh), then `ClientKeyExchange` contains the client side public parameters of the diffie-hellman. ([refer](https://datatracker.ietf.org/doc/html/rfc5246#section-7.4.7.2))
 
 The `CertificateVerify` is sent to provide explicit verification of a client certificate (if it is sent in the first place). It contains a **digital signature** over ==all the handshake messages sent till now (including this message)==. The digital signature is [signed](signature_authentication.md) using the private key corresponding to the public key present in the client certificate.
 
@@ -216,7 +216,7 @@ Above diagram pretty much summarises everything we need to know about how handsh
 
 TLS 1.3 heavily relies on [Extensions](https://datatracker.ietf.org/doc/html/rfc8446#section-4.2), as they are present in ClientHello, ServerHello and other messages.
 
-Since client sends either a `key_share` or `pre_shared_key` (or both) along with the **ClientHello** message (1st message), ==server has all the data necessary to generate shared secrets and start encrypting its messages==. Once server sends its `key_share` or `pre_shared_key` , client has all the data to generated shared secrets.  
+Since client sends either a [key_share](https://datatracker.ietf.org/doc/html/rfc8446#section-4.2.8) or [pre_shared_key](https://datatracker.ietf.org/doc/html/rfc8446#section-4.2.11) (or both) along with the **ClientHello** message (1st message), ==server has all the data necessary to generate shared secrets and start encrypting its messages==. Once server sends its `key_share` or `pre_shared_key` , client has all the data to generated shared secrets.  
 Thus ==TLS 1.3 is done within 1 round-trip== (1-RTT) instead of 2-RTT in TLS 1.2
 
 TLS 1.3 added an improved [Pre-shared Key (PSK)](https://datatracker.ietf.org/doc/html/rfc8446#section-2.2) mechanism, which can be used for session resumptions. Addition of PSK also enables a [zero-RTT](https://datatracker.ietf.org/doc/html/rfc8446#section-2.3) mode.

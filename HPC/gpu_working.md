@@ -164,8 +164,10 @@ While creating a kernel, we need to specify **number of blocks** and **number of
 ![gpu_kernels](Artifacts/gpu_kernels.jpeg)  
 [Image Reference](https://safari.ethz.ch/digitaltechnik/spring2023/lib/exe/fetch.php?media=onur-ddca-2023-lecture20-gpu-afterlecture.pdf)
 
-**nThread** is an ==hardware dependent number which defines how many threads will run inside a SM==  
-nThread = number wraps in a single SM * number of threads per wrap  
+**nThread** is an ==hardware dependent number which defines how many threads will run inside a SM==
+
+**nThread = number wraps in a single SM \* number of threads per wrap**
+
 Typically 1024, 2048 etc.
 
 **nBlock** needs to selected, such that
