@@ -3,14 +3,13 @@ aliases: []
 author: Maneesh Sutar
 date: 2024-05-10
 tags:
-- public
 - linux/container
 title: Organisations
 ---
 
 # Organisations
 
-```mermaid
+````mermaid
 flowchart TD
 
 ORGS[Organisations] --> MOBY[Moby]
@@ -23,7 +22,7 @@ ORGS --> CSP[Compose Specification]
 
 ORGS --> CNCF[Cloud Native Container Foundation]
 
-```
+````
 
 ## CNCF
 
@@ -59,7 +58,7 @@ A github organisation where [Docker](https://www.docker.com/) hosts all their op
 
 The [moby/moby](https://github.com/moby/moby) repo is the upstream of docker engine (dockerd)
 
-The components and tools in the Moby Project are initially the open source components that Docker and the community have built for the Docker Project.
+The components and tools in the Moby Project are initially the open source components that Docker and the community have built for the Docker Project.  
 e.g. libnetwork, hyperkit, swarmkit
 
 ## Containers

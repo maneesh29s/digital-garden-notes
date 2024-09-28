@@ -3,7 +3,6 @@ aliases: []
 author: Maneesh Sutar
 date: 2024-05-10
 tags:
-- public
 - linux/container
 title: Colima
 ---
@@ -118,11 +117,11 @@ For Containerd runtime, images built or pulled in the k8s.io namespace are acces
 
 1. K8s run components in separate processes, whereas K3s combines and operates all control plane components (including kubelet and kube-proxy) in a single binary, server, and Agent process.
 
-2. K3s includes and defaults to *containerd*. Before k8s 1.24, k3s used to have a flag --docker which would enable docker engine in the cluster along with dockershim. Once dockershim support was removed, initially --docker flag was also removed from k3s, forcing users to use container-runtime-endpoint flag to point to cri-dockerd . cri-dockerd was not present in k3s, and had to be installed seperately. The removal of --docker flag from k3s caused systems to fail, so they brought back --docker flag, but now using cri-dockerd . They embedded cri-dockerd along with k3s. More on this on k3s/docs/adrs/cri-dockerd
-more on this <https://docs.k3s.io/advanced#using-docker-as-the-container-runtime>
+1. K3s includes and defaults to *containerd*. Before k8s 1.24, k3s used to have a flag --docker which would enable docker engine in the cluster along with dockershim. Once dockershim support was removed, initially --docker flag was also removed from k3s, forcing users to use container-runtime-endpoint flag to point to cri-dockerd . cri-dockerd was not present in k3s, and had to be installed seperately. The removal of --docker flag from k3s caused systems to fail, so they brought back --docker flag, but now using cri-dockerd . They embedded cri-dockerd along with k3s. More on this on k3s/docs/adrs/cri-dockerd  
+   more on this <https://docs.k3s.io/advanced#using-docker-as-the-container-runtime>
 
-3. Colima, for `--runtime=docker` flag, either passes --docker  which starts cri-dockerd and docker engine in k8s cluster, with the default socket path `unix:///run/k3s/cri-dockerd/cri-dockerd.sock`.
-
+1. Colima, for `--runtime=docker` flag, either passes --docker  which starts cri-dockerd and docker engine in k8s cluster, with the default socket path `unix:///run/k3s/cri-dockerd/cri-dockerd.sock`.
+   
    For `--runtime=containerd` flag, colima passes `--container-runtime-endpoint unix:///run/containerd/containerd.sock` (using the VMs socket) flag to k3s , so that k3s uses containerd with the custom socket path (instead of the default from  `unix:///run/k3s/containerd/containerd.sock`)
 
 When colima run with `--kubernetes`, the lima VM itself is the node.  

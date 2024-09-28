@@ -39,6 +39,10 @@ fileignoreconfig:
   checksum: dd49954fa78f3ad532dd6323a136328ad60e136dd874b8e93689877f8f26f4db
 - filename: ComputerNetworking/VLANS.md
   checksum: 1ebb22266497bd6ae9b9feef35e1539a846a6d78d987288ebef6d6a081f79836
+- filename: ComputerNetworking/network_aggregation.md
+  checksum: 7d00e706fb6da52cef58f515254cbe4a2cd4111c9650264326b7c3700d710487
+- filename: ComputerNetworking/network_devices.md
+  checksum: 373270e71476ebb8b47bb39732d326cfff3caddd589c759499d34ae25210f31c
 - filename: FunctionalProgramming/pure_functions.md
   checksum: cf27622bc71062e0124311bef547b580dc1255e84a38f927b10ef5ef02253906
 - filename: FunctionalProgramming/side_effects.md
@@ -102,13 +106,13 @@ fileignoreconfig:
 - filename: LinuxContainers/README.md
   checksum: 8a17ea07c6400c3528d1c167f7e3bf9abe5f60ca7417d11ffd254cdeecfac18d
 - filename: LinuxContainers/colima.md
-  checksum: 911dff72d323fb12143467ac7bedc333b623eac7919fd6a9a9412e2f5acc4117
+  checksum: 11f61dd142e6ea755475d3a6e68124b6a4c5a19e888682f67eb50461ce3c1345
 - filename: LinuxContainers/containers_from_scratch.md
   checksum: 9abbd79aefe59fe767ddea28f1db67f4ddd592f7596cb26cada8fdd90f64693e
 - filename: LinuxContainers/kubernetes.md
   checksum: 48087c9fa3853cfa461bc948a961be9695f80f4cd3d8c10a63f943ba2375089a
 - filename: LinuxContainers/networking.md
-  checksum: cf69a89c31ba54d212901b5be8d8a541d685c7ca7afd2b722fb99fb390924af4
+  checksum: 5f39d4173994dadd7460a92620aa4807fa0b690d045ecb1f619c0d4df0e37eda
 - filename: LinuxContainers/podman.md
   checksum: 4d78b8e4b0e410c33bfaf63dba9c5842f1d6a22e58c86471788906336e4ffc53
 - filename: LinuxContainers/singularity_container_engine.md
