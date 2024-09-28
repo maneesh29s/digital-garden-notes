@@ -39,7 +39,7 @@ conditional_delete() {
       # Iterate over all files and directories within the specified directory
       for item in "${dir_path}"/*; do
 		# List of files and folders to exclude
-		excluded_items=("README.md" "index.md" "notebooks")
+		excluded_items=("README.md" "index.md" "notebooks" "scripts")
 		if [[ ! "${excluded_items[@]}" =~ "$(basename $item)" ]]; then
 			rm -r "$item"
 		fi
