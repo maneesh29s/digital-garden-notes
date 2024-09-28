@@ -2,8 +2,7 @@
 aliases: Posit
 author: Maneesh Sutar
 date: 2023-08-17
-tags:
-- public
+tags: []
 title: Posit number format
 ---
 

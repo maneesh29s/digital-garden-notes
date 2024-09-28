@@ -4,7 +4,6 @@ author: Maneesh Sutar
 date: 2023-11-22
 tags:
 - toread
-- public
 title: Tensor Networks
 ---
 

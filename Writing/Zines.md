@@ -2,8 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 date: 2023-11-23
-tags:
-- public
+tags: []
 title: Zines
 ---
 

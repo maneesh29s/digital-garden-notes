@@ -5,7 +5,6 @@ date: 2023-11-02
 tags:
 - latex
 - presentation
-- public
 title: Beamer
 ---
 

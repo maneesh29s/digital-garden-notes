@@ -2,8 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 date: 2024-04-07
-tags:
-- public
+tags: []
 title: Python Decorators
 ---
 

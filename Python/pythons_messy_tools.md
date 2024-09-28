@@ -2,8 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 date: 2024-04-04
-tags:
-- public
+tags: []
 title: All the messy tools in python
 ---
 

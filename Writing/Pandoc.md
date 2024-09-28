@@ -8,7 +8,6 @@ tags:
 - pdf
 - html
 - md
-- public
 title: Pandoc
 ---
 

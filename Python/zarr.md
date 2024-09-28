@@ -2,8 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 date: 2024-06-10
-tags:
-- public
+tags: []
 title: Zarr
 ---
 

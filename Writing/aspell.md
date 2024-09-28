@@ -5,7 +5,6 @@ author: Maneesh Sutar
 date: 2023-11-02
 tags:
 - spellcheck
-- public
 title: aspell
 ---
 

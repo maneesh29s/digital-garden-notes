@@ -2,8 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 date: 2024-03-07
-tags:
-- public
+tags: []
 title: Logical Thinking
 ---
 

@@ -2,8 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 date: 2024-02-21
-tags:
-- public
+tags: []
 title: Numerical analysis Book
 ---
 

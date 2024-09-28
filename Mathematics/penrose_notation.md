@@ -3,8 +3,7 @@ aliases:
 - Penrose's Notation
 author: Maneesh Sutar
 date: 2023-11-29
-tags:
-- public
+tags: []
 title: Penrose's Notation
 ---
 

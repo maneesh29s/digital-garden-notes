@@ -2,8 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 date: 2023-12-19
-tags:
-- public
+tags: []
 title: The Elements of Style
 ---
 

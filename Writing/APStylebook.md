@@ -5,7 +5,6 @@ date: 2023-04-05
 tags:
 - article
 - writing
-- public
 title: Associated Press Stylebook
 ---
 

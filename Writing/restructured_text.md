@@ -6,7 +6,6 @@ author: Maneesh Sutar
 date: 2023-12-02
 tags:
 - writing
-- public
 title: reStructuredText files
 ---
 
