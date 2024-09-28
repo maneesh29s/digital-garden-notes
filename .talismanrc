@@ -42,7 +42,7 @@ fileignoreconfig:
 - filename: ComputerNetworking/network_aggregation.md
   checksum: 7d00e706fb6da52cef58f515254cbe4a2cd4111c9650264326b7c3700d710487
 - filename: ComputerNetworking/network_devices.md
-  checksum: 373270e71476ebb8b47bb39732d326cfff3caddd589c759499d34ae25210f31c
+  checksum: ce886ece714f33c4aead012616e0edc8d857c7bccce9d6e7ba13c7cb81fe0c97
 - filename: FunctionalProgramming/pure_functions.md
   checksum: cf27622bc71062e0124311bef547b580dc1255e84a38f927b10ef5ef02253906
 - filename: FunctionalProgramming/side_effects.md
