@@ -4,8 +4,7 @@ aliases:
 - Simultaneous multithreading (SMT)
 author: Maneesh Sutar
 date: 2024-01-08
-tags:
-- public
+tags: []
 title: Simultaneous multithreading (SMT)
 ---
 

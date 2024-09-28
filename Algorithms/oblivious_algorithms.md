@@ -2,8 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 date: 2023-06-04
-tags:
-- public
+tags: []
 title: Oblivious Algorithms
 ---
 

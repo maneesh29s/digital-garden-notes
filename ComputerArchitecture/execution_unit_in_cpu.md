@@ -4,8 +4,7 @@ aliases:
 - Functional Unit
 author: Maneesh Sutar
 date: 2024-01-10
-tags:
-- public
+tags: []
 title: Execution Unit
 ---
 

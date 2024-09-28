@@ -3,7 +3,6 @@ aliases: []
 author: Maneesh Sutar
 date: 2024-03-02
 tags:
-- public
 - git
 title: Advanced git log
 ---

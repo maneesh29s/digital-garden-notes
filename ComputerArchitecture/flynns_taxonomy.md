@@ -3,8 +3,7 @@ aliases:
 - Flynn's Taxonomy
 author: Maneesh Sutar
 date: 2024-05-27
-tags:
-- public
+tags: []
 title: Flynn's Taxonomy
 ---
 

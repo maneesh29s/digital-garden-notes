@@ -5,7 +5,6 @@ date: 2023-06-16
 tags:
 - metaprogramming
 - cpp
-- public
 title: Template Metaprogramming in C++
 ---
 

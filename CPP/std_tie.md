@@ -3,7 +3,6 @@ aliases: []
 author: Maneesh Sutar
 date: 2023-11-23
 tags:
-- public
 - cpp
 title: C++ std::tie
 ---

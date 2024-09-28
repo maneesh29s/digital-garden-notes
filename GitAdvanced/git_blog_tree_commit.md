@@ -5,7 +5,6 @@ created: 2024-03-06 13:08:00
 date: 2024-03-06
 tags:
 - todo
-- public
 - git
 title: Git commits, trees and blobs
 ---

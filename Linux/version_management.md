@@ -3,7 +3,6 @@ aliases: []
 author: Maneesh Sutar
 date: 2024-03-27
 tags:
-- public
 - linux
 title: Package Version management
 ---

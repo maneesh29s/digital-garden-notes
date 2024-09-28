@@ -3,7 +3,6 @@ aliases: []
 author: Maneesh Sutar
 date: 2024-06-02
 tags:
-- public
 - cpp
 title: CPP Tricks
 ---

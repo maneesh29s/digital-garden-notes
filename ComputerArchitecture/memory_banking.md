@@ -4,8 +4,7 @@ aliases:
 - Interleaved Memory
 author: Maneesh Sutar
 date: 2024-01-11
-tags:
-- public
+tags: []
 title: Memory Banking
 ---
 

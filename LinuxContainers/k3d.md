@@ -3,7 +3,6 @@ aliases: []
 author: Maneesh Sutar
 date: 2024-05-10
 tags:
-- public
 - linux/container
 title: k3d.md
 ---

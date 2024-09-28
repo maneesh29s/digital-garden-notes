@@ -5,7 +5,6 @@ author: Maneesh Sutar
 date: 2023-12-15
 tags:
 - maths
-- public
 title: Affine Set
 ---
 

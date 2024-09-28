@@ -5,7 +5,6 @@ date: 2024-05-16
 tags:
 - todo
 - toread
-- public
 - linux
 title: Terminals
 ---

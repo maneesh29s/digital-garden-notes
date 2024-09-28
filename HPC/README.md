@@ -2,8 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 date: 2024-06-16
-tags:
-- public
+tags: []
 title: High Performance Computing
 ---
 

@@ -3,8 +3,7 @@ aliases:
 - Fourier Transform
 author: Maneesh Sutar
 date: 2024-02-02
-tags:
-- public
+tags: []
 title: Fourier Transform
 ---
 

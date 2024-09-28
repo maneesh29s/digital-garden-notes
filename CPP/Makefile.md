@@ -3,7 +3,6 @@ aliases: []
 author: Maneesh Sutar
 date: 2024-03-28
 tags:
-- public
 - cpp
 title: Makefile
 ---

@@ -3,7 +3,6 @@ aliases: []
 author: Maneesh Sutar
 date: 2024-03-19
 tags:
-- public
 - cpp
 title: C++ Compilation and Linking
 ---

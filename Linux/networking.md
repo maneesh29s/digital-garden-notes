@@ -2,8 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 date: 2024-09-02
-tags:
-- public
+tags: []
 title: Linux Networking Commands
 ---
 

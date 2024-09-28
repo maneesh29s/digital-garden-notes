@@ -2,8 +2,7 @@
 aliases: Floating Point Numbers
 author: Maneesh Sutar
 date: 2023-06-16
-tags:
-- public
+tags: []
 title: Floating Point Numbers
 ---
 

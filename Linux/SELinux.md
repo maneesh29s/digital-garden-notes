@@ -4,7 +4,6 @@ aliases:
 author: Maneesh Sutar
 date: 2023-11-19
 tags:
-- public
 - linux
 title: Security Enhanced Linux
 ---

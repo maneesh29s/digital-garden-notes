@@ -4,7 +4,6 @@ aliases:
 author: Maneesh Sutar
 date: 2023-07-14
 tags:
-- public
 - concurrent
 - computer-architecture
 title: Concurrency

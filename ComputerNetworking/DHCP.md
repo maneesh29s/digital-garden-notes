@@ -2,8 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 date: 2024-09-01
-tags:
-- public
+tags: []
 title: DHCP protocol
 ---
 

@@ -5,7 +5,6 @@ created: 2024-01-12 20:37:00
 date: 2024-01-12
 tags:
 - todo
-- public
 title: Heterogeneous-Compute Interface for Portability (HIP)
 ---
 

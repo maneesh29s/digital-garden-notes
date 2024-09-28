@@ -2,8 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 date: 2023-12-11
-tags:
-- public
+tags: []
 title: Virtual LANs
 ---
 
@@ -30,5 +29,4 @@ Supports [virtual local area networking](https://en.wikipedia.org/wiki/Virtual_
 ## References
 
 1. <https://www.geeksforgeeks.org/virtual-lan-vlan/>
-
 1. <https://en.wikipedia.org/wiki/IEEE_802.1Q>

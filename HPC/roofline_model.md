@@ -2,8 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 date: 2023-06-03
-tags:
-- public
+tags: []
 title: Roofline model
 ---
 

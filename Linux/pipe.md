@@ -3,7 +3,6 @@ aliases: []
 author: Maneesh Sutar
 date: 2023-12-30
 tags:
-- public
 - linux
 title: Linux Pipes
 ---

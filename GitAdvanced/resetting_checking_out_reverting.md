@@ -4,7 +4,6 @@ author: Maneesh Sutar
 date: 2024-02-10
 tags:
 - git
-- public
 title: Resetting, checking out & reverting
 ---
 

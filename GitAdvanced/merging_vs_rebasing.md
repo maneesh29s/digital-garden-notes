@@ -4,7 +4,6 @@ author: Maneesh Sutar
 date: 2024-01-19
 tags:
 - git
-- public
 title: Merge vs Rebasing
 ---
 

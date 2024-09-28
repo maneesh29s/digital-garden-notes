@@ -5,8 +5,7 @@ aliases:
 - Multiprocessing
 author: Maneesh Sutar
 date: 2023-11-18
-tags:
-- public
+tags: []
 title: Multithreading and Multiprocessing
 ---
 

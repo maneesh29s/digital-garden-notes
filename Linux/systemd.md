@@ -3,7 +3,6 @@ aliases: []
 author: Maneesh Sutar
 date: 2024-05-06
 tags:
-- public
 - linux
 title: systemd
 ---

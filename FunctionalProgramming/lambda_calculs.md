@@ -2,8 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 date: 2024-02-26
-tags:
-- public
+tags: []
 title: Lambda Calculus
 ---
 

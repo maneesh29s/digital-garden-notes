@@ -5,7 +5,6 @@ author: Maneesh Sutar
 date: 2023-11-13
 tags:
 - todo
-- public
 title: Reactive Programming
 ---
 

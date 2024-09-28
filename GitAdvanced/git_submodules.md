@@ -5,7 +5,6 @@ author: Maneesh Sutar
 date: 2024-03-03
 tags:
 - git
-- public
 title: Git Submodules
 ---
 

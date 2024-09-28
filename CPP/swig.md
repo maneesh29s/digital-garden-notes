@@ -4,7 +4,6 @@ author: Maneesh Sutar
 date: 2023-06-06
 tags:
 - cpp
-- public
 title: SWIG
 ---
 

@@ -2,8 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 date: 2024-01-10
-tags:
-- public
+tags: []
 title: Function Composition
 ---
 

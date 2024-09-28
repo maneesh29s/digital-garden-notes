@@ -6,7 +6,6 @@ author: Maneesh Sutar
 date: 2024-03-02
 tags:
 - GPU
-- public
 title: Programming Model
 ---
 

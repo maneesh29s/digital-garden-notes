@@ -2,8 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 date: 2023-04-09
-tags:
-- public
+tags: []
 title: Bitonic Sort
 ---
 

@@ -3,8 +3,7 @@ aliases:
 - Literate Programming
 author: Maneesh Sutar
 date: 2024-03-03
-tags:
-- public
+tags: []
 title: Literate Programming
 ---
 

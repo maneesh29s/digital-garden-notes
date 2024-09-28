@@ -4,8 +4,7 @@ aliases:
 author: Maneesh Sutar
 created: 2024-03-02 15:18:00
 date: 2024-03-02
-tags:
-- public
+tags: []
 title: SPMD
 ---
 

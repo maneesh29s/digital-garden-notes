@@ -3,8 +3,7 @@ aliases:
 - Category Theory
 author: Maneesh Sutar
 date: 2023-11-29
-tags:
-- public
+tags: []
 title: Category Theory
 ---
 

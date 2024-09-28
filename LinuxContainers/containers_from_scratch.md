@@ -4,7 +4,6 @@ author: Maneesh Sutar
 date: 2023-11-18
 tags:
 - tofix
-- public
 - linux/container
 title: Linux mechanisms used in containers
 ---

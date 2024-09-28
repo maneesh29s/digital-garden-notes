@@ -2,8 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 date: 2023-07-10
-tags:
-- public
+tags: []
 title: Accelerated Computing
 ---
 

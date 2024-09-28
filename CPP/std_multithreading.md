@@ -3,7 +3,6 @@ aliases: []
 author: Maneesh Sutar
 date: 2024-06-15
 tags:
-- public
 - cpp
 title: C++ standard library functions for multi-threading
 ---

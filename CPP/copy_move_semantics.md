@@ -3,7 +3,6 @@ aliases: []
 author: Maneesh Sutar
 date: 2024-04-12
 tags:
-- public
 - cpp
 title: Copy and Move Semantics
 ---

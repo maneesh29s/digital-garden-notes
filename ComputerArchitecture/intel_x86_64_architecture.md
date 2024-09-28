@@ -4,8 +4,7 @@ aliases:
 - Hyper-threading Technology
 author: Maneesh Sutar
 date: 2024-01-03
-tags:
-- public
+tags: []
 title: Intel x86-64 Architecture
 ---
 

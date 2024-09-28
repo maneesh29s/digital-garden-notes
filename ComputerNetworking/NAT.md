@@ -5,8 +5,7 @@ aliases:
 - PAT
 author: Maneesh Sutar
 date: 2024-08-20
-tags:
-- public
+tags: []
 title: Network Address Translation
 ---
 

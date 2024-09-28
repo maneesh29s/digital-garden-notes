@@ -4,7 +4,6 @@ author: Maneesh Sutar
 date: 2024-03-02
 tags:
 - git
-- public
 title: Hooks
 ---
 

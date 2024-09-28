@@ -4,7 +4,6 @@ author: Maneesh Sutar
 date: 2023-06-04
 tags:
 - todo
-- public
 title: Sorting Networks
 ---
 

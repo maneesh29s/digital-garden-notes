@@ -5,7 +5,6 @@ date: 2023-11-12
 tags:
 - functionalProgramming
 - clojure
-- public
 title: Bridges in Functional Programming
 ---
 

@@ -4,7 +4,6 @@ author: Maneesh Sutar
 date: 2023-06-01
 tags:
 - AI
-- public
 title: Transformers model architecture
 ---
 
