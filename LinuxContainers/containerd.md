@@ -47,7 +47,7 @@ The containerd clients are ( `ctr`, `nerdctl`, `kubernetes`, `dockerd`).
 
 Also see: <https://kubernetes.io/blog/2018/05/24/kubernetes-containerd-integration-goes-ga/>
 
-The [CRI](kubernetes.md#CRI) interface for kubelets to work with containerd directly
+The [CRI](cri.md) interface for kubelets to work with containerd directly
 
 ![containerd_cri](Artifacts/containerd_cri.png)
 

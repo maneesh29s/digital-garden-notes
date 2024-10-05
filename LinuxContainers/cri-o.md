@@ -11,7 +11,7 @@ title: CRI-O
 
 <https://github.com/cri-o/cri-o>
 
-Its whole purpose is to be the CRI for container orchestrators like k8s  
+Its whole purpose is to be the [CRI](cri.md) for container orchestrators like k8s  
 So it can do what CRI should do, e.g. transfer of images, image storage, networking, container monitoring,  etc and NOTHING else like building images, or letting user start containers via CLI  
 Refer to [the scope of CRI-O](https://github.com/cri-o/cri-o?tab=readme-ov-file#what-is-the-scope-of-this-project)
 

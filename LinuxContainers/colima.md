@@ -1,5 +1,6 @@
 ---
-aliases: []
+aliases:
+- Colima
 author: Maneesh Sutar
 date: 2024-05-10
 tags:
@@ -9,7 +10,7 @@ title: Colima
 
 # Colima
 
-Colima = Containers on [Lima](https://github.com/lima-vm/lima?tab=readme-ov-file) = Containers on Linux on Mac
+Colima = Containers on [Lima](lima.md) = Containers on Linux on Mac
 
  > 
  > This article contains my observations from various experiments I conducted with colima. It might be a little unstructured, so bare with me
@@ -52,7 +53,7 @@ spawned by systemd. But the **minikube** runs in an isolated container, and it *
 
 minicube's docker container runs on Ubuntu 22.04 with systemd. The container is henceforth referred as the k8s node.
 
-minikube supports 3 [CRI](kubernetes.md#CRI): containerd (via cri plugin), cri-o and cri-dockerd
+minikube supports 3 [CRI](cri.md): containerd (via cri plugin), cri-o and cri-dockerd
 
 ### Using cri-dockerd
 

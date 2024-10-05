@@ -111,8 +111,10 @@ fileignoreconfig:
   checksum: 9abbd79aefe59fe767ddea28f1db67f4ddd592f7596cb26cada8fdd90f64693e
 - filename: LinuxContainers/kubernetes.md
   checksum: 48087c9fa3853cfa461bc948a961be9695f80f4cd3d8c10a63f943ba2375089a
+- filename: LinuxContainers/lima.md
+  checksum: 4961d00a154cff219717185430bd6bf8954841bb3044bdb0c718c52f13d9a077
 - filename: LinuxContainers/networking.md
-  checksum: 5f39d4173994dadd7460a92620aa4807fa0b690d045ecb1f619c0d4df0e37eda
+  checksum: 201425a9013255ddce953415eba875fe012f999484d18c521dbf6d3748bb0b40
 - filename: LinuxContainers/podman.md
   checksum: 4d78b8e4b0e410c33bfaf63dba9c5842f1d6a22e58c86471788906336e4ffc53
 - filename: LinuxContainers/singularity_container_engine.md

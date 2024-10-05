@@ -1,24 +1,25 @@
 ---
-aliases: []
+aliases:
+- CRI
+- Container Runtime Interface
 author: Maneesh Sutar
-date: 2024-05-10
+date: 2024-10-02
 tags:
+- kubernetes
 - linux/container
-title: Kubernetes
+title: Container Runtime Interface
 ---
 
-# Kubernetes
+# Container Runtime Interface
 
  > 
  > This article contains my observations from various explorations I conducted regarding Kubernetes and docker. It might be a little unstructured, so bare with me. Also see to [colima](colima.md) to read about various experiments I did with minikube.
-
-## CRI
 
 The [Container Runtime Interface](https://github.com/kubernetes/cri-api) is a plugin **interface** which **enables the kubelet to use a wide variety of container runtimes**, without having a need to recompile the cluster components.
 
 Kubernetes repo contains a good readme on [Why CRI?](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-node/container-runtime-interface.md)
 
-### Dockershim: the old way
+## Dockershim: the old way
 
 ![Kubernetes_docker_history](Artifacts/Kubernetes_docker_history.png)  
 Image [ref](https://youtu.be/2PvzB9st15Q?t=272)
@@ -45,7 +46,7 @@ As mentioned in this [article from kubernetes](https://kubernetes.io/blog/2020/1
  > 
  > Docker isn’t compliant with CRI, the [Container Runtime Interface](https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-kubernetes/). If it were, we wouldn’t need the shim, and this wouldn’t be a thing
 
-### CRI: the replacement
+## CRI: the replacement
 
 Kubelet always uses CRI except for using the rktnetes integration.  
 The old, pre-CRI Docker integration was removed in 1.7.
@@ -71,30 +72,10 @@ Running kubelet with `--container-runtime-endpoint` is now deprecated, instead o
 The first release article (2016, k8s 1.5): <https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-kubernetes/>  
 Not so updated readme file in k8s: <https://github.com/kubernetes/community/blob/master/contributors/devel/sig-node/container-runtime-interface.md>
 
-### cri-tools
+## cri-tools
 
 [cri-tools](https://github.com/kubernetes-sigs/cri-tools) provide CLI and validation tools for Kubelet Container Runtime Interface (CRI) .
 
 `crictl` is a command-line interface for CRI-compatible container runtimes.  
 Supported comamands: `images, ps`  
 See the [documentation](https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md)
-
-## Kubectl
-
-A cli tool to play with k8s cluster, similar to docker-cli
-
-### Kubectl context
-
-similar to [docker context](docker.md), kubectl also has its context  
-dependeing on which context is selected, kubectl can toggle between multiple k8s clusters
-
-to see all contexts in kubectl, run `kubectl config get-contexts`  
-to see name of the active context, run `kubectl config current-context`  
-to change active context, run `kubectl config use-context`
-
-information about all contexts is stored  in a config file (by default) located in `$HOME/.kube/config`  
-with `kubectl` we can specify other config file using `--kubeconfig` flag  
-or update `$KUBECONFIG` env variable with multiple config file paths (`:` seperated), to create one merged config.
-
-To view the config, run `kubectl config view`  
-see `kubectl config --help` for detailed working of how config is generated

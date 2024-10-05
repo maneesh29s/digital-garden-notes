@@ -5,10 +5,10 @@ date: 2024-05-10
 tags:
 - linux
 - linux/container
-title: podman
+title: Podman
 ---
 
-# podman
+# Podman
 
 The [Docker](docker.md) ecosystem provides lot of UX enhancing features like the docker-cli, and extra features like image building (dockerfile), image transfers, high level network and storage,  etc.
 
