@@ -36,6 +36,9 @@ def get_file_birth_time(filepath: str) -> str:
             # Fallback for systems without st_birthtime
             return datetime.fromtimestamp(stat.st_ctime).strftime('%Y-%m-%d')
 
+def get_file_modified_time(filepath: str) -> str:
+    stat = os.stat(filepath)
+    return datetime.fromtimestamp(stat.st_mtime).strftime('%Y-%m-%d')
 
 def get_h1_title_or_filename(lines: list[str], filepath: str) -> str:
     for line in lines:
@@ -68,9 +71,16 @@ def ensure_frontmatter(filepath: str, dry_run: bool = False, new_tags: list[str]
 
     if 'title' not in frontmatter or frontmatter['title'] is None:
         frontmatter['title'] = get_h1_title_or_filename(lines[content_start:], filepath)
-        
-    if 'date' not in frontmatter or frontmatter['date'] is None:
-        frontmatter['date'] = get_file_birth_time(filepath)
+
+    if 'created' not in frontmatter or frontmatter['created'] is None:
+        frontmatter['created'] = get_file_birth_time(filepath)
+
+    if 'modified' not in frontmatter or frontmatter['modified'] is None:
+        frontmatter['modified'] = get_file_modified_time(filepath)
+
+    # Special condition to remove date
+    if 'date' in frontmatter:
+        del frontmatter['date']
 
     if 'author' not in frontmatter or frontmatter['author'] is None:
         frontmatter['author'] = "Maneesh Sutar"
@@ -89,7 +99,7 @@ def ensure_frontmatter(filepath: str, dry_run: bool = False, new_tags: list[str]
     if new_tags:
         frontmatter['tags'].extend(
             tag for tag in new_tags if tag not in frontmatter['tags'])
-    
+
     # A special check to remove "public" tag if frontmatter already contains "private" tag
     # Can be removed if this check is not required in the future
     if "private" in frontmatter['tags'] and "public" in frontmatter['tags'] :
@@ -100,10 +110,14 @@ def ensure_frontmatter(filepath: str, dry_run: bool = False, new_tags: list[str]
     new_frontmatter = yaml.dump(frontmatter, default_flow_style=False)
 
     if dry_run:
-        print(f"Existing frontmatter for {filepath}:\n{existing_frontmatter}")
-        print(f"New frontmatter for {filepath}:\n{new_frontmatter}")
+        print(f"Existing frontmatter for {filepath}:\n\n{existing_frontmatter}")
+        print(f"New frontmatter for {filepath}:\n\n{new_frontmatter}")
     else:
-        write_file(filepath, new_content)
+        if new_frontmatter != existing_frontmatter:
+            print(f"Modifying frontmatter in {filepath}.")
+            write_file(filepath, new_content)
+        else:
+            print(f"No changes made in {filepath}.")
 
 
 def main() -> None:
