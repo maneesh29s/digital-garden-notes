@@ -3,7 +3,8 @@ aliases:
 - Memory Banking
 - Interleaved Memory
 author: Maneesh Sutar
-date: 2024-01-11
+created: 2024-01-11
+modified: 2024-09-28
 tags: []
 title: Memory Banking
 ---

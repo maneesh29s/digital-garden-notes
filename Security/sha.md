@@ -2,7 +2,8 @@
 aliases:
 - SHA
 author: Maneesh Sutar
-date: 2024-05-31
+created: 2024-05-31
+modified: 2024-09-28
 tags:
 - todo
 title: Secured Hashing Algorithm

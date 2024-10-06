@@ -3,7 +3,8 @@ aliases:
 - TLS
 - Transport Layer Security
 author: Maneesh Sutar
-date: 2024-07-06
+created: 2024-07-06
+modified: 2024-09-28
 tags: []
 title: Transport Layer Security
 ---

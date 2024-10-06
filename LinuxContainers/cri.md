@@ -3,7 +3,8 @@ aliases:
 - CRI
 - Container Runtime Interface
 author: Maneesh Sutar
-date: 2024-10-02
+created: 2024-10-02
+modified: 2024-10-05
 tags:
 - kubernetes
 - linux/container

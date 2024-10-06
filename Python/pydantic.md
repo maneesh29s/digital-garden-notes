@@ -1,7 +1,8 @@
 ---
 aliases: []
 author: Maneesh Sutar
-date: 2024-04-08
+created: 2024-04-08
+modified: 2024-09-28
 tags: []
 title: Pydantic
 ---

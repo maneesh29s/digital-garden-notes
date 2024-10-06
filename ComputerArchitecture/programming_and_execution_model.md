@@ -3,7 +3,8 @@ aliases:
 - Programming Model
 - Execution Model
 author: Maneesh Sutar
-date: 2024-03-02
+created: 2024-03-02
+modified: 2024-09-28
 tags:
 - GPU
 title: Programming Model

@@ -4,7 +4,8 @@ aliases:
 - Network Address Translation
 - PAT
 author: Maneesh Sutar
-date: 2024-08-20
+created: 2024-08-20
+modified: 2024-09-28
 tags: []
 title: Network Address Translation
 ---

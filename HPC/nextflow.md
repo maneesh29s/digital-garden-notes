@@ -2,7 +2,8 @@
 aliases:
 - Nextflow
 author: Maneesh Sutar
-date: 2023-05-08
+created: 2023-05-08
+modified: 2024-09-28
 tags: []
 title: Nextflow
 ---

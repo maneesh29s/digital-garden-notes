@@ -3,7 +3,8 @@ aliases:
 - ChaCha
 - ChaCha20
 author: Maneesh Sutar
-date: 2024-06-23
+created: 2024-06-23
+modified: 2024-09-28
 tags: []
 title: ChaCha
 ---

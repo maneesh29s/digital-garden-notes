@@ -1,7 +1,8 @@
 ---
 aliases: []
 author: Maneesh Sutar
-date: 2024-02-21
+created: 2024-02-21
+modified: 2024-09-28
 tags: []
 title: Numerical analysis Book
 ---

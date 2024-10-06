@@ -2,7 +2,8 @@
 aliases:
 - Colima
 author: Maneesh Sutar
-date: 2024-05-10
+created: 2024-05-10
+modified: 2024-10-06
 tags:
 - linux/container
 title: Colima

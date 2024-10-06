@@ -1,7 +1,8 @@
 ---
 aliases: []
 author: Maneesh Sutar
-date: 2024-03-28
+created: 2024-03-28
+modified: 2024-09-28
 tags:
 - cpp
 title: Makefile

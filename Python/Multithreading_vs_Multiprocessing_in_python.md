@@ -1,7 +1,8 @@
 ---
 aliases: []
 author: Maneesh Sutar
-date: 2023-11-18
+created: 2023-11-18
+modified: 2024-09-28
 tags: []
 title: Multithreading vs Multiprocessing in Python
 ---

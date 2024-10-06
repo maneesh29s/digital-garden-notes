@@ -1,7 +1,8 @@
 ---
 aliases: []
 author: Maneesh Sutar
-date: 2023-06-05
+created: 2023-06-05
+modified: 2024-09-28
 tags: []
 title: Hough Transform
 ---

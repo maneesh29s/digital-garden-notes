@@ -3,7 +3,8 @@ aliases:
 - Lima
 - Linux on Mac
 author: Maneesh Sutar
-date: 2024-10-05
+created: 2024-10-05
+modified: 2024-10-05
 tags:
 - linux
 - vm

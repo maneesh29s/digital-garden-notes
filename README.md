@@ -7,6 +7,7 @@ date: 2024-05-20
 # Welcome to my "Digital Garden" 👩‍🌾
 
 Personal knowledge base, a collection of everything I have learned.
+There are currently **162 notes** in this.
 
 I use [obsidian](https://obsidian.md/) and [zettlr](https://www.zettlr.com/) to manage my notes.
 I also write [blogs](https://medium.com/@maneesh29s) derived from some of the notes present in this vault.

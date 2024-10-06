@@ -1,7 +1,8 @@
 ---
 aliases: []
 author: Maneesh Sutar
-date: 2024-06-15
+created: 2024-06-15
+modified: 2024-09-28
 tags:
 - cpp
 title: C++ standard library functions for multi-threading

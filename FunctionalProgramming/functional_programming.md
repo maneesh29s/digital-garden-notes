@@ -2,7 +2,8 @@
 aliases:
 - Functional Programming
 author: Maneesh Sutar
-date: 2023-10-29
+created: 2023-10-29
+modified: 2024-09-28
 tags: []
 title: Functional Programming
 ---

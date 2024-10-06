@@ -1,7 +1,8 @@
 ---
 aliases: []
 author: Maneesh Sutar
-date: 2024-01-08
+created: 2024-01-08
+modified: 2024-09-28
 tags: []
 title: Multi-core and Multi-CPU systems
 ---

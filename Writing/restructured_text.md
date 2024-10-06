@@ -3,11 +3,13 @@ aliases:
 - rst
 - restructured text files
 author: Maneesh Sutar
-date: 2023-12-02
+created: 2023-12-02
+modified: 2024-09-28
 tags:
 - writing
 title: reStructuredText files
 ---
+
 
 # reStructuredText files
 
@@ -23,7 +25,7 @@ Sphinx can be used to convert .rst files to HTML, PDF, LATEX etc
 
 Projects do this all the time
 
-## Compared to md
+## Compared to markdown
 
-Offers more features than markdown, more systematic  
-Markdown is simple and easy
+Offers more features than markdown, more systematic
+Markdown is simple and easy.

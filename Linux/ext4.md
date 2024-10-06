@@ -2,7 +2,8 @@
 aliases:
 - ext4
 author: Maneesh Sutar
-date: 2024-08-04
+created: 2024-08-04
+modified: 2024-09-28
 tags: []
 title: ext4
 ---

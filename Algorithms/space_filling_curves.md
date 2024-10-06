@@ -1,7 +1,8 @@
 ---
 aliases: []
 author: Maneesh Sutar
-date: 2023-04-04
+created: 2023-04-04
+modified: 2024-09-28
 tags: []
 title: Space Filling Curves
 ---

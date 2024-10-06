@@ -2,7 +2,8 @@
 aliases:
 - Singularity
 author: Maneesh Sutar
-date: 2023-07-28
+created: 2023-06-06
+modified: 2024-10-05
 tags: []
 title: Singularity Container Engine
 ---

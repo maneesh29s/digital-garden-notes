@@ -1,7 +1,8 @@
 ---
 aliases: []
 author: Maneesh Sutar
-date: 2024-09-01
+created: 2024-09-01
+modified: 2024-10-05
 tags: []
 title: Networking in containers
 ---

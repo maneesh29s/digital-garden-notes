@@ -1,7 +1,8 @@
 ---
 aliases: []
 author: Maneesh Sutar
-date: 2024-01-19
+created: 2024-01-19
+modified: 2024-09-28
 tags:
 - git
 title: Merge vs Rebasing

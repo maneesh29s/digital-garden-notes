@@ -1,7 +1,8 @@
 ---
 aliases: LLAMA
 author: Maneesh Sutar
-date: 2023-08-21
+created: 2023-08-21
+modified: 2024-09-28
 tags: []
 title: Low-Level Abstraction of Memory Access
 ---

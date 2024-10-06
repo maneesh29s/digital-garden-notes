@@ -1,7 +1,8 @@
 ---
 aliases: []
 author: Maneesh Sutar
-date: 2023-03-25
+created: 2023-03-25
+modified: 2024-09-28
 tags: []
 title: Overview of Parallelism
 ---
