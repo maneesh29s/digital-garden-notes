@@ -2,7 +2,7 @@
 aliases:
 - SPMD
 author: Maneesh Sutar
-created: 2024-03-02 15:18:00
+created: 2024-03-02
 modified: 2024-09-28
 tags: []
 title: SPMD

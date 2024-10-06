@@ -1,7 +1,8 @@
 ---
 title: Digital Garden
 author: Maneesh Sutar
-date: 2024-05-20
+created: 2024-05-20
+modified: 2024-05-20
 ---
 
 # Welcome to my "Digital Garden" 👩‍🌾
