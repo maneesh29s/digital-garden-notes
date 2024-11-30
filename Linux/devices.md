@@ -19,7 +19,7 @@ title: Devices
 
 There are two main types of devices under all Unix systems, character and block devices. Character devices are those for which no buffering is performed, and block devices are those which are accessed through a cache. Block devices must be random access, but character devices are not required to be, though some are. Filesystems can only be mounted if they are on block devices.
 
-Character devices are read from and written to with two function: foo_read() and foo_write(). The read() and write() calls do not return until the operation is complete. By contrast, block devices do not even implement the read() and write() functions, and instead have a function which has historically been called the "strategy routine". 
+Character devices are read from and written to with two function: foo_read() and foo_write(). The read() and write() calls do not return until the operation is complete. By contrast, block devices do not even implement the read() and write() functions, and instead have a function which has historically been called the "strategy routine".
 
 Reads and writes are done through the buffer cache mechanism by the generic functions bread(), breada(), and bwrite(). These functions go through the buffer cache, and so may or may not actually call the strategy routine, depending on whether or not the block requested is in the buffer cache (for reads) or on whether or not the buffer cache is full (for writes). A request may be asyncronous: breada() can request the strategy routine to schedule reads that have not been asked for, and to do it asyncronously, in the background, in the hopes that they will be needed later.
 

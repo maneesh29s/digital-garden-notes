@@ -46,7 +46,7 @@ vCPU represents **a portion or share of the underlying, physical CPU** that is a
 
 ## Calculations of available vCPU
 
-$$(Threads\ \*\\ Cores)\ * Physical\_CPU = Number\_of\_vCPU$$
+$$(Threads\ *\ Cores)\ * Physical\_CPU = Number\_of\_vCPU$$
 
 e.g. **Intel Xeon E-2288G** chipset has  8 cores / 16 threads  
 Assuming we have 1 chipset in the motherboard  

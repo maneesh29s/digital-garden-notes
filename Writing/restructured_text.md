@@ -10,7 +10,6 @@ tags:
 title: reStructuredText files
 ---
 
-
 # reStructuredText files
 
 An alternative to markdown
@@ -27,5 +26,5 @@ Projects do this all the time
 
 ## Compared to markdown
 
-Offers more features than markdown, more systematic
-Markdown is simple and easy.
+Offers more features than markdown, more systematic  
+Markdown is simple and easy

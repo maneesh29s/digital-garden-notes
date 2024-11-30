@@ -33,10 +33,10 @@ title: Resetting, checking out & reverting
 
 1. Using `git reset` or `git checkout` on a file level might be confusing as we need to know what they do by default. Instead use `git restore`, specifying the `--source=<treeish>` and whether to do changes in `--worktree` (default) or `--staged`
    
-   \|Command|Equivalent|  
-   \|---|---|  
-   \|`git reset HEAD~2 ./readme`\|`git restore --staged --source=HEAD~2 ./readme`\|  
-   \|`git checkout HEAD~2 ./readme`\|`git restore [--worktree] --source=HEAD~2 ./readme`\|
+   |Command|Equivalent|
+   |-------|----------|
+   |`git reset HEAD~2 ./readme`|`git restore --staged --source=HEAD~2 ./readme`|
+   |`git checkout HEAD~2 ./readme`|`git restore [--worktree] --source=HEAD~2 ./readme`|
    
    Also use patch mode `-p` to make changes interactively
 

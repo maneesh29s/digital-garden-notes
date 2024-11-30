@@ -86,7 +86,7 @@ fileignoreconfig:
 - filename: Linux/criu.md
   checksum: 7a156daf55957e4df3f91a6f4ff0a17a33fc4d7c790fedaa96f126571c6f2c23
 - filename: Linux/devices.md
-  checksum: 78507db797c86ae06bb48624abc9921b75cfb1dd592ca2caf9554c351cdd89aa
+  checksum: bac7432282d89eb767d5eef9a6d050a49c067d91c5ea57186b9962e4221be1d9
 - filename: Linux/links.md
   checksum: a14c60bbfb80db13f9596edd4a46d86ec5a35f8f90c51878e510a9801d220e21
 - filename: Linux/networking.md
@@ -114,7 +114,7 @@ fileignoreconfig:
 - filename: LinuxContainers/lima.md
   checksum: 4961d00a154cff219717185430bd6bf8954841bb3044bdb0c718c52f13d9a077
 - filename: LinuxContainers/networking.md
-  checksum: 201425a9013255ddce953415eba875fe012f999484d18c521dbf6d3748bb0b40
+  checksum: 131b23d941e9455cd7dd0e29dde5a53f53b9f9ed4a63d257cc5d0e5f4b548e68
 - filename: LinuxContainers/podman.md
   checksum: 4d78b8e4b0e410c33bfaf63dba9c5842f1d6a22e58c86471788906336e4ffc53
 - filename: LinuxContainers/singularity_container_engine.md
@@ -133,6 +133,10 @@ fileignoreconfig:
   checksum: 18d719e82443a9be49ff364239a765e8e0d43d2752a6d21a19eefd269c7b861f
 - filename: Python/Multithreading_vs_Multiprocessing_in_python.md
   checksum: 0229a054e4aeafdffe0b0e2a5a24bb72a8a108a3334f612cc4b6c410e37c4a80
+- filename: Python/python_and_c.md
+  checksum: 0fa34967a597fd74718afcb99c8e306f2ac09b56fe87e020b82d56ea1c8a11e6
+- filename: Python/python_jit_performance.md
+  checksum: af03db95f8a30a94e9921c6316ef2e4bd19fe3049ffdd997c5133d08e2fbeb54
 - filename: Python/pythons_messy_tools.md
   checksum: e3be8b07969180b38d4483118b48862253d2e51cf9857f8e0e257efe0b1ba5ad
 - filename: Python/xarray.md

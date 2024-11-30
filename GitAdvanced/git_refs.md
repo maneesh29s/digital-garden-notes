@@ -14,7 +14,7 @@ title: Git Refs
 
 `git rev-parse <ref>`: returns the SHA id of the `ref`, where `ref` can be tag, branch name, HEAD
 
-A **ref** is an indirect way of referring to a commit. You can think of it as a user-friendly alias for a commit hash. This is Git’s internal mechanism of representing branches and tags[^1]
+A **ref** is an indirect way of referring to a commit. You can think of it as a user-friendly alias for a commit hash. This is Git’s internal mechanism of representing branches and tags.
 
 ## Where they are stored?
 

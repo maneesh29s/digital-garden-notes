@@ -94,18 +94,18 @@ When you create a new network using  `docker network create ...`, docker creates
 Since bridge is a [switch](../ComputerNetworking/network_devices.md), it works at layer 2 of OSI. So its only concerned about the layer 2 properties (MAC addresses, MTU etc.) of  the devices connected to it.  Bridge can't do anything for layer 3 i.e. assigning IP, managing routes etc.
 
 But ==bridges act as an helper to the docker daemon== for managing networking of the containers.  
-**All the layer 3 things are handled by the docker daemon itself.** 
+**All the layer 3 things are handled by the docker daemon itself.**
 
 ### Which layer 3 operations are handled by docker daemon?
 
-* **Bridge network setup**: 
+* **Bridge network setup**:
   
   * When a container is created and attached to a bridge network, Docker assigns it an IP address from the ==subnet allocated to that bridge== (e.g., `172.17.0.0/16` for the default bridge network). This is done by the Docker daemon itself.
   * Docker uses an internal **IPAM** (**IP Address Management**) system that keeps track of which IPs have been assigned and dynamically allocates an available IP from the subnet to the container. This happens when the container starts, and there is ==no separate DHCP service involved.==
   * The container receives its IP address, default gateway, and DNS configuration through a process that mimics DHCP but it is all handled by Docker's internal mechanisms without requiring a standalone DHCP server.
-* **DNS Resolution**: 
+* **DNS Resolution**:
   
-  * For every container, Docker creates embedded DNS server, which runs inside the network namespace of the container (at some IP `127.0.0.x`). Containers connected to the Docker bridge network are automatically configured to use the embedded DNS server as their primary DNS resolver. 
+  * For every container, Docker creates embedded DNS server, which runs inside the network namespace of the container (at some IP `127.0.0.x`). Containers connected to the Docker bridge network are automatically configured to use the embedded DNS server as their primary DNS resolver.
   * ==Which DNS entries to add for each container depends on which bridge network that container is connected to==.
   * If the container is added to a new bridge, docker sends new entries in the container's DNS config.
 * **NAT**:
@@ -123,7 +123,7 @@ So here are the advantages of bridge network:
 1. **Logical isolation at layer 2 (link layer)**
    
    1. Bridge acts as a virtual switch at layer 2 of OSI.
-   1. Even though one end of veth is in the host namespace, once we set a "master" bridge for veth, veth acts as ==one of the ports of the bridge==. In this case, ==the layer 2 "frames" from veth can only travel inside the bridge network==, and they can't reach the host without explicitly assigning IP route (layer 3). 
+   1. Even though one end of veth is in the host namespace, once we set a "master" bridge for veth, veth acts as ==one of the ports of the bridge==. In this case, ==the layer 2 "frames" from veth can only travel inside the bridge network==, and they can't reach the host without explicitly assigning IP route (layer 3).
    1. Also, containers connected to different bridge networks are also isolated from each other at layer 2.
 1. **Simplified connectivity between host and containers**
    
@@ -132,7 +132,7 @@ So here are the advantages of bridge network:
    1. The bridge makes port forwarding simple, so containers can be accessed externally without exposing the entire host network.
 1. **Changing the network** that a container is part of becomes easier because of the abstraction of a "bridge". Docker provides `docker connect` command to achieve the same.
 
-1. **Access to Layer 2 functions** like mac address filtering, VLAN filtering, assigning priority 
+1. **Access to Layer 2 functions** like mac address filtering, VLAN filtering, assigning priority
 
 ## MACvlans and IPvlans
 

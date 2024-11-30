@@ -17,7 +17,7 @@ Bitonic sort does exactly the same steps in the best and the worst case, while n
 ## Algorithm Design Strategy
 
 ||adaptive|oblivious|
-|--|--------|---------|
+|-|--------|---------|
 |control flow|complex|simple|
 |raw compute|less|more|
 |support parallel processsing|maybe|yes|

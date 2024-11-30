@@ -44,7 +44,7 @@ Each word in the given sequence of text will have 3 vectors:
 ![600](Artifacts/Multi_head_attention.jpeg)
 
 The attention vector for each word can be calculated using **Scaled-Dot Product Attention**.  
-But instead of performing a single attention function with $d\_{model}$ dimensions, to get benefit of parallelisation, Multi-Head Attention is performed. The attention is calculated in $h$ parallel processes. The dimensions for each attention layer is kept ( according to the [^1] ) to be $d\_{model} / h$ , so overall computation performed is same.
+But instead of performing a single attention function with $d_{model}$ dimensions, to get benefit of parallelisation, Multi-Head Attention is performed. The attention is calculated in $h$ parallel processes. The dimensions for each attention layer is kept ( according to the [^1] ) to be $d_{model} / h$ , so overall computation performed is same.
 
 [^1]: Reference: [Attention is All You Need](https://arxiv.org/abs/1706.03762)
 
@@ -69,7 +69,7 @@ Output embeddings are offset by one position, also masking is done before Multi-
 
 ### Linear and Softmax
 
-Linear layer is again a [Feed Forward](#feed-forward) layer which converts the attention vectors into a vector of dimension suitable $d\_{model}$. Softmax layers outputs the probabiilties of the next possible word / value in the generated sequence
+Linear layer is again a [Feed Forward](#feed-forward) layer which converts the attention vectors into a vector of dimension suitable $d_{model}$. Softmax layers outputs the probabiilties of the next possible word / value in the generated sequence
 
 ## Further Reading
 
