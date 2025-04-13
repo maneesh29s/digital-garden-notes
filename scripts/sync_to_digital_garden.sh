@@ -86,7 +86,7 @@ if [[ -z $START_AT ]] # on the entire vault
 then
 	conditional_delete $DIGITAL_GARDEN_ROOT
 	echo "Emptied $DIGITAL_GARDEN_ROOT"
-	obsidian-export --preserve-mtime --hard-linebreaks --skip-tags private $OBSIDIAN_ROOT $DIGITAL_GARDEN_ROOT
+	obsidian-export --hard-linebreaks --skip-tags private $OBSIDIAN_ROOT $DIGITAL_GARDEN_ROOT
 	echo "Notes have been exported to $DIGITAL_GARDEN_ROOT"
 else # only export subfolder
 	OUTPUT_PATH="$DIGITAL_GARDEN_ROOT/$START_AT"
@@ -98,6 +98,6 @@ else # only export subfolder
 		echo "Creating new directory $OUTPUT_PATH"
 		mkdir -p "$OUTPUT_PATH"
 	fi
-	obsidian-export --preserve-mtime --hard-linebreaks --skip-tags private --start-at $OBSIDIAN_ROOT/$START_AT $OBSIDIAN_ROOT $OUTPUT_PATH
+	obsidian-export --hard-linebreaks --skip-tags private --start-at $OBSIDIAN_ROOT/$START_AT $OBSIDIAN_ROOT $OUTPUT_PATH
 	echo "Notes have been exported to $OUTPUT_PATH"
 fi
