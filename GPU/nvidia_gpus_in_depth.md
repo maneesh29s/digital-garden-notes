@@ -2,7 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 created: 2024-05-28
-modified: 2024-09-28
+modified: 2025-01-18
 tags: []
 title: Nvidia over the years
 ---
@@ -67,7 +67,7 @@ RTX 3090Ti has 84 SMs
 
 ![gpu_rtx_30_SM](Artifacts/gpu_rtx_30_SM.jpeg)
 
-[Nvidia A100](https://images.nvidia.com/aem-dam/en-zz/Solutions/data-center/nvidia-ampere-architecture-whitepaper.pdf) GPU powered by NVIDIA Ampere GA100 Architecture  
+[Nvidia A100](https://images.nvidia.com/aem-dam/en-zz/Solutions/data-center/nvidia-ampere-architecture-whitepaper.pdf) is a server grade GPU powered by NVIDIA Ampere GA100 Architecture  
 Each SM in GA100 architecture contains:
 
 * **64 FP32 and INT32** CUDA Cores
@@ -81,6 +81,11 @@ The NVIDIA A100 Tensor Core GPU implementation of the GA100 GPU includes:
 * 7 GPCs, 7 or 8 TPCs per GPC, 2 SMs per TPC, up to 16 SMs/GPC, **108 SMs**
 * 5 HBM2 stacks, 10 512-bit Memory Controllers
 
+**About Display capabilities**: from the whitepaper:
+
+ > 
+ > Because the A100 Tensor Core GPU is designed to be installed in high-performance servers and data center racks to power AI and HPC compute workloads, it does not include display connectors, NVIDIA RT Cores for ray tracing acceleration, or an NVENC encoder
+
 SM in NVIDIA GA100 Ampere Architecture (used in A100 series)  
 ![gpu_nvidia_ampere_arch](Artifacts/gpu_nvidia_ampere_arch.jpeg)
 
@@ -90,7 +95,7 @@ Hopper Microarchitecture - HPC - H100
 Whitepaper: <https://resources.nvidia.com/en-us-tensor-core/gtc22-whitepaper-hopper>
 
 Datasheet:  
-![h100_datasheet](./Artifacts/h100_datasheet.jpeg)
+![h100_datasheet](../HPC/Artifacts/h100_datasheet.jpeg)
 
 NVIDIA H100 GPU contains total 132 SMs per GPU  
 Each SM has (compute capability 9.0 for H100)
@@ -102,6 +107,9 @@ Each SM has (compute capability 9.0 for H100)
 * 16 special function units for single-precision floating-point transcendental functions
 * 4 texture units
 * 4 warp schedulers
+
+ > 
+ > Since the H100 series GPUs (like A100) are supposed to be used for HPC workloads, so they don't have display connector or RT cores.
 
 Ada Lovelace - Consumer - RTX 40 series  
 <https://en.wikipedia.org/wiki/Ada_Lovelace_(microarchitecture)>  

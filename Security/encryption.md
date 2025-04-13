@@ -5,7 +5,7 @@ aliases:
 - Symmetric Encryption
 author: Maneesh Sutar
 created: 2024-05-31
-modified: 2024-09-28
+modified: 2025-04-01
 tags: []
 title: Encryption
 ---

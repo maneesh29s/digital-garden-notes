@@ -2,7 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 created: 2024-10-20 18:45:00
-modified: 2024-10-20
+modified: 2024-11-30
 tags: []
 title: Python and C
 ---

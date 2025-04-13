@@ -2,7 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 created: 2024-06-10
-modified: 2024-09-28
+modified: 2025-03-16
 tags: []
 title: Zarr
 ---
@@ -85,3 +85,22 @@ Time to write: 1.9 seconds
 Size of disk: 51MB
 
 Note: Multi threaded with 8 threads, around 200% total CPU usage. Data written to 1024 seperate files (2^20 elements per file)
+
+## Comparision to HDF5
+
+The Hierarchical Data Format version 5 [HDF5](https://github.com/HDFGroup/hdf5) is also an open source file format.
+
+In summary, both Zarr and HDF5 are very similar,
+
+1. directory and files based structure
+1. Each file containing multi-dimensional arrays
+1. Metadata for each file/directory  
+   And one can achieve same things with both Zarr and HDF5
+
+**The benefit of Zarr**
+
+1. Its relatively modern, supports things like using Json files for metadata (instead of binary files in HDF5), using semantic versioning for each file etc.,
+1. extending `zarr-python` with custom filters/storage backends is relatively easy than extending HDF5, where everything is in C. Even for H5py (python wrapper over main HDF5 library), extension plugins must be written in C.
+1. **HDF5 is single-threaded**. For parallel access, one must use MPI (or multi-processing). The `zarr-python` supports multi-thread access.
+
+Reference: [https://youtu.be/-l445lCPTts](https://youtu.be/-l445lCPTts)

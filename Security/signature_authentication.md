@@ -3,7 +3,7 @@ aliases:
 - Signing
 author: Maneesh Sutar
 created: 2024-05-31
-modified: 2024-09-28
+modified: 2025-04-13
 tags: []
 title: Authentication and Signing
 ---
@@ -12,7 +12,7 @@ title: Authentication and Signing
 
 Used to verify that the message received during communication was really sent by the author as intended.
 
-[Public key DSA](encryption.md#Asymmetric) like [RSA](rsa.md) or [ed25519](dh.md#ECDSA), are used in protocols like TLS and SSH as the user authentication mechanisms.
+[Public key DSA](encryption.md#Asymmetric) like [RSA](rsa.md) or [Ed25519](elliptical_curve_crypto.md#Ed25519) are used in protocols like TLS and SSH as the user authentication mechanisms.
 
 In case of SSH, the public key of the client can be stored as "authorized keys" in the server, which is stored in `~/.ssh/authorized_keys` file.  
 Thus, the server can verify the identity of a client, and [MITM impersonation](mitm.md) attacks can be prevented.

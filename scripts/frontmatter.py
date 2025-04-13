@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import argparse
 import os
@@ -69,28 +69,28 @@ def ensure_frontmatter(filepath: str, dry_run: bool = False, new_tags: list[str]
 
     existing_frontmatter = yaml.dump(frontmatter, default_flow_style=False)
 
-    if 'title' not in frontmatter or frontmatter['title'] is None:
+    if frontmatter.get('title') in [None, ""]:
         frontmatter['title'] = get_h1_title_or_filename(lines[content_start:], filepath)
 
-    if 'created' not in frontmatter or frontmatter['created'] is None:
+    if frontmatter.get('created') in [None, ""]:
         frontmatter['created'] = get_file_birth_time(filepath)
 
-    if 'modified' not in frontmatter or frontmatter['modified'] is None:
-        frontmatter['modified'] = get_file_modified_time(filepath)
+    # Always update modified time
+    frontmatter['modified'] = get_file_modified_time(filepath)
 
     # Special condition to remove date
     if 'date' in frontmatter:
         del frontmatter['date']
 
-    if 'author' not in frontmatter or frontmatter['author'] is None:
+    if frontmatter.get('author') in [None, ""]:
         frontmatter['author'] = "Maneesh Sutar"
 
-    if 'aliases' not in frontmatter or frontmatter['aliases'] is None:
+    if frontmatter.get('aliases') in [None, ""]:
         frontmatter['aliases'] = []
 
-    if 'tags' not in frontmatter or frontmatter['tags'] is None:
+    if frontmatter.get('tags') in [None, ""]:
         frontmatter['tags'] = []
-    
+
     # Add new aliases if provided
     if new_aliases:
         frontmatter['aliases'].extend(
@@ -99,11 +99,6 @@ def ensure_frontmatter(filepath: str, dry_run: bool = False, new_tags: list[str]
     if new_tags:
         frontmatter['tags'].extend(
             tag for tag in new_tags if tag not in frontmatter['tags'])
-
-    # A special check to remove "public" tag if frontmatter already contains "private" tag
-    # Can be removed if this check is not required in the future
-    if "private" in frontmatter['tags'] and "public" in frontmatter['tags'] :
-        frontmatter['tags'].remove("public")
 
     new_frontmatter_content = build_frontmatter(frontmatter)
     new_content = new_frontmatter_content + lines[content_start:]

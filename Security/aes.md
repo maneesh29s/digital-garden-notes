@@ -4,7 +4,7 @@ aliases:
 - Advanced Encryption Standard
 author: Maneesh Sutar
 created: 2024-05-31
-modified: 2024-09-28
+modified: 2025-04-13
 tags: []
 title: Advanced Encryption Standard (AES)
 ---
@@ -13,7 +13,7 @@ title: Advanced Encryption Standard (AES)
 
 AES is a symmetric key encryption algorithm, means the same key is used for both encryption and decryption.
 
-Any public key cryptosystems like [RSA](rsa.md) or [ECDHE](dh.md#ECDH) can be used to share the symmetric key to be used in AES.
+Any public key cryptosystems like [RSA](rsa.md) or [ECDHE](elliptical_curve_crypto.md#ecdh) can be used to share the symmetric key to be used in AES.
 
 AES uses key lengths of 128, 192, or 256 bits.  
 In terms of security, even AES-128 gives better security than 2048 bit [RSA](rsa.md) encryption.

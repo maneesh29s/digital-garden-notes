@@ -21,6 +21,8 @@ fileignoreconfig:
   checksum: 35c2d97b0bec9c8f14ed7aae06cb84ad63f780dacb32e10ad648bb34f9723499
 - filename: CPP/template_metaprogramming.md
   checksum: c4eb1899c4329b3f6320c9f3c1a02ec2c3300319aa09b69356af062b70ef44ae
+- filename: ComputerArchitecture/computer_memory.md
+  checksum: 398e827e80b74f2d588e535db4c905223980ae3b2e3205d7c2628ba5a1da7980
 - filename: ComputerArchitecture/concurrency.md
   checksum: 37939cb917ab0a27dff20f4fcb9334a9abfdb7657ea967e7293e0cf79105cca1
 - filename: ComputerArchitecture/intel_x86_64_architecture.md
@@ -29,6 +31,8 @@ fileignoreconfig:
   checksum: 59beff9cce270f2b5f676e7ab7a4723dd9852135593a765fb3e718e98f8b9616
 - filename: ComputerArchitecture/program_processes_threads.md
   checksum: 9d279dea39599d6b3910e69e7a0559fbd5be8e7d4b2b7394c0684a1bf27646ee
+- filename: ComputerGraphics/graphics_pipeline.md
+  checksum: 819214c9424e5bf8adb455712e4e07b5a93b8ae20d2d7612714299310552238a
 - filename: ComputerNetworking/DHCP.md
   checksum: af9b156eb6580c4961bd9f8b80f8b742c8453eeef35d0db844b2d79ce3ade292
 - filename: ComputerNetworking/Firewall.md
@@ -43,6 +47,8 @@ fileignoreconfig:
   checksum: 7d00e706fb6da52cef58f515254cbe4a2cd4111c9650264326b7c3700d710487
 - filename: ComputerNetworking/network_devices.md
   checksum: ce886ece714f33c4aead012616e0edc8d857c7bccce9d6e7ba13c7cb81fe0c97
+- filename: DailyNotes/2025_01_18.md
+  checksum: 95b0c49ffe2d36235e75bbaaa49c220b1546dc43c28a0eda76a28d016f5504d0
 - filename: FunctionalProgramming/pure_functions.md
   checksum: cf27622bc71062e0124311bef547b580dc1255e84a38f927b10ef5ef02253906
 - filename: FunctionalProgramming/side_effects.md
@@ -150,9 +156,13 @@ fileignoreconfig:
 - filename: Security/DH.md
   checksum: 1204fbbd28b77537e0025b7092b2bc5fb11b2f25d52c494639e162ffad6b4ee1
 - filename: Security/cypher_suite.md
-  checksum: 5703f11970b3c7cde984279b799839faee1728e2961b623bafefa5ac5c8c7338
+  checksum: 1e2d99fd2d14f3708373b41714bba17499525923cdd8cc8e0da5d046c4f1d346
 - filename: Security/dh.md
   checksum: 850677c7c35c871104c5fb565af5b45c6ce51bd12c120b4aa653cd92746f492a
+- filename: Security/ed25519.md
+  checksum: 1d85fe162eccb1e271bc34f20711265201b3e35b4facf7dd21cf1c78a3dcc3ac
+- filename: Security/elliptical_curve_crypto.md
+  checksum: 2faeb8a101f33e6f7e2a4001eddc2d89f2ead1be37a1cc0704ce95773c84d05e
 - filename: Security/encryption.md
   checksum: 3c2c36a40fbb4fc8ade6206f8309357be60eeec19ba259fe2c414c58118f2e19
 - filename: Security/error_correction.md
@@ -166,7 +176,7 @@ fileignoreconfig:
 - filename: Security/hashing.md
   checksum: adc5f8699db85e788364286022fe03312897d20c17a584e46e730d560914815a
 - filename: Security/mitm.md
-  checksum: 4e4999ef8a88a5a6747b5e6a48d1d0c9db48f8a1cdadfbc99abfd1b972754b97
+  checksum: b557d7827da9ea2046aa64cc8b0a8a39a8d1547a38b048f1aded6504a79afce8
 - filename: Security/rsa.md
   checksum: c85635530ebf695b64f273d73b234ec50468fbed3873a50caf1f57c6e94fdb98
 - filename: Security/signature_authentication.md
@@ -174,9 +184,9 @@ fileignoreconfig:
 - filename: Security/signing.md
   checksum: 74a38a9649a7a43ce7b97f6125b9ffc5d83c0e285f04d2663cbbce94b4351988
 - filename: Security/tls.md
-  checksum: e1808aef0b3a246c5e97298dfee61587d129b77fa0e61d1354973d77f35385a1
+  checksum: e36d584bd6b87a1920e33d258eca896db1e640742617728466045c1290f7710b
 - filename: Security/x_509.md
-  checksum: 89a2931c0d529b673f54ebdcdd3f1277da12670b6dcfc2d16779bc19bce0243f
+  checksum: 5cb23c9a3daac1906c08dcd9f0cd5a14cea1e4d525a314303f1ffa552439e4bc
 - filename: notebooks/zarr.ipynb
   checksum: 9d3d60f2ed250acd050f64c221ed3b3683c7d5162a98152be1f1d995cb994dc5
 custom_patterns:

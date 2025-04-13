@@ -2,7 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 created: 2023-07-10
-modified: 2024-09-28
+modified: 2025-01-18
 tags: []
 title: Accelerated Computing
 ---
@@ -16,7 +16,7 @@ FPGA
 ## GPU
 
 Distributed load across thousands of cores.  
-Refer [Working of GPU](gpu_working.md) and [gpu programming paradigms](gpu_programming.md)
+Refer [Working of GPU](../GPU/gpu_working.md) and [gpu programming paradigms](../GPU/gpu_programming.md)
 
 ## Custom Silicon
 

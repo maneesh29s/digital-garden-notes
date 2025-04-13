@@ -3,7 +3,7 @@ aliases:
 - Cypher Suites
 author: Maneesh Sutar
 created: 2024-05-31
-modified: 2024-09-28
+modified: 2025-04-13
 tags: []
 title: Cypher Suite
 ---
@@ -20,10 +20,10 @@ Suites typically use [Transport Layer Security](https://en.wikipedia.org/wiki/T
 
 **A suite contains**
 
-1. a key exchange algorithm: [ECDHE](dh.md#ECDH) , [RSA](rsa.md)
-1. authentication algorithm during handshake: [RSA](rsa.md), ECDSA
-1. block encryption algorithm: [AES](aes.md)
-1. hash function for [HMAC](hashing.md#HMAC) and [HKDF](hashing.md#HKDF): [SHA](sha.md), MD5
+1. Key exchange algorithm: [ECDHE](elliptical_curve_crypto.md#ECDH) , [RSA](rsa.md)
+1. Digital signature (certificate) auth algorithms during handshake: [RSA](rsa.md), ECDSA
+1. Symmetric encryption algorithm: [AES](aes.md), [ChaCha20](chacha.md)
+1. Hash function for [HMAC](hashing.md#HMAC) and [HKDF](hashing.md#HKDF): [SHA](sha.md), MD5
 
 ## Support in TLS
 

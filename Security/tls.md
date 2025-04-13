@@ -4,7 +4,7 @@ aliases:
 - Transport Layer Security
 author: Maneesh Sutar
 created: 2024-07-06
-modified: 2024-09-28
+modified: 2025-04-13
 tags: []
 title: Transport Layer Security
 ---
@@ -224,7 +224,7 @@ TLS 1.3 added an improved [Pre-shared Key (PSK)](https://datatracker.ietf.org/do
 TLS 1.3 has ==removed static RSA and static DH based key-exchange== mechanisms (see [Support in TLS](cypher_suite.md#Support-in-TLS)). All handshakes provide [Forward Secrecy](forward_secracy.md). All key exchanges (except when using **PSK**) take place using **Ephemeral Finite/Elliptical Diffie-Hellman**.
 
 In Ephemeral key-exchanges cases, server must [authenticate](https://datatracker.ietf.org/doc/html/rfc8446#section-4.4) itself using [Certificate](https://datatracker.ietf.org/doc/html/rfc8446#section-4.4.2) and [CertificateVerify](https://datatracker.ietf.org/doc/html/rfc8446#section-4.4.3) messages.  
-The `Certificate` message contains servers [x_509](x_509.md) certificate, which contains the public key using one of the [Digital Signature Algorithm](https://datatracker.ietf.org/doc/html/rfc8446#section-4.2.3) like [RSA](rsa.md), [ECDSA](dh.md#ECDSA) or EdDSA.  
+The `Certificate` message contains servers [x_509](x_509.md) certificate, which contains the public key using one of the [Digital Signature Algorithm](https://datatracker.ietf.org/doc/html/rfc8446#section-4.2.3) like [RSA](rsa.md) or [ECDSA](elliptical_curve_crypto.md#ECDSA)  
 The `CertificateVerify` message ==contains a signature, over the== [hash of entire handshake message](https://datatracker.ietf.org/doc/html/rfc8446#section-4.4.1) upto that point, generated ==using the private key corresponding to the public key in the certificate..==
 
 Unlike TLS 1.2, the ==handshake messages after server key exchange are encrypted== with keys derived from ==a set of 11 secrets==. Refer to [section 7.1](https://datatracker.ietf.org/doc/html/rfc8446#section-7.1) to see list of all the secrets (with how they are derived) and also [section 7.3](https://datatracker.ietf.org/doc/html/rfc8446#section-7.3) to see how the *key* and *iv* (required for [AES](aes.md) or [ChaCha20](chacha.md)) are derived from those secrets.
