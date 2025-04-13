@@ -110,7 +110,11 @@ def ensure_frontmatter(filepath: str, dry_run: bool = False, new_tags: list[str]
     else:
         if new_frontmatter != existing_frontmatter:
             print(f"Modifying frontmatter in {filepath}.")
+            stat = os.stat(filepath)
+            original_mtime_ns = stat.st_mtime_ns
             write_file(filepath, new_content)
+            # Set the modified timestamp back to its original value
+            os.utime(filepath, ns=(stat.st_atime_ns, original_mtime_ns))
         else:
             print(f"No changes made in {filepath}.")
 
