@@ -3,7 +3,7 @@ aliases:
 - git submodule
 author: Maneesh Sutar
 created: 2024-03-03
-modified: 2024-09-28
+modified: 2025-04-14
 tags:
 - git
 title: Git Submodules

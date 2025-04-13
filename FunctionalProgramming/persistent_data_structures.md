@@ -2,7 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 created: 2023-11-12
-modified: 2024-09-28
+modified: 2025-04-14
 tags: []
 title: Persistent Data Structures
 ---

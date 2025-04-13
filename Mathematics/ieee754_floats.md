@@ -3,7 +3,7 @@ aliases:
 - IEEE754
 author: Maneesh Sutar
 created: 2023-08-17
-modified: 2024-09-28
+modified: 2025-04-14
 tags: []
 title: The IEEE754 Floating Point Format
 ---

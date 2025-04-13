@@ -4,7 +4,7 @@ aliases:
 - Elliptical Curve Cryptography
 author: Maneesh Sutar
 created: 2025-03-31
-modified: 2025-04-13
+modified: 2025-04-14
 tags: []
 title: Elliptical Curve Cryptography
 ---

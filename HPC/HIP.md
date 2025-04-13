@@ -2,7 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 created: 2024-01-12
-modified: 2024-11-30
+modified: 2025-04-14
 tags:
 - todo
 title: Heterogeneous-Compute Interface for Portability (HIP)

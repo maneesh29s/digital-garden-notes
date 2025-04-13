@@ -3,7 +3,7 @@ aliases:
 - Side-effects
 author: Maneesh Sutar
 created: 2023-11-12
-modified: 2024-09-28
+modified: 2025-04-14
 tags: []
 title: Side-Effects in Functional Programming
 ---

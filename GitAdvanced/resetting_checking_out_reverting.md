@@ -2,7 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 created: 2024-02-10
-modified: 2024-09-28
+modified: 2025-04-14
 tags:
 - git
 title: Resetting, checking out & reverting

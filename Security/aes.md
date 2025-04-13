@@ -4,7 +4,7 @@ aliases:
 - Advanced Encryption Standard
 author: Maneesh Sutar
 created: 2024-05-31
-modified: 2025-04-13
+modified: 2025-04-14
 tags: []
 title: Advanced Encryption Standard (AES)
 ---

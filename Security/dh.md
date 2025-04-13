@@ -5,7 +5,7 @@ aliases:
 - ECDHE
 author: Maneesh Sutar
 created: 2024-05-31
-modified: 2025-03-31
+modified: 2025-04-14
 tags: []
 title: Diffie-Hellman key exchange
 ---

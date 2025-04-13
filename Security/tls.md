@@ -4,7 +4,7 @@ aliases:
 - Transport Layer Security
 author: Maneesh Sutar
 created: 2024-07-06
-modified: 2025-04-13
+modified: 2025-04-14
 tags: []
 title: Transport Layer Security
 ---

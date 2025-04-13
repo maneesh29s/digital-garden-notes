@@ -3,7 +3,7 @@ aliases:
 - Affine Geometry
 author: Maneesh Sutar
 created: 2023-12-15
-modified: 2024-09-28
+modified: 2025-04-14
 tags:
 - maths
 title: Affine Set

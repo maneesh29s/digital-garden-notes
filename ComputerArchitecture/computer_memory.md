@@ -4,7 +4,7 @@ aliases:
 - Memory
 author: Maneesh Sutar
 created: 2025-02-10
-modified: 2025-02-10
+modified: 2025-04-14
 tags:
 - computer-architecture
 title: Computer Memory

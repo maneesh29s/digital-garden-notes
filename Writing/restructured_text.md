@@ -4,7 +4,7 @@ aliases:
 - restructured text files
 author: Maneesh Sutar
 created: 2023-12-02
-modified: 2024-11-30
+modified: 2025-04-14
 tags:
 - writing
 title: reStructuredText files

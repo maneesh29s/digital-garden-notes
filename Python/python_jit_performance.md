@@ -1,8 +1,8 @@
 ---
 aliases: []
 author: Maneesh Sutar
-created: 2024-10-20 19:00:00
-modified: 2024-11-30
+created: 2024-10-20
+modified: 2025-04-14
 tags:
 - todo
 title: Python JIT performances

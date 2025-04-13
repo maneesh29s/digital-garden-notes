@@ -2,7 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 created: 2024-05-28
-modified: 2025-01-18
+modified: 2025-04-14
 tags: []
 title: Nvidia over the years
 ---

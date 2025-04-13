@@ -3,7 +3,7 @@ aliases:
 - SELinux
 author: Maneesh Sutar
 created: 2023-11-19
-modified: 2024-09-28
+modified: 2025-04-14
 tags:
 - linux
 title: Security Enhanced Linux
