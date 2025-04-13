@@ -11,7 +11,7 @@ from PIL import Image
 def png_to_jpeg_converter(directory_path):
     for filename in os.listdir(directory_path):
         if filename.endswith(".png"):
-            
+
             new_filename = filename.replace(" ", "_").replace(".png", ".jpeg")
 
             image_path = os.path.join(directory_path, filename)
@@ -27,7 +27,7 @@ def png_to_jpeg_converter(directory_path):
 
 
 if __name__ == "__main__":
-    if (len(sys.argv) < 2):
+    if len(sys.argv) < 2:
         print(f"Usage: ${sys.argv[0]} directory_containing_png_images")
         exit(1)
 

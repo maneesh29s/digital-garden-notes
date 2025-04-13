@@ -8,12 +8,18 @@ import os
 # it searches through the obsidian_base_directory for a matching file name
 
 
-def convert_wikilinks_to_relative_links(file_path: str, obsidian_base_directory: str, convert_notes: bool, convert_artifacts: bool, dry_run: bool = False) -> None:
-    with open(file_path, 'r', encoding='utf-8') as file:
+def convert_wikilinks_to_relative_links(
+    file_path: str,
+    obsidian_base_directory: str,
+    convert_notes: bool,
+    convert_artifacts: bool,
+    dry_run: bool = False,
+) -> None:
+    with open(file_path, "r", encoding="utf-8") as file:
         content = file.read()
 
     # Define the pattern for Wikilinks with aliases
-    wikilink_pattern = r'\[\[([^\|\]]+)(?:\|([^\]]+))?\]\]'
+    wikilink_pattern = r"\[\[([^\|\]]+)(?:\|([^\]]+))?\]\]"
 
     # Find all Wikilinks in the content
     matches = re.finditer(wikilink_pattern, content)
@@ -41,36 +47,37 @@ def convert_wikilinks_to_relative_links(file_path: str, obsidian_base_directory:
             continue
 
         # Find the full path to the target note or artifacts
-        target_path = find_note_path(obsidian_base_directory, page_name) if is_markdown_file else find_artifact_path(
-            obsidian_base_directory, page_name)
+        target_path = (
+            find_note_path(obsidian_base_directory, page_name)
+            if is_markdown_file
+            else find_artifact_path(obsidian_base_directory, page_name)
+        )
 
         if target_path is not None:
             # Build the relative path
-            relative_path = os.path.relpath(
-                target_path, os.path.dirname(file_path))
-            new_link = f'[{link_text}]({relative_path})'
+            relative_path = os.path.relpath(target_path, os.path.dirname(file_path))
+            new_link = f"[{link_text}]({relative_path})"
             changes.append((old_link, new_link))
         else:
-            print(f'WARN: can not find target links for: {old_link}. Skipping.')
+            print(f"WARN: can not find target links for: {old_link}. Skipping.")
 
     if len(changes) == 0:
-        print(f'NO changes to be made in {file_path}')
+        print(f"NO changes to be made in {file_path}")
         return
 
     if dry_run:
-        print(f'Changes to be made in {file_path}:')
+        print(f"Changes to be made in {file_path}:")
         for old_link, new_link in changes:
-            print(f'  Replace: {old_link}')
-            print(f'     With: {new_link}')
+            print(f"  Replace: {old_link}")
+            print(f"     With: {new_link}")
     else:
         # Make the actual changes to the content
         for old_link, new_link in changes:
             content = content.replace(old_link, new_link)
         # Save the modified content back to the file
-        with open(file_path, 'w', encoding='utf-8') as file:
+        with open(file_path, "w", encoding="utf-8") as file:
             file.write(content)
-        print(
-            f'Wikilinks in {file_path} have been converted to relative links.')
+        print(f"Wikilinks in {file_path} have been converted to relative links.")
 
 
 def find_artifact_path(base_directory: str, target_name: str) -> str | None:
@@ -94,27 +101,49 @@ def main() -> None:
     Main function
     """
     parser = argparse.ArgumentParser(
-        description='Convert Wikilinks in Obsidian Markdown files to relative links. You must select which types of links to convert using the optional arguments.')
-    parser.add_argument('obsidian_file_path', type=str,
-                        help='Path to the Obsidian Markdown file')
-    parser.add_argument('obsidian_base_directory', type=str,
-                        help='Path to the base directory of the Obsidian vault')
-    parser.add_argument('-n', '--notes', action='store_true',
-                        help='Convert links to other markdown notes')
-    parser.add_argument('-a', '--artifacts', action='store_true',
-                        help='Convert links to other artifacts')
-    parser.add_argument('-d', '--dry-run', action='store_true',
-                        help="Preview changes without modifying files.")
+        description="Convert Wikilinks in Obsidian Markdown files to relative links. You must select which types of links to convert using the optional arguments."
+    )
+    parser.add_argument(
+        "obsidian_file_path", type=str, help="Path to the Obsidian Markdown file"
+    )
+    parser.add_argument(
+        "obsidian_base_directory",
+        type=str,
+        help="Path to the base directory of the Obsidian vault",
+    )
+    parser.add_argument(
+        "-n",
+        "--notes",
+        action="store_true",
+        help="Convert links to other markdown notes",
+    )
+    parser.add_argument(
+        "-a",
+        "--artifacts",
+        action="store_true",
+        help="Convert links to other artifacts",
+    )
+    parser.add_argument(
+        "-d",
+        "--dry-run",
+        action="store_true",
+        help="Preview changes without modifying files.",
+    )
 
     args = parser.parse_args()
 
     if not args.notes and not args.artifacts:
-        print('No conversion option provided. Use --notes, --artifacts, or both.')
+        print("No conversion option provided. Use --notes, --artifacts, or both.")
         return
 
     convert_wikilinks_to_relative_links(
-        args.obsidian_file_path, args.obsidian_base_directory, args.notes, args.artifacts, args.dry_run)
+        args.obsidian_file_path,
+        args.obsidian_base_directory,
+        args.notes,
+        args.artifacts,
+        args.dry_run,
+    )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

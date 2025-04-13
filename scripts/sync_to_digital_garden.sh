@@ -19,6 +19,8 @@ START_AT="$1"
 OBSIDIAN_ROOT="$PWD"
 DIGITAL_GARDEN_ROOT="$HOME/opensource/digital-garden-notes"
 
+EXCLUDED_ITEMS=("README.md" "index.md" "notebooks" "scripts" "requirements.txt")
+
 check_git_repo() {
     local folder_path="$1"
 
@@ -69,8 +71,7 @@ conditional_delete() {
       # Iterate over all files and directories within the specified directory
       for item in "${dir_path}"/*; do
 		# List of files and folders to exclude
-		excluded_items=("README.md" "index.md" "notebooks" "scripts")
-		if [[ ! "${excluded_items[@]}" =~ "$(basename $item)" ]]; then
+		if [[ ! "${EXCLUDED_ITEMS[@]}" =~ "$(basename $item)" ]]; then
 			rm -r "$item"
 		fi
       done
