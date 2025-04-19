@@ -83,7 +83,7 @@ Registered memory:
 **Error Correcting Code** or [ECC](https://en.wikipedia.org/wiki/ECC_memory) memory is a DIMM with extra memory memory chips which add support for error detection and correction of data in RAM.  
 Most common ECC modules have 1 extra chip per 8 data chips.
 
-The ECC use a [SECDED codes](https://books.google.co.in/books?id=zJwuDwAAQBAJ&pg=PA95&redir_esc=y#v=onepage&q&f=false) i.e. **Single Error Correcting and Double Error Detecting** which is a modified version of [Extended Hamming Codes](../Security/error_correction.md) technique to detect and correct errors. The ==common configuration is `(72,64,4)`,== where 64 data bits of data is read from the 8 data chips, and 8 bits of parity bits are read from the extra chip.
+The ECC use a [SECDED codes](https://books.google.co.in/books?id=zJwuDwAAQBAJ&pg=PA95&redir_esc=y#v=onepage&q&f=false) i.e. Single Error Correcting and Double Error Detecting which is a modified version of [Extended Hamming Codes](../Security/error_correction.md) technique to detect and correct errors. The ==common configuration is `(72,64,4)`,== where 64 data bits of data is read from the 8 data chips, and 8 bits of parity bits are read from the extra chip.
 
 In ECC memory, the CPU-RAM ==data bus width is 72== rather than typical 64 on non-ECC memory. ==The memory controller reads all 64 data + 8 parity bits from the RAM, and then performs the check.==
 

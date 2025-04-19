@@ -2,7 +2,7 @@
 aliases: []
 author: Maneesh Sutar
 created: 2024-05-28
-modified: 2025-04-14
+modified: 2025-04-19
 tags: []
 title: Nvidia over the years
 ---
@@ -95,7 +95,7 @@ Hopper Microarchitecture - HPC - H100
 Whitepaper: <https://resources.nvidia.com/en-us-tensor-core/gtc22-whitepaper-hopper>
 
 Datasheet:  
-![h100_datasheet](../HPC/Artifacts/h100_datasheet.jpeg)
+![h100_datasheet](Artifacts/h100_datasheet.jpeg)
 
 NVIDIA H100 GPU contains total 132 SMs per GPU  
 Each SM has (compute capability 9.0 for H100)
