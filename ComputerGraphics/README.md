@@ -4,7 +4,7 @@ author: Maneesh Sutar
 created: 2025-01-18
 modified: 2025-04-14
 tags: []
-title: 'Folder: Graphic Processing Units'
+title: Computer Graphics
 ---
 
-# Folder: Graphic Processing Units
+# Folder: Computer Graphics
